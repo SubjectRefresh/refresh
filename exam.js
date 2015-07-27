@@ -2,7 +2,6 @@ var request = require("request");
 var cheerio = require("cheerio");
 var fs = require('fs');
 
-
 console.info("Request has been loaded");
 
 function cleanArray(actual) {
@@ -44,4 +43,10 @@ function examBoardCie(callback) {
             console.log(subjectArray);
         }
     })
+<<<<<<< Updated upstream
 }
+=======
+}
+
+//checkExamBoard("cie");
+>>>>>>> Stashed changes
