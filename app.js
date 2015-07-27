@@ -11,7 +11,23 @@ app.use(multer());
 app.use(express.static('public'));
 
 app.get("/", function(req, res) {
-    res.send("Hi");
+    fs.readFile("pages/index.html", "ASCII", function(err, data) {
+        res.send(data);
+    });
+});
+
+app.post("/dashboard", function(req, res) {
+    // MySQL Shit
+    // That Tom needs to do...
+    
+    // Paste this inside your callback
+    // Template Engine Stuff Goes Here
+});
+
+app.post("/sandpit", function(req, res) {
+    // Login Stuff
+    var username = "OliCallaghan"
+    var examboard = "CIE"
 });
 
 var server = app.listen(3000, function () {
