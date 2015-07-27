@@ -2,6 +2,11 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
+
+var examBoard = require('exam.js');
+var examBoardModule = new examBoard;
+var convert = require('convert.js');
+
 var app = express();
 
 app.use(bodyParser.json());
@@ -26,8 +31,8 @@ app.post("/dashboard", function(req, res) {
 
 app.post("/sandpit", function(req, res) {
     // Login Stuff
-    var username = "OliCallaghan"
-    var examboard = "CIE"
+    var username = "OliCallaghan";
+    var examboard = "CIE";
 });
 
 var server = app.listen(3000, function () {
