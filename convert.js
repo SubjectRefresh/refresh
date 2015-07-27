@@ -3,10 +3,18 @@ var myStringArray = ["State the distinguishing properties of solids, liquids and
 function convert(inputArray) {
     var arrayLength = inputArray.length;
     for (var i = 0; i < arrayLength; i++) {
-        console.log("Current working sentence: " + inputArray[i]);
+        //console.log("Current working sentence: " + inputArray[i]);
         var sentence = inputArray[i]
-        
-}
+        for (c = 0; c < sentence.length; c++) {
+            //console.log(sentence[c]);
+            if (sentence[c] == " ") {
+                var root = sentence.slice(c, sentence.length)
+                break;
+            }
+
+            console.log(root);
+        }
+    }
 }
 
 convert(myStringArray);
