@@ -48,7 +48,7 @@ var convertModule = function () {
 
 module.exports = convertModule;
 
-function convertActual(inputArray) {
+function convertActual(inputArray, callback) {
     var roots = [];
     var arrayLength = inputArray.length;
     for (var i = 0; i < arrayLength; i++) {
@@ -70,12 +70,12 @@ function convertActual(inputArray) {
             case "State":
                 console.log("Switch for State");
                 for (d = 0; d < sentence.length; d++) {
-                    console.log("Working lettter: " + sentence[d]);
+                    //console.log("Working lettter: " + sentence[d]);
                     if (sentence[d] == " ") {
-                        console.log("Found space char");
+                        //console.log("Found space char");
                         var workingWord = sentence.slice(d + 1, sentence.length);
-                        console.log("workingWord: " + workingWord)
-                        for (e = 0; e < workingWord.length; d++) {
+                        //console.log("workingWord: " + workingWord)
+                        for (e = 0; e < workingWord.length; e++) {
                             console.log("workingWord[e]: " + workingWord[e]);
                             if (workingWord[e] == " ") {
                                 var word = workingWord.slice(0, e);
@@ -95,4 +95,4 @@ function convertActual(inputArray) {
     }
     callback(roots);
 }
-convertActual(myStringArray)
+convertActual(myStringArray, function (output) {})
