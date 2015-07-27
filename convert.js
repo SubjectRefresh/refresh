@@ -4,34 +4,39 @@ var convertModule = function () {
     var self = this;
 
     self.covert = function (inputArray, callback) {
+
         var root = "";
         var question = "";
         var outputContentWrapper = [];
         var output = []
-        var arrayLength = inputArray.length;
-        for (var i = 0; i < arrayLength; i++) {
-            //=====================================================================================
-            //Holding sentence
 
-            //console.log("Current working sentence: " + inputArray[i]);
+        var arrayLength = inputArray.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+
             var sentence = inputArray[i]
+
             for (c = 0; c < sentence.length; c++) {
-                //console.log(sentence[c]);
+
                 if (sentence[c] == " ") {
+
                     var root = sentence.slice(c + 1, sentence.length)
                     var keyword = sentence.slice(0, c);
                     break;
+
                 }
+
             }
             console.log("Keyword:--" + keyword + "--");
+
             switch (keyword) {
+
                 case "State":
+
                     console.log("Switch for State");
                     var words = sentence.split(" ");
-                    //console.log(words)
                     words.shift();
                     root = words;
-                    //console.log("Post shift" + words);
                     words.unshift("What", "are");
                     words.push("?");
                     console.log("QUESTION: " + words.join(" "));
@@ -40,45 +45,53 @@ var convertModule = function () {
                     outputContentWrapper.push(question);
                     output.push(outputContentWrapper);
                     break;
+
             }
 
-            //====================================================================================           
         }
+
         callback(output);
+
     };
+
 };
 
 module.exports = convertModule;
 
 function convertActual(inputArray, callback) {
+
     var root = "";
     var question = "";
     var outputContentWrapper = [];
     var output = []
-    var arrayLength = inputArray.length;
-    for (var i = 0; i < arrayLength; i++) {
-        //=====================================================================================
-        //Holding sentence
 
-        //console.log("Current working sentence: " + inputArray[i]);
+    var arrayLength = inputArray.length;
+
+    for (var i = 0; i < arrayLength; i++) {
+
         var sentence = inputArray[i]
+
         for (c = 0; c < sentence.length; c++) {
-            //console.log(sentence[c]);
+
             if (sentence[c] == " ") {
+
                 var root = sentence.slice(c + 1, sentence.length)
                 var keyword = sentence.slice(0, c);
                 break;
+
             }
+
         }
         console.log("Keyword:--" + keyword + "--");
+
         switch (keyword) {
+
             case "State":
+
                 console.log("Switch for State");
                 var words = sentence.split(" ");
-                //console.log(words)
                 words.shift();
                 root = words;
-                //console.log("Post shift" + words);
                 words.unshift("What", "are");
                 words.push("?");
                 console.log("QUESTION: " + words.join(" "));
@@ -87,10 +100,11 @@ function convertActual(inputArray, callback) {
                 outputContentWrapper.push(question);
                 output.push(outputContentWrapper);
                 break;
+
         }
 
-        //====================================================================================           
     }
+
     callback(output);
 }
 convertActual(myStringArray, function (output) {})
