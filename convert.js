@@ -69,23 +69,13 @@ function convertActual(inputArray, callback) {
         switch (keyword) {
             case "State":
                 console.log("Switch for State");
-                for (d = 0; d < sentence.length; d++) {
-                    //console.log("Working lettter: " + sentence[d]);
-                    if (sentence[d] == " ") {
-                        //console.log("Found space char");
-                        var workingWord = sentence.slice(d + 1, sentence.length);
-                        //console.log("workingWord: " + workingWord)
-                        for (e = 0; e < workingWord.length; e++) {
-                            //console.log("workingWord[e]: " + workingWord[e]);
-                            if (workingWord[e] == " " || workingWord[e] == workingWord.length) {
-                                var word = workingWord.slice(0, e);
-                                var placeholder = e
-                                console.log("Word: " + word)
-                                break;
-                            }
-                        }
-                    }
-                }
+                var words = sentence.split(" ");
+                console.log(words)
+                words.shift();
+                console.log("Post shift" + words);
+                words.unshift("What", "are");
+                words.push("?");
+                console.log("QUESTION: " + words.join(" "));
                 break;
         }
         //console.log(root);
