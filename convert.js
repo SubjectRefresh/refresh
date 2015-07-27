@@ -8,12 +8,13 @@ function convert(inputArray) {
         for (c = 0; c < sentence.length; c++) {
             //console.log(sentence[c]);
             if (sentence[c] == " ") {
-                var root = sentence.slice(c, sentence.length)
+                var root = sentence.slice(c + 1, sentence.length)
                 break;
             }
 
-            console.log(root);
+
         }
+        console.log(root);
     }
 }
 
