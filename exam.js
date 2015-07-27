@@ -24,7 +24,8 @@ var examBoardModule = function() {
                 }
 
                 subjectArray.length = subjectArray.length - 4;
-                callback(subjectArray);
+                console.log(subjectArray);
+                //callback(subjectArray); //Future Callback
             }
         });
     };
@@ -38,7 +39,7 @@ var examBoardModule = function() {
         }
         return newArray;
     }
+    self.examBoardCIE(); //Temporary Use for Testing
 };
 
 module.exports = examBoardModule;
-
