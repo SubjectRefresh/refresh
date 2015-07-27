@@ -5,10 +5,14 @@ var fs = require('fs');
 
 console.info("Request has been loaded");
 
-if (typeof(String.prototype.trim) === "undefined") {
-    String.prototype.trim = function() {
-        return String(this).replace(/^\s+|\s+$/g, '');
-    };
+function cleanArray(actual) {
+    var newArray = new Array();
+    for (var i = 0; i < actual.length; i++) {
+        if (actual[i]) {
+            newArray.push(actual[i]);
+        }
+    }
+    return newArray;
 }
 
 function checkExamBoard(examBoard) {
@@ -22,17 +26,20 @@ function examBoardCie() {
         if (!error && response.statusCode == 200) {
             //console.log(body) 
             $ = cheerio.load(body);
+
             data = $('.emphasized-link').text();
-            data = data.replace(/ +?/g, '');
-            data = data.replace("/\r", '');
-            data = data.split("\n");
-            console.log(data);
-            fs.writeFile("tmp", data, function(err) {
-                if (err) {
-                    return console.log(err);
+            data = data.replace(/ +?|\r/g, '').split("\n");
+            data = cleanArray(data);
+
+            for (i = 0; i < data.length; i++) {
+                if (data[i] == "New" || "Live") {
+                	data[i] = "";
                 }
-                console.info("The file was saved!");
-            });
+            }
+
+            //data = cleanArray(data);
+
+            console.log(data);
         }
     })
 }
