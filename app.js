@@ -3,9 +3,10 @@ var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 
-var examBoard = require('exam.js');
-var examBoardModule = new examBoard;
-var convert = require('convert.js');
+var examBoard = require('./exam.js');
+var examBoardModuleInstance = new examBoard();
+var convert = require('./convert.js');
+var convertModuleInstance = new convert();
 
 var app = express();
 
@@ -29,10 +30,14 @@ app.post("/dashboard", function(req, res) {
     // Template Engine Stuff Goes Here
 });
 
-app.post("/sandpit", function(req, res) {
+app.get("/sandpit", function(req, res) {
     // Login Stuff
     var username = "OliCallaghan";
     var examboard = "CIE";
+    
+    examBoardModuleInstance.examBoardCIE(function(output) {
+        res.send(output);
+    });
 });
 
 var server = app.listen(3000, function () {
