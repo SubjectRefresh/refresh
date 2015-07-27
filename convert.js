@@ -4,7 +4,10 @@ var convertModule = function () {
     var self = this;
 
     self.covert = function (inputArray, callback) {
-        var roots = [];
+        var root = "";
+        var question = "";
+        var outputContentWrapper = [];
+        var output = []
         var arrayLength = inputArray.length;
         for (var i = 0; i < arrayLength; i++) {
             //=====================================================================================
@@ -20,36 +23,38 @@ var convertModule = function () {
                     break;
                 }
             }
-            console.log("Keyword: " + keyword)
+            console.log("Keyword:--" + keyword + "--");
             switch (keyword) {
                 case "State":
-                    for (d = 0; d < sentence.length; d++) {
-                        if (sentence[d] == " ") {
-                            var workingWord = sentence.slice(d + 1, sentence.length);
-                            for (e = 0; e < workingWord.length; d++) {
-                                if (sentence[e] == " ") {
-                                    var word = workingWord.slice(0, e);
-                                    var placeholder = e
-                                    console.log("Word: " + word)
-                                }
-                            }
-                        }
-                    }
+                    console.log("Switch for State");
+                    var words = sentence.split(" ");
+                    //console.log(words)
+                    words.shift();
+                    root = words;
+                    //console.log("Post shift" + words);
+                    words.unshift("What", "are");
+                    words.push("?");
+                    console.log("QUESTION: " + words.join(" "));
+                    question = words.join(" ")
+                    outputContentWrapper.push(root);
+                    outputContentWrapper.push(question);
+                    output.push(outputContentWrapper);
                     break;
             }
-            //console.log(root);
-            roots.push(root);
 
             //====================================================================================           
         }
-        callback(roots);
+        callback(output);
     };
 };
 
 module.exports = convertModule;
 
 function convertActual(inputArray, callback) {
-    var roots = [];
+    var root = "";
+    var question = "";
+    var outputContentWrapper = [];
+    var output = []
     var arrayLength = inputArray.length;
     for (var i = 0; i < arrayLength; i++) {
         //=====================================================================================
@@ -72,17 +77,20 @@ function convertActual(inputArray, callback) {
                 var words = sentence.split(" ");
                 //console.log(words)
                 words.shift();
+                root = words;
                 //console.log("Post shift" + words);
                 words.unshift("What", "are");
                 words.push("?");
                 console.log("QUESTION: " + words.join(" "));
+                question = words.join(" ")
+                outputContentWrapper.push(root);
+                outputContentWrapper.push(question);
+                output.push(outputContentWrapper);
                 break;
         }
-        //console.log(root);
-        roots.push(root);
 
         //====================================================================================           
     }
-    callback(roots);
+    callback(output);
 }
 convertActual(myStringArray, function (output) {})
