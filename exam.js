@@ -3,7 +3,7 @@ var cheerio = require("cheerio");
 var fs = require('fs');
 
 
-console.info("Request has been loaded");
+console.info("Request, Cheerio and FS have been loaded");
 
 function cleanArray(actual) {
     var newArray = new Array();
@@ -20,28 +20,19 @@ function examBoardCie(callback) {
         if (!error && response.statusCode == 200) {
             $ = cheerio.load(body);
 
-            data = $('.emphasized-link').text();
-            data = data.replace(/ +?|\r/g, '').split("\n");
-            data = cleanArray(data);
-
+            data = cleanArray($('.emphasized-link').text().replace(/ +?|\r/g, '').split("\n"));
             subjectArray = [];
 
             for (i = 0; i < data.length; i++) {
                 if (data[i] != "New" && data[i] != "Live") {
                     subjectArray.push(data[i]);
                 }
+                subjectArray[i] = subjectArray[i].replace(/-/g, " - ");
             }
 
-            for (i = 0; i < 4; i++) {
-                subjectArray.pop();
-            }
-
-            for (i = 0; i < subjectArray.length; i++) {
-            	subjectArray[i] = subjectArray[i].replace(/-/g, " - ");
-            }
-
+            subjectArray.length = subjectArray.length - 4;
             callback(subjectArray);
-            console.log(subjectArray);
+            console.log("Completed Exam.JS");
         }
     })
 }
