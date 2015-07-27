@@ -1,21 +1,32 @@
+// Node.JS Packages
 var express = require("express");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 
+// Imports for External Refresh Node.JS Functions
 var examBoard = require('./exam.js');
-var examBoardModuleInstance = new examBoard();
 var convert = require('./convert.js');
-var convertModuleInstance = new convert();
+var research = require('./research.js');
 
+// Instanciating External Refresh Packages
+var examBoardModule = new examBoard();
+var convertModule = new convert();
+var researchModule = new research();
+
+// Creating Express.JS Web Server
 var app = express();
 
+// Initialising Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(multer());
 
+// Creating Static Public Folder
 app.use(express.static('public'));
 
+
+// App Routes
 app.get("/", function(req, res) {
     fs.readFile("pages/index.html", "ASCII", function(err, data) {
         res.send(data);
@@ -35,11 +46,12 @@ app.get("/sandpit", function(req, res) {
     var username = "OliCallaghan";
     var examboard = "CIE";
     
-    examBoardModuleInstance.examBoardCIE(function(output) {
+    examBoardModule.examBoardCIE(function(output) {
         res.send(output);
     });
 });
 
+// Initialising the Express.JS Web Server to Listen on Port 3000
 var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
