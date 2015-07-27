@@ -76,8 +76,8 @@ function convertActual(inputArray, callback) {
                         var workingWord = sentence.slice(d + 1, sentence.length);
                         //console.log("workingWord: " + workingWord)
                         for (e = 0; e < workingWord.length; e++) {
-                            console.log("workingWord[e]: " + workingWord[e]);
-                            if (workingWord[e] == " ") {
+                            //console.log("workingWord[e]: " + workingWord[e]);
+                            if (workingWord[e] == " " || workingWord[e] == workingWord.length) {
                                 var word = workingWord.slice(0, e);
                                 var placeholder = e
                                 console.log("Word: " + word)
