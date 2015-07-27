@@ -15,33 +15,33 @@ function cleanArray(actual) {
     return newArray;
 }
 
-function checkExamBoard(examBoard) {
-    if (examBoard == "cie") {
-        examBoardCie();
-    }
-}
-
-function examBoardCie() {
+function examBoardCie(callback) {
     request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
         if (!error && response.statusCode == 200) {
-            //console.log(body) 
             $ = cheerio.load(body);
 
             data = $('.emphasized-link').text();
             data = data.replace(/ +?|\r/g, '').split("\n");
             data = cleanArray(data);
 
+            subjectArray = [];
+
             for (i = 0; i < data.length; i++) {
-                if (data[i] == "New" || "Live") {
-                	data[i] = "";
+                if (data[i] != "New" && data[i] != "Live") {
+                    subjectArray.push(data[i]);
                 }
             }
 
-            //data = cleanArray(data);
+            for (i = 0; i < 4; i++) {
+                subjectArray.pop();
+            }
 
-            console.log(data);
+            for (i = 0; i < subjectArray.length; i++) {
+            	subjectArray[i] = subjectArray[i].replace(/-/g, " - ");
+            }
+
+            callback(subjectArray);
+            console.log(subjectArray);
         }
     })
 }
-
-checkExamBoard("cie");
