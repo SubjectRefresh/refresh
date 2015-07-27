@@ -2,7 +2,8 @@ var myStringArray = ["State the distinguishing properties of solids, liquids and
 
 
 
-function convert(inputArray) {
+function convert(inputArray, callback) {
+    var roots = [];
     var arrayLength = inputArray.length;
     for (var i = 0; i < arrayLength; i++) {
         //console.log("Current working sentence: " + inputArray[i]);
@@ -14,7 +15,11 @@ function convert(inputArray) {
                 break;
             }
         }
-        console.log(root);
+        //console.log(root);
+        roots.push(root);
     }
+    callback(roots);
 }
-convert(myStringArray);
+convert(myStringArray, function (output) {
+    console.log(output);
+});
