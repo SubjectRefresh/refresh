@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var examBoardModule = function() {
     var self = this;
-    
+
     self.examBoardCIE = function(callback) {
         request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
             if (!error && response.statusCode == 200) {
@@ -18,7 +18,7 @@ var examBoardModule = function() {
                         subjectArray.push(data[i]);
                     }
                 }
-                
+
                 for (i = 0; i < subjectArray.length; i++) {
                     subjectArray[i] = subjectArray[i].replace(/-/g, " - ");
                 }
@@ -29,7 +29,18 @@ var examBoardModule = function() {
             }
         });
     };
-    
+
+    self.collectSyllabusURL = function(number, callback) {
+        request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                $ = cheerio.load(body);
+              
+              data = $('.emphasized-link');
+              
+              console.log(data);
+            }        
+    };
+
     function cleanArray(actual) {
         var newArray = new Array();
         for (var i = 0; i < actual.length; i++) {
@@ -39,7 +50,8 @@ var examBoardModule = function() {
         }
         return newArray;
     }
-    self.examBoardCIE(); //Temporary Use for Testing
+    //self.examBoardCIE(); //Temporary Use for Testing
+    self.collectSyllabusURL(0400, function(number){console.log(number);}); //Temporary Use for Testing
 };
 
 module.exports = examBoardModule;
