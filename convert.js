@@ -8,7 +8,7 @@ var convertModule = function () {
         var root = "";
         var question = "";
         var outputContentWrapper = [];
-        var output = []
+        var output = [];
         var researchPoints = [];
 
         var arrayLength = inputArray.length;
