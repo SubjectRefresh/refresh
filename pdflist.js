@@ -10,6 +10,7 @@ Array.prototype.last = function() {
 }
 
 function collectURL(number, callback) { // returns an array of the links and numbers for each syllabus
+  // PLEASE PASS number AS A STRING!
     var link = [];
     var newArray = [];
     request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
