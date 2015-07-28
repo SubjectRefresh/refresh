@@ -11,7 +11,7 @@ Array.prototype.last = function() {
 
 function collectURL(number, callback) { // returns an array of the links and numbers for each syllabus
     var link = [];
-  	var newArray = [];
+    var newArray = [];
     request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
         if (!error && response.statusCode == 200) {
             $ = cheerio.load(body);
@@ -26,7 +26,7 @@ function collectURL(number, callback) { // returns an array of the links and num
                    );
             });
           for (i=0;i<newArray.length-1;i++){
-            	if (newArray[i][0] == number){
+              if (newArray[i][0] == number){
                 link = newArray[i][1];
               }
           }
@@ -35,7 +35,7 @@ function collectURL(number, callback) { // returns an array of the links and num
           }
       log(newArray);
       if (callback != undefined) {
-      	callback(link);
+        callback(link);
       }
     });
 }
