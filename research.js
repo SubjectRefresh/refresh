@@ -10,7 +10,7 @@ var researchModule = function() {
     self.researchTopic = function(topic, commandWord, callback) {
         console.log("Research.JS:".bold + " Searching Bing".green);
         bing.web(topic, {top:3, skip:0}, function(err, res, body) {
-            console.log("Research.JS:".bold + " Recieved Bing Search Results".green);
+            console.log("Research.JS:".bold + " Received Bing Search Results".green);
             var URL = []
             URL.push(body.d.results[0].Url);
             URL.push(body.d.results[1].Url);
@@ -21,7 +21,7 @@ var researchModule = function() {
             for (var i = 0; i < 3; i++) {
                 console.log("Research.JS:".bold + (" Requesting Webpage, " + URL[i]).green);
                 request(URL[i], function(err, res, body) {
-                    console.log("Research.JS:".bold + " Recieved Webpage!".green);
+                    console.log("Research.JS:".bold + " Received Webpage!".green);
                     $ = cheerio.load(body);
                     var bodyText = $("p").text();
                     output += bodyText;
