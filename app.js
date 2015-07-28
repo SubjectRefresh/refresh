@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 var colors = require("colors");
-console.log("APP.JS: ".bold + " Successfully Imported Required Packages".green);
+console.log("App.JS: ".bold + " Successfully Imported Required Packages".green);
 
 
 // Imports for External Refresh Node.JS Functions
@@ -12,7 +12,7 @@ var examBoard = require('./exam.js');
 var convert = require('./convert.js');
 var research = require('./research.js');
 var question = require('./question.js');
-console.log("APP.JS: ".bold + " Successfully Imported External Functions".green);
+console.log("App.JS: ".bold + " Successfully Imported External Functions".green);
 
 
 // Instantiating External Refresh Packages
@@ -20,12 +20,12 @@ var examBoardModule = new examBoard();
 var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
-console.log("APP.JS: ".bold + " Successfully Instantiated Packages".green);
+console.log("App.JS: ".bold + " Successfully Instantiated Packages".green);
 
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("APP.JS: ".bold + " Successfully Created Express.JS Web Server".green);
+console.log("App.JS: ".bold + " Successfully Created Express.JS Web Server".green);
 
 
 // Initialising Middleware
@@ -34,12 +34,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
-console.log("APP.JS: ".bold + " Successfully Initialised Middleware".green);
+console.log("App.JS: ".bold + " Successfully Initialised Middleware".green);
 
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("APP.JS: ".bold + " Successfully Public Folder".green);
+console.log("App.JS: ".bold + " Successfully Public Folder".green);
 
 
 
@@ -57,7 +57,7 @@ app.post("/dashboard", function (req, res) {
     // Paste this inside your callback
     // Template Engine Stuff Goes Here
 });
-console.log("APP.JS: ".bold + " Successfully Created App Route".green);
+console.log("App.JS: ".bold + " Successfully Created App Route".green);
 
 
 app.get("/sandpit", function (req, res) {
@@ -69,7 +69,7 @@ app.get("/sandpit", function (req, res) {
         res.send(output);
     });
 });
-console.log("APP.JS: ".bold + " Successfully Created Sandpit".green);
+console.log("App.JS: ".bold + " Successfully Created Sandpit".green);
 
 
 // Initialising the Express.JS Web Server to Listen on Port 3000
@@ -79,4 +79,8 @@ var server = app.listen(3000, function () {
 
     console.log("Refresh Running at localhost:3000");
 });
+<<<<<<< HEAD
 console.log("APP.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
+=======
+console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
+>>>>>>> origin/master
