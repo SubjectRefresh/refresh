@@ -13,7 +13,7 @@ var question = require('./question.js');
 // Instanciating External Refresh Packages
 var examBoardModule = new examBoard();
 var convertModule = new convert();
-var researchModule = new research();
+//var researchModule = new research();
 var questionModule = new question();
 
 // Creating Express.JS Web Server
