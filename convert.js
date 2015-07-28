@@ -30,10 +30,10 @@ var convertModule = function () {
 
             }
         }
-
+        callback(researchPoints);
     }
 
-    callback(researchPoints);
+
 };
-};
+
 module.exports = convertModule;
