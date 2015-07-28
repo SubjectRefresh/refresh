@@ -3,21 +3,29 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
+var colors = require("colors");
+console.log("APP.JS: ".bold + " Successfully Imported Required Packages".green);
+
 
 // Imports for External Refresh Node.JS Functions
 var examBoard = require('./exam.js');
 var convert = require('./convert.js');
 var research = require('./research.js');
 var question = require('./question.js');
+console.log("APP.JS: ".bold + " Successfully Imported External Functions".green);
 
-// Instanciating External Refresh Packages
+
+// Instantiating External Refresh Packages
 var examBoardModule = new examBoard();
 var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
+console.log("APP.JS: ".bold + " Successfully Instantiated Packages".green);
+
 
 // Creating Express.JS Web Server
 var app = express();
+
 
 // Initialising Middleware
 app.use(bodyParser.json());
