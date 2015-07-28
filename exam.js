@@ -40,7 +40,6 @@ var examBoardModule = function() {
         return newArray;
     }
     //self.examBoardCIE(); //Temporary Use for Testing
-    self.collectSyllabusURL(0400, function(number){console.log(number);}); //Temporary Use for Testing
 };
 
 module.exports = examBoardModule;
