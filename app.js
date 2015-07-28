@@ -60,6 +60,7 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
+    questionModule.convert(["data is very cool"]);
+
     console.log("Refresh Running at localhost:3000");
 });
-question.questionModule([])
