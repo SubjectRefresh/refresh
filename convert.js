@@ -12,7 +12,7 @@ var convertModule = function () {
         var root = "";
         var question = "";
         var outputContentWrapper = [];
-        var output = []
+        var output = [];
         var researchPoints = [];
         console.log("Conv.JS:".bold + " Successfully Defined Global Variables".green);
 

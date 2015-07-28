@@ -65,8 +65,8 @@ app.get("/sandpit", function (req, res) {
     // Login Stuff
     var username = "OliCallaghan";
     var examboard = "CIE";
-    
-    researchModule.researchTopic("structure of atoms", "", function(output) {
+
+    researchModule.researchTopic("structure of atoms", "", function (output) {
         res.send(output);
     });
 });
@@ -78,9 +78,10 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    questionModule.convert(["data is very cool"]);
-
     console.log("Refresh Running at localhost:3000");
 });
+<<<<<<< HEAD
 console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
 console.log('+==+ Reached the Finish of App.JS +==+'.rainbow);
+=======
+>>>>>>> origin/master
