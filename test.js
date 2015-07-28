@@ -4,6 +4,7 @@ var myStringArray = ["State the distinguishing properties of solids, liquids and
 var utf8 = require('utf8');
 var request = require("request");
 var colors = require("colors");
+var request = require('request');
 
 function test(inputArray, callback) {
 
@@ -31,19 +32,12 @@ function test(inputArray, callback) {
             }
 
         }
-        var options = {
-            url: 'http://api.textrazor.com/',
-            'method': 'POST',
-            'body': {
-                "apiKey": "c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a",
-                "text": utf8.encode(sentence),
-                "extractors": "words"
-            }
 
-        };
-
-        request(options, function (error, response, body) {
-            console.log("TextRazer reply :: " + body);
+        request.post({
+            url: 'http://api.textrazor.com',
+            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=This+is+the+text+string&extractors=words"
+        }, function (error, response, body) {
+            console.log(body);
         });
     }
 
