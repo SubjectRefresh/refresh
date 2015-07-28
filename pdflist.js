@@ -1,10 +1,6 @@
 var request = require("request");
 var cheerio = require("cheerio");
 
-function log(string){
-  console.log(string);
-}
-
 Array.prototype.last = function() {
     return this[this.length - 1];
 }
