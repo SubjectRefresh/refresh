@@ -2,11 +2,13 @@ var myStringArray = ["State the distinguishing properties of solids, liquids and
 
 var utf8 = require('utf8');
 var request = require("request");
+var colors = require("colors");
+console.log("Question.JS:".bold + " Successfully Imported Required Packages".green);
 
 var questionModule = function () {
     var self = this;
 
-    self.convert = function (inputArray, callback) {
+    self.question = function (inputArray, callback) {
 
         var root = "";
         var question = "";
@@ -30,11 +32,26 @@ var questionModule = function () {
                 }
 
             }
+            console.log("Question got to api bit");
+            var options = {
+                url: 'https://api.textrazor.com/',
+                'method': 'POST',
+                'body': {
+                    "apiKey": "c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a",
+                    "text": utf8.encode(sentence),
+                    "extractors": "words"
+                }
+
+            };
+
+            request(options, function (error, response, body) {
+                console.log("RazerText reply :: " + body)
+            });
         }
 
     };
 
 };
 
-
+console.log("Question.JS:".bold + " Successfully finished question".green);
 module.exports = questionModule;
