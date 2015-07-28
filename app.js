@@ -79,12 +79,3 @@ var server = app.listen(3000, function () {
 
     console.log("Refresh Running at localhost:3000");
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log("APP.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
-=======
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
->>>>>>> origin/master
-=======
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
->>>>>>> origin/master
