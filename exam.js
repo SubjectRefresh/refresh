@@ -1,6 +1,7 @@
-var request = require("request");
-var cheerio = require("cheerio");
+var request = require('request');
+var cheerio = require('cheerio');
 var fs = require('fs');
+var color = require('color');
 
 var examBoardModule = function() {
     var self = this;
