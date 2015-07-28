@@ -32,7 +32,7 @@ function test(inputArray, callback) {
 
         }
         var options = {
-            url: 'https://api.textrazor.com/',
+            url: 'http://api.textrazor.com/',
             'method': 'POST',
             'body': {
                 "apiKey": "c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a",
@@ -43,7 +43,7 @@ function test(inputArray, callback) {
         };
 
         request(options, function (error, response, body) {
-            console.log("TextRazer reply :: " + JSON.parse(body));
+            console.log("TextRazer reply :: " + body);
         });
     }
 

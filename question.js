@@ -44,7 +44,7 @@ var questionModule = function () {
             };
 
             request(options, function (error, response, body) {
-                console.log("TextRazer reply :: " + JSON.parse(body));
+                console.log("TextRazer reply :: " + response.getBody());
             });
         }
 
