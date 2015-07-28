@@ -1,5 +1,3 @@
-
-
 var utf8 = require('utf8');
 var request = require("request");
 var colors = require("colors");
@@ -21,7 +19,7 @@ var questionModule = function () {
         for (var i = 0; i < arrayLength; i++) {
 
             var sentence = inputArray[i]
-            cons
+
 
             for (c = 0; c < sentence.length; c++) {
 
@@ -34,7 +32,6 @@ var questionModule = function () {
                 }
 
             }
-            console.log("Question got to api bit");
             var options = {
                 url: 'https://api.textrazor.com/',
                 'method': 'POST',
@@ -45,8 +42,9 @@ var questionModule = function () {
                 }
 
             };
+
             request(options, function (error, response, body) {
-                console.log("RazorText reply :: " + body)
+                console.log("TextRazer reply :: " + JSON.parse(body));
             });
         }
 
