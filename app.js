@@ -13,7 +13,7 @@ var question = require('./question.js');
 // Instanciating External Refresh Packages
 var examBoardModule = new examBoard();
 var convertModule = new convert();
-//var researchModule = new research();
+var researchModule = new research();
 var questionModule = new question();
 
 // Creating Express.JS Web Server
@@ -49,6 +49,10 @@ app.get("/sandpit", function (req, res) {
     // Login Stuff
     var username = "OliCallaghan";
     var examboard = "CIE";
+    
+    researchModule.researchTopic("structure of atoms", "", function(output) {
+        res.send(output);
+    });
 });
 
 // Initialising the Express.JS Web Server to Listen on Port 3000
