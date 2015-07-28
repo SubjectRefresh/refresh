@@ -1,10 +1,8 @@
+var pdflist = require("./pdflist.js");
 var request = require("request");
 var cheerio = require("cheerio");
 
-Array.prototype.last = function() {
-    return this[this.length - 1];
-}
-
+/* from pdflist.js */
 function collectURL(number, callback) { // returns an array of the links and numbers for each syllabus
   // PLEASE PASS <number> AS A STRING!
     var link = [];
@@ -31,3 +29,31 @@ function collectURL(number, callback) { // returns an array of the links and num
         }
     });
 }
+
+function doPDFConversion() {
+	collectURL("0600", function(pdf_url){ // grab the url for the based on number
+		request(pdf_url, function(err, res, body){ // grab the PDF from the url
+			var pdftohtml = require('pdftohtmljs'), converter = new pdftohtml(body, "sample.html"); // make a PDF object
+
+			converter.preset('default');
+
+			converter.success(function() {
+				console.log("Conversion done");
+			});
+
+			converter.error(function(error) {
+				console.log("Conversion error: " + error);
+			});
+
+			converter.progress(function(ret) {
+				console.log((ret.current*100.0)/ret.total + " %");
+			});
+
+			converter.convert();
+		});
+	});
+};
+
+doPDFConversion();
+
+//module.exports = PDFModule;
