@@ -1,6 +1,7 @@
 var pdflist = require("./pdflist.js");
 var request = require("request");
 var cheerio = require("cheerio");
+var fs = require("fs");
 
 /* from pdflist.js */
 function collectURL(number, callback) { // returns an array of the links and numbers for each syllabus
@@ -32,8 +33,15 @@ function collectURL(number, callback) { // returns an array of the links and num
 
 function doPDFConversion() {
 	collectURL("0600", function(pdf_url){ // grab the url for the based on number
+			console.log(pdf_url);
+		
 		request(pdf_url, function(err, res, body){ // grab the PDF from the url
-			var pdftohtml = require('pdftohtmljs'), converter = new pdftohtml(body, "./sample.html"); // make a PDF object
+			fs.writeFile("html.html",body,function(err){
+				if (err){
+					throw err;
+				}
+			});
+			var pdftohtml = require('pdftohtmljs'), converter = new pdftohtml("./html.html", "./sample.html"); // make a PDF object
 
 			converter.preset('default');
 
