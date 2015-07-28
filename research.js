@@ -2,6 +2,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var bing = require('node-bing-api')({ accKey: "InGGbJ6KRh/VpRJgiQLn1dwXms5Od8n8k9KGbTBdjb4" });
 var fs = require('fs');
+var natural = require("natural");
 
 var researchModule = function() {
     var self = this;
@@ -24,9 +25,15 @@ var researchModule = function() {
                         callback(output);
                     }
                 });
+    self.researchTopic = function(topic, commandWord) {
+        var topicURL = ("https://www.google.co.uk/webhp?hl=en#hl=en&q=" + topic.replace(" ", "+"));
+        request(topicURL, function(err, res, body) {
+            if (!err && res.statusCode == 200) {
+                console.log(body);
             }
         });
     };
 }
 
-module.exports = researchModule;
+module.exports = researchModule; 
+} 
