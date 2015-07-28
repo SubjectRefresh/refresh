@@ -25,6 +25,7 @@ console.log("APP.JS: ".bold + " Successfully Instantiated Packages".green);
 
 // Creating Express.JS Web Server
 var app = express();
+console.log("APP.JS: ".bold + " Successfully Created Express.JS Web Server".green);
 
 
 // Initialising Middleware
@@ -33,9 +34,13 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
+console.log("APP.JS: ".bold + " Successfully Initialised Middleware".green);
+
 
 // Creating Static Public Folder
 app.use(express.static('public'));
+console.log("APP.JS: ".bold + " Successfully Public Folder".green);
+
 
 
 // App Routes
@@ -52,6 +57,8 @@ app.post("/dashboard", function (req, res) {
     // Paste this inside your callback
     // Template Engine Stuff Goes Here
 });
+console.log("APP.JS: ".bold + " Successfully Created App Route".green);
+
 
 app.get("/sandpit", function (req, res) {
     // Login Stuff
@@ -62,6 +69,8 @@ app.get("/sandpit", function (req, res) {
         res.send(output);
     });
 });
+console.log("APP.JS: ".bold + " Successfully Created Sandpit".green);
+
 
 // Initialising the Express.JS Web Server to Listen on Port 3000
 var server = app.listen(3000, function () {
@@ -72,3 +81,4 @@ var server = app.listen(3000, function () {
 
     console.log("Refresh Running at localhost:3000");
 });
+console.log("APP.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
