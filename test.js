@@ -32,17 +32,14 @@ function test(inputArray, callback) {
             }
 
         }
-
         request.post({
-            url: 'http://api.textrazor.com',
+            url: 'https://api.textrazor.com',
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=phrases%2Cwords"
-        }, function (error, response, body) {
+        }, function (err, response, body) {
             console.log(body);
         });
     }
-
 }
-
 test(myStringArray, function (output) {
     console.log(output);
 });
