@@ -9,6 +9,7 @@ var convertModule = function () {
         var question = "";
         var outputContentWrapper = [];
         var output = []
+        var researchPoints = [];
 
         var arrayLength = inputArray.length;
 
@@ -22,35 +23,17 @@ var convertModule = function () {
 
                     var root = sentence.slice(c + 1, sentence.length)
                     var keyword = sentence.slice(0, c);
+                    researchPoints.push(root)
                     break;
 
                 }
 
             }
-            console.log("Keyword:--" + keyword + "--");
-
-            switch (keyword) {
-
-                case "State":
-
-                    console.log("Switch for State");
-                    var words = sentence.split(" ");
-                    words.shift();
-                    root = words;
-                    words.unshift("What", "are");
-                    words.push("?");
-                    console.log("QUESTION: " + words.join(" "));
-                    question = words.join(" ")
-                    outputContentWrapper.push(root);
-                    outputContentWrapper.push(question);
-                    output.push(outputContentWrapper);
-                    break;
-
-            }
-
         }
 
-        callback(output);
-    };
+    }
+
+    callback(researchPoints);
+};
 };
 module.exports = convertModule;
