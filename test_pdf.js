@@ -33,7 +33,7 @@ function collectURL(number, callback) { // returns an array of the links and num
 
 function doPDFConversion() {
 	collectURL("0600", function(pdf_url){ // grab the url for the based on number
-			console.log(pdf_url);
+		console.log(pdf_url);
 		
 		request(pdf_url, function(err, res, body){ // grab the PDF from the url
 			fs.writeFile("html.html",body,function(err){
@@ -63,5 +63,3 @@ function doPDFConversion() {
 };
 
 doPDFConversion();
-
-//module.exports = PDFModule;
