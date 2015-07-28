@@ -1,6 +1,8 @@
 # Refresh
 
-Refresh is a simplistic revision app that uses AI to ask questions for the user to answer.
+Refresh is a simplistic app that uses machine learning in order to improve the intelligence of the person doing it.
 
+### List of files
 
-********FINAL COPY**********
+APP.js - The main controller of the application, this controls all the other files.
+**To-Do: Add More of These**
