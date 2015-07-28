@@ -46,11 +46,31 @@ var questionModule = function () {
             request(options, function (error, response, body) {
                 console.log("TextRazer reply :: " + response.getBody());
             });
+
+            /* developius added this */
+            console.log("fetching...");
+            request.post('http://service.com/upload', {form: {
+                apiKey:'c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a',
+                text: utf8.encode(sentence),
+                extractors: "words"}
+            }, function (err, httpResponse, body){
+                if (httpResponse == 200 && !err){
+                    console.log(body);
+                }
+                else {
+                    throw err;
+                }
+            });
+            /* end of developius additions */
         }
 
     };
 
 };
+
+/* developius added this */
+questionModule.question(["random question"],function(){var x = null;}); // I've got no clue how to test the code I added above - help!
+/* end of developius additions */
 
 console.log("Question.JS:".bold + " Successfully finished question".green);
 module.exports = questionModule;
