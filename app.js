@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 var colors = require("colors");
+console.log('+==+ Reached the Start of App.JS +==+'.rainbow);
 console.log("App.JS: ".bold + " Successfully Imported Required Packages".green);
 
 
@@ -82,3 +83,4 @@ var server = app.listen(3000, function () {
     console.log("Refresh Running at localhost:3000");
 });
 console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
+console.log('+==+ Reached the Finish of App.JS +==+'.rainbow);

@@ -15,11 +15,19 @@ function collectURL(number, callback) { // returns an array of the links and num
     var link = [];
     var newArray = [];
     console.log("Pdf.JS: ".bold + " Successfully Defined Global Variables".green);
-    request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
+    request("http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/", function(error, response, body) {
         if (!error && response.statusCode == 200){
               console.log("Pdf.JS: ".bold + " Successfully Requested Website".green);
               $ = cheerio.load(body);
               $(".emphasized-link").find("li").find("a").each(function() { // loop through each link
+                // go to pdf link
+                request($(this).attr("href"), function(error2, response2, body2){
+                  $new = cheerio.load(body2);
+                  $new(".binaryLink").find("a").each(function(){
+                    var PDFLink = $new(this).attr("href");
+                    console.log(PDFLink);
+                  });
+                });
                   var selector = $(this).attr("href");
                   newArray.push({
                     "number": selector.split("-").last().replace("/",""), // number
