@@ -46,8 +46,8 @@ app.get("/sandpit", function(req, res) {
     var username = "OliCallaghan";
     var examboard = "CIE";
     
-    examBoardModule.examBoardCIE(function(output) {
-        res.send(output);
+    researchModule.researchTopic("properties of solids", "state", function(answer) {
+        res.send(answer);
     });
 });
 
