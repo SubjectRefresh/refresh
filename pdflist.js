@@ -13,33 +13,27 @@ function collectURL(number, callback) { // returns an array of the links and num
     var link = [];
     var newArray = [];
     request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            $ = cheerio.load(body);
-
-            data = $.html();
-
-            $(".emphasized-link").find("li").find("a").each(function() { // loop through each link
-                var selector = $(this).attr("href");
-                newArray.push(
-                  selector.split("-").last().replace("/",""), // number
-                   selector // link  
-                   );
-            });
-          for (i=0;i<newArray.length-1;i++){
-              if (newArray[i][0] == number){
-                link = newArray[i][1];
+        if (!error && response.statusCode == 200){
+              $ = cheerio.load(body);
+              $(".emphasized-link").find("li").find("a").each(function() { // loop through each link
+                  var selector = $(this).attr("href");
+                  newArray.push({
+                    "number": selector.split("-").last().replace("/",""), // number
+                    "link": selector // link
+                    });
+              });
+              for (i=0;i<newArray.length;i++){
+                if (String(newArray[i].number) == String(number)){
+                  link = newArray[i].link;
+                }
               }
-          }
-          
           newArray.splice(newArray.length-7, 7);
-          }
-      log(newArray);
-      if (callback != undefined) {
-        callback(link);
-      }
+        }
+        log(link);
+        if (callback !== undefined) {
+          callback(link);
+        }
     });
 }
 
-
-
-collectURL(0600);
+// collectURL("0413");
