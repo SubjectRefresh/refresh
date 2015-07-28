@@ -14,7 +14,7 @@ PDFCollector.collectURL("0600",function(){
 	});
 
 	converter.progress(function(ret) {
-		console.log ((ret.current*100.0)/ret.total + " %");
+		console.log((ret.current*100.0)/ret.total + " %");
 	});
 
 	converter.convert();
