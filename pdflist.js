@@ -48,4 +48,9 @@ function collectURL(number, callback) { // returns an array of the links and num
         }
     });
 }
+
+collectURL("0600",function(){
+  console.log(this);
+});
+
 console.log("Pdf.JS: ".bold + " Successfully Declared `collectURL`".green);
