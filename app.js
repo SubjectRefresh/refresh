@@ -78,7 +78,4 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
 
     console.log("Refresh Running at localhost:3000");
-    question(["This is a very interesting string"], function (output) {
-        console.log("Finished")
-    });
 });
