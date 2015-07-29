@@ -11,7 +11,11 @@ parseHTML = function(number) {
         console.log("Success!");
         $ = cheerio.load(data);
         var blarg = $("body").text();
-        console.log(blarg);
+        // console.log(blarg);
+
+        tokenizer = new natural.WordTokenizer();
+        blarg = tokenizer.tokenize(blarg);
+        console.log(blarg.join("`"));
 
 
     });
