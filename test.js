@@ -36,11 +36,16 @@ function test(inputArray, callback) {
         });
         var data = JSON.parse(res.getBody().toString('utf8'));
         var entities = data.response.entities;
-        for (g = 0; g < entities.length; g++) {
-            console.log(entities[g].entityEnglishId);
-            output.push("GCSE " + entities[g].entityEnglishId)
+        if (entities != undefined) {
+            for (g = 0; g < entities.length; g++) {
+                console.log(entities[g].entityEnglishId);
+                if (entities[g].entityEnglishId != "") {
+                    output.push("GCSE " + entities[g].entityEnglishId);
+                }
+            }
         }
     }
+    console.log(output);
     callback(output);
 }
 test(myStringArray, function (output) {
