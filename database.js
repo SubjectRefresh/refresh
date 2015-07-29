@@ -23,25 +23,29 @@ function AddUser(fName,lName,eMail,pass,uName){
 
 function login(eMail,pass){
     connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err,rows,fields){
-        if(err) throw err;
-        console.log(rows);
         var salt=rows[0]['Salt'];
-        var hash = rows[0]['Hash'];
-        var both = pass+salt;
-        console.log(rows[0]['Salt'])
-        console.log(both)
-        console.log(hash+salt)
-        if(both==hash+salt){
-            console.log('SUCCESSFUL LOGIN')
-        }
+        crypto.pbkdf2(pass, salt, 10000, 512,           function(err, derivedKey) {
+            
+            pass = derivedKey;
+            if(err) throw err;
+            console.log(rows);
+
+            var hash = rows[0]['Hash'];
+            var both = pass+salt;
+            console.log(rows[0]['Salt'])
+            console.log(both)
+            console.log(hash+salt)
+            if(both==pass){
+                console.log('SUCCESSFUL LOGIN')
+        };
+            
         connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail,pass], function(err,rows,fields){
         if(err) throw err;
         
     });
     });
-   
-    
-
     
 }
+                     }}
+
 login('jim','dave')
