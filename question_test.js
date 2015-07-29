@@ -18,6 +18,6 @@ function question(inputString, callback) {
     callback(output);
 }
 
-question("An atom is the smallest constituent unit of ordinary matter that has the properties of a chemical element. Every solid, liquid, gas, and plasma is made up of neutral or ionized atoms.", function (output) {
+question("Solid is one of the four fundamental states of matter ). It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a liquid , a solid object does not flow to take on the shape of its container , nor does it expand to fill the entire volume available to it like a gas does. The atoms in a solid are tightly bound to each other , either in a regular geometric lattice ) or irregularly )", function (output) {
     console.log(output);
 });
