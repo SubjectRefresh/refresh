@@ -3,6 +3,13 @@ var cheerio = require('cheerio');
 var fs = require('fs');
 var colors = require('colors');
 
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
+
 var examBoardModule = function() {
     var self = this;
 
