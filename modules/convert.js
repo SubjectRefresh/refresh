@@ -1,3 +1,5 @@
+var utf8 = require('utf8');
+var request = require('sync-request');
 var colors = require("colors");
 console.log("Convert.JS:".bold + " Successfully Imported Required Packages".blue);
 
@@ -5,6 +7,7 @@ var convertModule = function () {
     var self = this;
 
     self.covert = function (inputArray, callback) {
+
 
 
         var root = "";
@@ -17,7 +20,7 @@ var convertModule = function () {
         for (var i = 0; i < arrayLength; i++) {
 
             var sentence = inputArray[i]
-            global.ready = true;
+
 
             for (c = 0; c < sentence.length; c++) {
 
@@ -47,7 +50,7 @@ var convertModule = function () {
                             for (j = 0; j < data.response.sentences[0].words.length; j++) {
                                 if (data.response.sentences[0].words[j].parentPosition == undefined) {
                                     console.log(data.response.sentences[0].words[j].token);
-                                    output.push(data.response.sentences[0].words[j].token + " GCSE " + entities[g].entityEnglishId);
+                                    output.push(data.response.sentences[0].words[j].token + " " + entities[g].entityEnglishId + " GCSE");
                                 }
                             }
 

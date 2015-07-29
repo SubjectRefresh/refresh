@@ -34,7 +34,7 @@ function test(inputArray, callback) {
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=" + utf8.encode("entities,dependency-trees")
         });
         var data = JSON.parse(res.getBody().toString('utf8'));
-        console.log(res.getBody().toString('utf8'));
+        //console.log(res.getBody().toString('utf8'));
         console.log("Test.JS:".bold + " Successfully attempted communication with TextRazor".green);
         var entities = data.response.entities;
         if (entities != undefined) {
@@ -47,7 +47,7 @@ function test(inputArray, callback) {
                         for (j = 0; j < data.response.sentences[0].words.length; j++) {
                             if (data.response.sentences[0].words[j].parentPosition == undefined) {
                                 console.log(data.response.sentences[0].words[j].token);
-                                output.push("GCSE " + entities[g].entityEnglishId + " " + data.response.sentences[0].words[j].token);
+                                output.push(data.response.sentences[0].words[j].token + " " + entities[g].entityEnglishId + " GCSE");
                             }
                         }
 
@@ -59,6 +59,5 @@ function test(inputArray, callback) {
     callback(output);
 }
 test(myStringArray, function (output) {
-    console.log(["Subject", "Keyword", "Property of subject to be acted on by keyword"])
     console.log(output);
 });
