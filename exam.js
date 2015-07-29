@@ -3,7 +3,7 @@ var cheerio = require('cheerio');
 var fs = require('fs');
 var colors = require('colors');
 
-console.log("Exam.JS:".bold + " Successfully Imported Required Packages".green);
+//console.log("Exam.JS:".bold + " Successfully Imported Required Packages".green);
 
 var examBoardModule = function() {
     var self = this;
@@ -45,7 +45,7 @@ var examBoardModule = function() {
         return newArray;
     }
     //self.examBoardCIE(); //Temporary Use for Testing
-    console.log("Exam.JS:".bold + " Successfully Defined `examBoardCIE`".green);
+    //console.log("Exam.JS:".bold + " Is live".green);
 };
 
 module.exports = examBoardModule;

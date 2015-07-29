@@ -1,59 +1,106 @@
-var pdflist = require("./pdflist.js");
 var request = require("request");
 var cheerio = require("cheerio");
+var colors = require("colors");
+var fs = require("fs");
+var baseURL = "http://www.cie.org.uk";
 
 /* from pdflist.js */
-function collectURL(number, callback) { // returns an array of the links and numbers for each syllabus
-  // PLEASE PASS <number> AS A STRING!
-    var link = [];
+Array.prototype.last = function() {
+    return this[this.length - 1];
+}
+
+function collectURLs(number, callback) { // returns an array of the links and numbers for each syllabus
+    // PLEASE PASS <number> AS A STRING!
     var newArray = [];
-    request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
-        if (!error && response.statusCode == 200){
-              $ = cheerio.load(body);
-              $(".emphasized-link").find("li").find("a").each(function() { // loop through each link
-                  var selector = $(this).attr("href");
-                  newArray.push({
-                    "number": selector.split("-").last().replace("/",""), // number
-                    "link": selector // link
+    var links = {
+        syllabus: null,
+        pdfs: []
+    };
+    console.log("PDFList.js: ".bold + "Successfully Defined Global Variables".green);
+    request("http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/", function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log("PDFList.js: ".bold + "Successfully Requested Website For List of Subjects".green);
+            $ = cheerio.load(body);
+            $(".emphasized-link").find("li").each(function() { // loop through each link
+                var selector = $(this).find("a").attr("href");
+                newArray.push({
+                    "dom_object": $(this), // this is so we can access it later
+                    "number": selector.split("-").last().replace("/", ""), // number
+                    "link": baseURL + selector // link
+                });
+            });
+            for (i = 0; i < newArray.length; i++) {
+                if (String(newArray[i].number) == String(number)) { // we got a match for the subject
+                    links.syllabus = newArray[i].link;
+                    request(baseURL + newArray[i].dom_object.find("a").attr("href"), function(error2, response2, body2) {
+                    	console.log("PDFList.js: ".bold + "Successfully Requested Website For List Of PDFs".green);
+                        $new = cheerio.load(body2);
+                        $new(".binaryLink").find("a").each(function() {
+                            var PDFLink = $new(this).attr("href");
+                            links.pdfs.push(PDFLink); // is working
+                            console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
+                        });
+                        console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
                     });
-              });
-              for (i=0;i<newArray.length;i++){
-                if (String(newArray[i].number) == String(number)){
-                  link = newArray[i].link;
                 }
-              }
-          newArray.splice(newArray.length-7, 7);
+            }
         }
         if (callback !== undefined) {
-          callback(link);
+            callback(links);
         }
     });
 }
 
-function doPDFConversion() {
-	collectURL("0600", function(pdf_url){ // grab the url for the based on number
-		request(pdf_url, function(err, res, body){ // grab the PDF from the url
-			var pdftohtml = require('pdftohtmljs'), converter = new pdftohtml(body, "./sample.html"); // make a PDF object
+/* end from pdflist.js */
 
-			converter.preset('default');
+function doPDFConversions(number, callback) {
+    var status = [false, "creation of html from pdf failed"];
+    var urls_glob;
+    collectURLs(number, function(urls) { // grab the url for the subject based on number
+        urls_glob = urls;
+        if (urls.pdfs.length != 0){
+	        // this is getting run BEFORE collectURLs has finished and therefore urls is empty
+	        console.log("PDFList.js: ".bold + "collectURLs() gave us: ".green + String(urls.pdfs.length -1).blue + " PDFs".green);
+	    }
+	    else {
+	    	console.log("PDFList.js: ".bold + "collectURLs gave us: ".red + String(urls.pdfs.length).blue + " PDFs".red);
+	    }
+        for (i = 0; i < urls.pdfs.length - 1; i++) {
+            request(urls.pdfs[i], function(err, res, body) { // grab the PDF from the url
+                fs.writeFile("html.html", body, function(err) {
+                    if (err) {
+                        status = [false, err]
+                    }
+                });
+                var pdftohtml = require('pdftohtmljs'),
+                    converter = new pdftohtml("./html.html", "./sample.html"); // make a PDF object
 
-			converter.success(function() {
-				console.log("Conversion done");
-			});
+                converter.preset('default');
 
-			converter.error(function(error) {
-				console.log("Conversion error: " + error);
-			});
+                converter.success(function() {
+                    console.log("Conversion done");
+                    status = [true, "ok"];
+                });
 
-			converter.progress(function(ret) {
-				console.log((ret.current*100.0)/ret.total + " %");
-			});
+                converter.error(function(error) {
+                    console.log("Conversion error: " + error);
+                    status = [false, error];
+                });
 
-			converter.convert();
-		});
-	});
+                converter.progress(function(ret) {
+                    console.log((ret.current * 100.0) / ret.total + " %");
+                });
+
+                converter.convert();
+            });
+        }
+    });
+    if (callback !== undefined) {
+        callback(status, urls_glob);
+    }
 };
 
-doPDFConversion();
-
-//module.exports = PDFModule;
+doPDFConversions("0600", function(status, urls) {
+    if (status[0]) console.log(urls);
+    //else console.log(status);
+});
