@@ -4,8 +4,7 @@ var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 var colors = require("colors");
-console.log("App.JS: ".bold + " Successfully Imported Required Packages".green);
-
+console.log("App.JS: ".bold + " Successfully Imported Required Packages".blue);
 
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
@@ -15,8 +14,7 @@ var convert = require('./modules/convert.js');
 var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
-console.log("App.JS: ".bold + " Successfully Imported External Functions".green);
-
+console.log("App.JS: ".bold + " Successfully Imported External Functions".blue);
 
 // Instantiating External Refresh Packages
 var listModule = new list();
@@ -26,13 +24,11 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
-console.log("App.JS: ".bold + " Successfully Instantiated Packages".green);
-
+console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
-
+console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".blue);
 
 // Initialising Middleware
 app.use(bodyParser.json());
@@ -40,12 +36,13 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
-console.log("App.JS: ".bold + " Successfully Initialised Middleware".green);
+console.log("App.JS: ".bold + " Successfully Initialised Middleware".blue);
 
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".bold + " Successfully Created Public Folder".green);
+console.log("App.JS: ".bold + " Successfully Created Public Folder".blue);
+
 
 // App Routes
 app.get("/", function (req, res) {
@@ -54,35 +51,55 @@ app.get("/", function (req, res) {
     });
 });
 
+app.post("/register", function(req, res) {
+    var firstName = req.body.firstName;
+    var lastName = req.body.lastName;
+    var email = req.body.email;
+    var password = req.body.password;
+});
+
+app.get("/login", function(req, res) {
+    res.send("Login Page");
+});
+
+app.get("/dashboard", function(req, res) {
+    researchModule.researchTopic("properties of solids", "state", function(output) {
+        res.send(output);
+    });
+});
+
 app.post("/dashboard", function (req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+    
     // MySQL Shit
     // That Tom needs to do...
 
     // Paste this inside your callback
     // Template Engine Stuff Goes Here
 });
-//console.log("App.JS: ".bold + " Successfully Created App Route".green);
 
-
-app.get("/sandpit", function (req, res) {
-    // Login Stuff
-    var username = "OliCallaghan";
-    var examboard = "CIE";
-
-    researchModule.researchTopic("structure of atoms", "", function (output) {
-        res.send(output);
-    });
+app.post("/createSyllabus", function(req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+    var examBoard = req.body.examBoard;
+    var subject = req.body.subject;
+    var syllabus = req.body.syllabus;
 });
 
+app.get("/revise", function (req, res) {
+    // Login Stuff
+    var email = req.body.email;
+    var password = req.body.password;
+    var examBoard = req.body.examBoard;
+    var subject = req.body.subject;
+    var syllabus = req.body.syllabus;
+});
 
 // Initialising the Express.JS Web Server to Listen on Port 3000
 var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     
-    researchModule.researchTopic("properties of solids", "state", function(output) {
-        console.log(output);
-    });
-    
-    console.log("App.JS".bold + " Refresh Running at localhost:3000".green);
+    console.log("App.JS".bold + " Refresh Running at localhost:3000".blue);
 });

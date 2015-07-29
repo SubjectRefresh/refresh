@@ -1,7 +1,7 @@
 var utf8 = require('utf8');
 var request = require("request");
 var colors = require("colors");
-console.log("Question.JS:".bold + " Successfully Imported Required Packages".green);
+console.log("Question.JS:".bold + " Successfully Imported Required Packages".blue);
 
 var questionModule = function () {
     var self = this;
@@ -72,5 +72,5 @@ var questionModule = function () {
 //questionModule.question(["random question"],function(){var x = null;}); // I've got no clue how to test the code I added above - help!
 /* end of developius additions */
 
-console.log("Question.JS:".bold + " Successfully finished question".green);
+console.log("Question.JS:".bold + " Successfully finished question".blue);
 module.exports = questionModule;
