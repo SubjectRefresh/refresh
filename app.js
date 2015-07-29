@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var multer = require("multer");
 var fs = require("fs");
 var colors = require("colors");
-console.log("App.JS: ".bold + " Successfully Imported Required Packages".blue);
+console.log("App.JS: ".bold + " Successfully Imported Required Packages".rainbow);
 
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
@@ -14,7 +14,7 @@ var convert = require('./modules/convert.js');
 var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
-console.log("App.JS: ".bold + " Successfully Imported External Functions".blue);
+console.log("App.JS: ".bold + " Successfully Imported External Functions".rainbow);
 
 // Instantiating External Refresh Packages
 var listModule = new list();
@@ -24,11 +24,11 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
-console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
+console.log("App.JS: ".bold + " Successfully Instantiated Packages".rainbow);
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".blue);
+console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".rainbow);
 
 // Initialising Middleware
 app.use(bodyParser.json());
@@ -36,12 +36,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
-console.log("App.JS: ".bold + " Successfully Initialised Middleware".blue);
+console.log("App.JS: ".bold + " Successfully Initialised Middleware".rainbow);
 
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".bold + " Successfully Created Public Folder".blue);
+console.log("App.JS: ".bold + " Successfully Created Public Folder".rainbow);
 
 
 // App Routes
@@ -105,5 +105,5 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     
-    console.log("App.JS".bold + " Refresh Running at localhost:3000".blue);
+    console.log("App.JS".bold + " Refresh Running at localhost:3000".rainbow);
 });

@@ -23,34 +23,18 @@ var scrapeModule = function() {
     };
 
     self.parseHTML = function(number) {
-        fs.readFile('../temporary/CIE' + number + ".html", 'utf8', function(err, data) {
+        fs.readFile('./temporary/CIE' + number + ".html", 'utf8', function(err, data) {
             if (err) {
-                throw err;
+                return console.log(err);
             }
             console.log("Success!");
-            $ = cheerio.load(data);
-            var blarg = $("body").text();
-            // console.log(blarg);
+            $ = cheerio.load(body);
+            console.log($.text());
 
-            blarg = blarg.split("•");
-            //console.log(blarg);
-
-            var test = blarg;
-
-            for (i = 0; i < blarg.length; i++) {
-                if (blarg[i].indexOf("State the distinguishing properties of solids") > -1) {
-                    console.log(blarg[i]);
-                    break;
-                } else {
-                    console.log("Shifted!");
-                    test.shift()
-                }
-            }
-            console.log(test);
         });
     }
 
-    self.parseHTML("0600");
+    //self.parseHTML("0600");
 };
 
 module.exports = scrapeModule;
