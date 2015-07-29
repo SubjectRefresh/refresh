@@ -4,17 +4,20 @@ var colors = require("colors");
 
 function question(inputString, callback) {
     var output = "";
+    var entityPositions = [];
+    var entityPositionsContentWrapper = [];
     var res = request('POST', 'https://api.textrazor.com', {
-        var entityPositions = [];
-        var entityPositionsContentWrapper = [];
+
         body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(inputString) + "&extractors=" + utf8.encode("entities")
     });
     var data = JSON.parse(res.getBody().toString('utf8'));
-
-    console.log(res.getBody().toString('utf8'));
+    for (i = 0; i < data.response.entities.length; i++) {
+        entityPositions.push(data.response.entities[i].matchedText);
+    }
+    console.log(entityPositions);
     callback(output);
 }
 
-question("Atoms are very small objects", function (output) {
+question("An atom is the smallest constituent unit of ordinary matter that has the properties of a chemical element. Every solid, liquid, gas, and plasma is made up of neutral or ionized atoms.", function (output) {
     console.log(output);
 });
