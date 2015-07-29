@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<meta charset="UTF-8" />
+<title>Solid - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.26wmf15" />
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Solid" />
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Solid&amp;action=edit" />
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Solid&amp;action=edit" />
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png" />
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Solid" />
+<link rel="stylesheet" href="//en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.uls.nojs%7Cext.visualEditor.viewPageTarget.noscript%7Cext.wikihiero%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cmediawiki.ui.button%7Cmw.PopUpMediaTransform.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="//en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=site&amp;only=styles&amp;skin=vector&amp;*" />
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: global:resourceloader:filter:minify-css:7:de1ab5287c9076b96eedd3f97a84a7b6 */</style>
+<script src="//en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Solid","wgTitle":"Solid","wgCurRevisionId":673147719,"wgRevisionId":673147719,"wgArticleId":18993816,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Wikipedia move-protected pages","Wikipedia indefinitely move-protected pages","Wikipedia articles with GND identifiers","Phases of matter","Solids","Articles containing video clips"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Solid","wgRelevantArticleId":18993816,"wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":["sysop"],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wikilove-recipient":"","wikilove-anon":0,"wgPoweredByHHVM":true,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgGatherShouldShowTutorial":true,"wgGatherPageImageThumbnail":"//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Insulincrystals.jpg/100px-Insulincrystals.jpg","wgULSAcceptLanguageList":["pt-br"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q11438"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});
+/* cache key: global:resourceloader:filter:minify-js:7:b2706269305541eba923c165462b22c4 */
+}</script>
+<script>if(window.mw){
+mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mw.TMHGalleryHook.js","mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","mmv.head","ext.imageMetrics.head","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static/1.26wmf15/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Solid skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+<div id="mw-indicator-pp-default" class="mw-indicator"><a href="/wiki/Wikipedia:Protection_policy#move" title="This article is move-protected."><img alt="Page move-protected" src="//upload.wikimedia.org/wikipedia/en/thumb/5/58/Padlock-olive.svg/20px-Padlock-olive.svg.png" width="20" height="20" srcset="//upload.wikimedia.org/wikipedia/en/thumb/5/58/Padlock-olive.svg/30px-Padlock-olive.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/5/58/Padlock-olive.svg/40px-Padlock-olive.svg.png 2x" data-file-width="128" data-file-height="128" /></a></div>
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Solid</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hatnote">For other uses, see <a href="/wiki/Solid_(disambiguation)" title="Solid (disambiguation)" class="mw-disambig">Solid (disambiguation)</a>.</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Insulincrystals.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Insulincrystals.jpg/300px-Insulincrystals.jpg" width="300" height="210" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/8/8c/Insulincrystals.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/8/8c/Insulincrystals.jpg 2x" data-file-width="320" data-file-height="224" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Insulincrystals.jpg" class="internal" title="Enlarge"></a></div>
+Single crystalline form of solid <a href="/wiki/Insulin" title="Insulin">insulin</a>.</div>
+</div>
+</div>
+<table class="vertical-navbox nowraplinks plainlist" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%">
+<tr>
+<th style="padding:0.2em 0.4em 0.2em;font-size:145%;line-height:1.2em"><a href="/wiki/Continuum_mechanics" title="Continuum mechanics">Continuum mechanics</a></th>
+</tr>
+<tr>
+<td style="padding:0.2em 0 0.4em;display:block;margin-bottom:0.5em;"><a href="/wiki/File:BernoullisLawDerivationDiagram.svg" class="image" title="Diagram illustrating a derivation using Bernoulli's Law"><img alt="Diagram illustrating a derivation using Bernoulli's Law" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/BernoullisLawDerivationDiagram.svg/220px-BernoullisLawDerivationDiagram.svg.png" width="220" height="103" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/20/BernoullisLawDerivationDiagram.svg/330px-BernoullisLawDerivationDiagram.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/20/BernoullisLawDerivationDiagram.svg/440px-BernoullisLawDerivationDiagram.svg.png 2x" data-file-width="790" data-file-height="370" /></a></td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;background:#ddf; text-align:center;">Laws</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center">
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;border-collapse:collapse; border-spacing:0px; border:none; width:100%; margin:0px; font-size:100%; clear:none; float:none">
+<tr>
+<th style="padding:0.1em;font-style:italic;font-weight:normal;">Conservations</th>
+</tr>
+<tr>
+<td class="hlist" style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Conservation_of_energy" title="Conservation of energy">Energy</a></li>
+<li><a href="/wiki/Conservation_of_mass" title="Conservation of mass">Mass</a></li>
+<li><a href="/wiki/Momentum#Conservation" title="Momentum">Momentum</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em;font-style:italic;font-weight:normal;">Inequalities</th>
+</tr>
+<tr>
+<td class="hlist" style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Clausius%E2%80%93Duhem_inequality" title="Clausius–Duhem inequality">Clausius–Duhem (entropy)</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;background:#ddf; text-align:center;"><a href="/wiki/Solid_mechanics" title="Solid mechanics">Solid mechanics</a></div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center">
+<div class="hlist">
+<ul>
+<li><a href="/wiki/Stress_(mechanics)" title="Stress (mechanics)">Stress</a></li>
+<li><a href="/wiki/Deformation_(mechanics)" title="Deformation (mechanics)">Deformation</a></li>
+<li><a href="/wiki/Compatibility_(mechanics)" title="Compatibility (mechanics)">Compatibility</a></li>
+<li><a href="/wiki/Finite_strain_theory" title="Finite strain theory">Finite strain</a></li>
+<li><a href="/wiki/Infinitesimal_strain_theory" title="Infinitesimal strain theory">Infinitesimal strain</a></li>
+<li><a href="/wiki/Elasticity_(physics)" title="Elasticity (physics)">Elasticity</a>&#160;(<a href="/wiki/Linear_elasticity" title="Linear elasticity">linear</a>)</li>
+<li><a href="/wiki/Plasticity_(physics)" title="Plasticity (physics)">Plasticity</a></li>
+<li><a href="/wiki/Bending" title="Bending">Bending</a></li>
+<li><a href="/wiki/Hooke%27s_law" title="Hooke's law">Hooke's law</a></li>
+<li><a href="/wiki/Material_failure_theory" title="Material failure theory">Material failure theory</a></li>
+<li><a href="/wiki/Fracture_mechanics" title="Fracture mechanics">Fracture mechanics</a></li>
+</ul>
+</div>
+<ul>
+<li><a href="/wiki/Contact_mechanics" title="Contact mechanics">Contact mechanics</a>&#160;(<a href="/wiki/Frictional_contact_mechanics" title="Frictional contact mechanics">frictional</a>)</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;background:#ddf; text-align:center;"><a href="/wiki/Fluid_mechanics" title="Fluid mechanics">Fluid mechanics</a></div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center">
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;border-collapse:collapse; border-spacing:0px; border:none; width:100%; margin:0px; font-size:100%; clear:none; float:none">
+<tr>
+<th style="padding:0.1em;font-style:italic;"><a href="/wiki/Fluid" title="Fluid">Fluids</a></th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="wraplinks">
+<ul>
+<li><a href="/wiki/Fluid_statics" title="Fluid statics" class="mw-redirect">Statics</a>&#160;<b>·</b> <a href="/wiki/Fluid_dynamics" title="Fluid dynamics">Dynamics</a></li>
+<li><a href="/wiki/Archimedes%27_principle" title="Archimedes' principle">Archimedes' principle</a>&#160;<b>·</b> <a href="/wiki/Bernoulli%27s_principle" title="Bernoulli's principle">Bernoulli's principle</a></li>
+<li><a href="/wiki/Navier%E2%80%93Stokes_equations" title="Navier–Stokes equations">Navier–Stokes equations</a></li>
+<li><a href="/wiki/Hagen%E2%80%93Poiseuille_equation" title="Hagen–Poiseuille equation">Poiseuille equation</a>&#160;<b>·</b> <a href="/wiki/Pascal%27s_law" title="Pascal's law">Pascal's law</a></li>
+<li><a href="/wiki/Viscosity" title="Viscosity">Viscosity</a>&#160;(<a href="/wiki/Newtonian_fluid" title="Newtonian fluid">Newtonian</a>&#160;<b>·</b> <a href="/wiki/Non-Newtonian_fluid" title="Non-Newtonian fluid">non-Newtonian</a>)</li>
+<li><a href="/wiki/Buoyancy" title="Buoyancy">Buoyancy</a>&#160;<b>·</b> <a href="/wiki/Mixing_(process_engineering)" title="Mixing (process engineering)">Mixing</a>&#160;<b>·</b> <a href="/wiki/Pressure" title="Pressure">Pressure</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em;font-style:italic;"><a href="/wiki/Liquid" title="Liquid">Liquids</a></th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="hlist">
+<ul>
+<li><a href="/wiki/Surface_tension" title="Surface tension">Surface tension</a></li>
+<li><a href="/wiki/Capillary_action" title="Capillary action">Capillary action</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em;font-style:italic;"><a href="/wiki/Gas" title="Gas">Gases</a></th>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="hlist">
+<ul>
+<li><a href="/wiki/Atmosphere" title="Atmosphere">Atmosphere</a></li>
+<li><a href="/wiki/Boyle%27s_law" title="Boyle's law">Boyle's law</a></li>
+<li><a href="/wiki/Charles%27s_law" title="Charles's law">Charles's law</a></li>
+<li><a href="/wiki/Gay-Lussac%27s_law" title="Gay-Lussac's law">Gay-Lussac's law</a></li>
+<li><a href="/wiki/Combined_gas_law" title="Combined gas law">Combined gas law</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em;font-style:italic;"><a href="/wiki/Plasma_(physics)" title="Plasma (physics)">Plasma</a></th>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;background:#ddf; text-align:center;"><a href="/wiki/Rheology" title="Rheology">Rheology</a></div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center">
+<table class="vertical-navbox nowraplinks" style="float:right;clear:right;width:22.0em;margin:0 0 1.0em 1.0em;background:#f9f9f9;border:1px solid #aaa;padding:0.2em;border-spacing:0.4em 0;text-align:center;line-height:1.4em;font-size:88%;border-collapse:collapse; border-spacing:0px; border:none; width:100%; margin:0px; font-size:100%; clear:none; float:none">
+<tr>
+<td class="hlist" style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Viscoelasticity" title="Viscoelasticity">Viscoelasticity</a></li>
+<li><a href="/wiki/Rheometry" title="Rheometry">Rheometry</a></li>
+<li><a href="/wiki/Rheometer" title="Rheometer">Rheometer</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="padding:0.1em;font-style:italic;"><a href="/wiki/Smart_fluid" title="Smart fluid">Smart fluids</a></th>
+</tr>
+<tr>
+<td class="hlist" style="padding:0 0.1em 0.4em">
+<ul>
+<li><a href="/wiki/Magnetorheological_fluid" title="Magnetorheological fluid">Magnetorheological</a></li>
+<li><a href="/wiki/Electrorheological_fluid" title="Electrorheological fluid">Electrorheological</a></li>
+<li><a href="/wiki/Ferrofluid" title="Ferrofluid">Ferrofluids</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding:0 0.1em 0.4em">
+<div class="NavFrame collapsed" style="border:none;padding:0">
+<div class="NavHead" style="font-size:105%;background:transparent;text-align:left;background:#ddf; text-align:center;">Scientists</div>
+<div class="NavContent" style="font-size:105%;padding:0.2em 0 0.4em;text-align:center">
+<div class="hlist">
+<ul>
+<li><a href="/wiki/Daniel_Bernoulli" title="Daniel Bernoulli">Bernoulli</a></li>
+<li><a href="/wiki/Robert_Boyle" title="Robert Boyle">Boyle</a></li>
+<li><a href="/wiki/Augustin-Louis_Cauchy" title="Augustin-Louis Cauchy">Cauchy</a></li>
+<li><a href="/wiki/Jacques_Charles" title="Jacques Charles">Charles</a></li>
+<li><a href="/wiki/Leonhard_Euler" title="Leonhard Euler">Euler</a></li>
+<li><a href="/wiki/Joseph_Louis_Gay-Lussac" title="Joseph Louis Gay-Lussac">Gay-Lussac</a></li>
+<li><a href="/wiki/Robert_Hooke" title="Robert Hooke">Hooke</a></li>
+<li><a href="/wiki/Blaise_Pascal" title="Blaise Pascal">Pascal</a></li>
+<li><a href="/wiki/Isaac_Newton" title="Isaac Newton">Newton</a></li>
+<li><a href="/wiki/Claude-Louis_Navier" title="Claude-Louis Navier">Navier</a></li>
+<li><a href="/wiki/Sir_George_Stokes,_1st_Baronet" title="Sir George Stokes, 1st Baronet">Stokes</a></li>
+</ul>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="text-align:right;font-size:115%;padding-top: 0.6em;">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Continuum_mechanics" title="Template:Continuum mechanics"><span title="View this template">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Continuum_mechanics" title="Template talk:Continuum mechanics"><span title="Discuss this template">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Continuum_mechanics&amp;action=edit"><span title="Edit this template">e</span></a></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<p><b>Solid</b> is one of <a href="/wiki/State_of_matter#The_four_fundamental_states" title="State of matter">the four fundamental states of matter</a> (the others being <a href="/wiki/Liquid" title="Liquid">liquid</a>, <a href="/wiki/Gas" title="Gas">gas</a>, and <a href="/wiki/Plasma_(physics)" title="Plasma (physics)">plasma</a>). It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a <a href="/wiki/Liquid" title="Liquid">liquid</a>, a solid object does not flow to take on the shape of its container, nor does it expand to fill the entire volume available to it like a <a href="/wiki/Gas" title="Gas">gas</a> does. The atoms in a solid are tightly bound to each other, either in a regular geometric lattice (<a href="/wiki/Crystal" title="Crystal">crystalline solids</a>, which include <a href="/wiki/Metal" title="Metal">metals</a> and ordinary <a href="/wiki/Ice" title="Ice">ice</a>) or irregularly (an <a href="/wiki/Amorphous_solid" title="Amorphous solid">amorphous solid</a> such as common window <a href="/wiki/Glass" title="Glass">glass</a>).</p>
+<p>The branch of <a href="/wiki/Physics" title="Physics">physics</a> that deals with solids is called <a href="/wiki/Solid-state_physics" title="Solid-state physics">solid-state physics</a>, and is the main branch of <a href="/wiki/Condensed_matter_physics" title="Condensed matter physics">condensed matter physics</a> (which also includes liquids). <a href="/wiki/Materials_science" title="Materials science">Materials science</a> is primarily concerned with the physical and <a href="/wiki/Chemical" title="Chemical" class="mw-redirect">chemical</a> properties of solids. <a href="/wiki/Solid-state_chemistry" title="Solid-state chemistry">Solid-state chemistry</a> is especially concerned with the <a href="/wiki/Chemical_synthesis" title="Chemical synthesis">synthesis</a> of novel materials, as well as the science of identification and <a href="/wiki/Chemical_composition" title="Chemical composition">chemical composition</a>.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Microscopic_description"><span class="tocnumber">1</span> <span class="toctext">Microscopic description</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Classes_of_solids"><span class="tocnumber">2</span> <span class="toctext">Classes of solids</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Metals"><span class="tocnumber">2.1</span> <span class="toctext">Metals</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Minerals"><span class="tocnumber">2.2</span> <span class="toctext">Minerals</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Ceramics"><span class="tocnumber">2.3</span> <span class="toctext">Ceramics</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Glass_ceramics"><span class="tocnumber">2.4</span> <span class="toctext">Glass ceramics</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Organic_solids"><span class="tocnumber">2.5</span> <span class="toctext">Organic solids</span></a>
+<ul>
+<li class="toclevel-3 tocsection-8"><a href="#Wood"><span class="tocnumber">2.5.1</span> <span class="toctext">Wood</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Polymers"><span class="tocnumber">2.5.2</span> <span class="toctext">Polymers</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Composite_materials"><span class="tocnumber">2.6</span> <span class="toctext">Composite materials</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Semiconductors"><span class="tocnumber">2.7</span> <span class="toctext">Semiconductors</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Nanomaterials"><span class="tocnumber">2.8</span> <span class="toctext">Nanomaterials</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Biomaterials"><span class="tocnumber">2.9</span> <span class="toctext">Biomaterials</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Physical_properties"><span class="tocnumber">3</span> <span class="toctext">Physical properties</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Mechanical"><span class="tocnumber">3.1</span> <span class="toctext">Mechanical</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Thermal"><span class="tocnumber">3.2</span> <span class="toctext">Thermal</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Electrical"><span class="tocnumber">3.3</span> <span class="toctext">Electrical</span></a>
+<ul>
+<li class="toclevel-3 tocsection-18"><a href="#Electro-mechanical"><span class="tocnumber">3.3.1</span> <span class="toctext">Electro-mechanical</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href="#Optical"><span class="tocnumber">3.4</span> <span class="toctext">Optical</span></a>
+<ul>
+<li class="toclevel-3 tocsection-20"><a href="#Opto-electronic"><span class="tocnumber">3.4.1</span> <span class="toctext">Opto-electronic</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-21"><a href="#References"><span class="tocnumber">4</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#External_links"><span class="tocnumber">5</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Microscopic_description">Microscopic description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=1" title="Edit section: Microscopic description">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Fcc_lattice_4.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Fcc_lattice_4.jpg/220px-Fcc_lattice_4.jpg" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Fcc_lattice_4.jpg/330px-Fcc_lattice_4.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Fcc_lattice_4.jpg/440px-Fcc_lattice_4.jpg 2x" data-file-width="640" data-file-height="480" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Fcc_lattice_4.jpg" class="internal" title="Enlarge"></a></div>
+Model of closely packed atoms within a crystalline solid.</div>
+</div>
+</div>
+<p>The atoms, molecules or ions which make up solids may be arranged in an orderly repeating pattern, or irregularly. Materials whose constituents are arranged in a regular pattern are known as <a href="/wiki/Crystal" title="Crystal">crystals</a>. In some cases, the regular ordering can continue unbroken over a large scale, for example <a href="/wiki/Diamond" title="Diamond">diamonds</a>, where each diamond is a <a href="/wiki/Single_crystal" title="Single crystal">single crystal</a>. Solid objects that are large enough to see and handle are rarely composed of a single crystal, but instead are made of a large number of single crystals, known as <a href="/wiki/Crystallite" title="Crystallite">crystallites</a>, whose size can vary from a few nanometers to several meters. Such materials are called <a href="/wiki/Polycrystal" title="Polycrystal" class="mw-redirect">polycrystalline</a>. Almost all common metals, and many <a href="/wiki/Ceramic" title="Ceramic">ceramics</a>, are polycrystalline.</p>
+<div class="thumb tmulti tleft">
+<div class="thumbinner" style="width:408px;max-width:408px">
+<div class="tsingle" style="float:left;margin:1px;width:202px;max-width:202px">
+<div class="thumbimage"><a href="/wiki/File:Silica.svg" class="image"><img alt="Atoms of Si and O; each atom has the same number of bonds, but the overall arrangement of the atoms is random." src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Silica.svg/200px-Silica.svg.png" width="200" height="209" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Silica.svg/300px-Silica.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Silica.svg/400px-Silica.svg.png 2x" data-file-width="474" data-file-height="496" /></a></div>
+</div>
+<div class="tsingle" style="float:left;margin:1px;width:202px;max-width:202px">
+<div class="thumbimage"><a href="/wiki/File:SiO%C2%B2_Quartz.svg" class="image"><img alt="Regular hexagonal pattern of Si and O atoms, with a Si atom at each corner and the O atoms at the centre of each side." src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SiO%C2%B2_Quartz.svg/200px-SiO%C2%B2_Quartz.svg.png" width="200" height="110" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SiO%C2%B2_Quartz.svg/300px-SiO%C2%B2_Quartz.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SiO%C2%B2_Quartz.svg/400px-SiO%C2%B2_Quartz.svg.png 2x" data-file-width="287" data-file-height="158" /></a></div>
+</div>
+<div style="clear:left"></div>
+<div class="thumbcaption" style="clear:left;text-align:left;background-color:transparent">Schematic representation of a random-network glassy form (left) and ordered crystalline lattice (right) of identical chemical composition.</div>
+</div>
+</div>
+<p>In other materials, there is no long-range order in the position of the atoms. These solids are known as <a href="/wiki/Amorphous_solid" title="Amorphous solid">amorphous solids</a>; examples include <a href="/wiki/Polystyrene" title="Polystyrene">polystyrene</a> and <a href="/wiki/Glass" title="Glass">glass</a>.</p>
+<p>Whether a solid is crystalline or amorphous depends on the material involved, and the conditions in which it was formed. Solids which are formed by slow cooling will tend to be crystalline, while solids which are frozen rapidly are more likely to be amorphous. Likewise, the specific <a href="/wiki/Crystal_structure" title="Crystal structure">crystal structure</a> adopted by a crystalline solid depends on the material involved and on how it was formed.</p>
+<p>While many common objects, such as an ice cube or a coin, are chemically identical throughout, many other common materials comprise a number of different substances packed together. For example, a typical <a href="/wiki/Rock_(geology)" title="Rock (geology)">rock</a> is an aggregate of several different <a href="/wiki/Mineral" title="Mineral">minerals</a> and <a href="/wiki/Mineraloid" title="Mineraloid">mineraloids</a>, with no specific chemical composition. <a href="/wiki/Wood" title="Wood">Wood</a> is a natural organic material consisting primarily of <a href="/wiki/Cellulose" title="Cellulose">cellulose</a> fibers embedded in a matrix of organic <a href="/wiki/Lignin" title="Lignin">lignin</a>. In materials science, <a href="/wiki/Composite_material" title="Composite material">composites</a> of more than one constituent material can be designed to have desired properties.</p>
+<h2><span class="mw-headline" id="Classes_of_solids">Classes of solids</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=2" title="Edit section: Classes of solids">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="hatnote">Further information: <a href="/wiki/Bonding_in_solids" title="Bonding in solids">Bonding in solids</a></div>
+<p>The forces between the atoms in a solid can take a variety of forms. For example, a crystal of <a href="/wiki/Sodium_chloride" title="Sodium chloride">sodium chloride</a> (common salt) is made up of <a href="/wiki/Ion" title="Ion">ionic</a> <a href="/wiki/Sodium" title="Sodium">sodium</a> and <a href="/wiki/Chlorine" title="Chlorine">chlorine</a>, which are held together by <a href="/wiki/Ionic_bond" title="Ionic bond" class="mw-redirect">ionic bonds</a>. In diamond or silicon, the atoms share <a href="/wiki/Electron" title="Electron">electrons</a> and form <a href="/wiki/Covalent_bond" title="Covalent bond">covalent bonds</a>. In metals, electrons are shared in <a href="/wiki/Metallic_bond" title="Metallic bond" class="mw-redirect">metallic bonding</a>. Some solids, particularly most organic compounds, are held together with <a href="/wiki/Van_der_Waals_force" title="Van der Waals force">van der Waals forces</a> resulting from the polarization of the electronic charge cloud on each molecule. The dissimilarities between the types of solid result from the differences between their bonding.</p>
+<h3><span class="mw-headline" id="Metals">Metals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=3" title="Edit section: Metals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Metal" title="Metal">Metal</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Chrysler_Building_detail.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chrysler_Building_detail.jpg/220px-Chrysler_Building_detail.jpg" width="220" height="293" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chrysler_Building_detail.jpg/330px-Chrysler_Building_detail.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chrysler_Building_detail.jpg/440px-Chrysler_Building_detail.jpg 2x" data-file-width="768" data-file-height="1024" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Chrysler_Building_detail.jpg" class="internal" title="Enlarge"></a></div>
+The pinnacle of New York's <a href="/wiki/Chrysler_Building" title="Chrysler Building">Chrysler Building</a>, the world's tallest steel-supported brick building, is clad with stainless steel.</div>
+</div>
+</div>
+<p>Metals typically are strong, dense, and good conductors of both <a href="/wiki/Electrical_conduction" title="Electrical conduction" class="mw-redirect">electricity</a> and <a href="/wiki/Heat_conduction" title="Heat conduction" class="mw-redirect">heat</a>. The bulk of the elements in the <a href="/wiki/Periodic_table" title="Periodic table">periodic table</a>, those to the left of a diagonal line drawn from <a href="/wiki/Boron" title="Boron">boron</a> to <a href="/wiki/Polonium" title="Polonium">polonium</a>, are metals. Mixtures of two or more elements in which the major component is a metal are known as <a href="/wiki/Alloy" title="Alloy">alloys</a>.</p>
+<p>People have been using metals for a variety of purposes since prehistoric times. The <a href="/wiki/Strength_of_materials" title="Strength of materials">strength</a> and <a href="//en.wiktionary.org/wiki/reliability" class="extiw" title="wikt:reliability">reliability</a> of metals has led to their widespread use in <a href="/wiki/Construction" title="Construction">construction</a> of buildings and other structures, as well as in most vehicles, many appliances and tools, pipes, road signs and railroad tracks. <a href="/wiki/Iron" title="Iron">Iron</a> and <a href="/wiki/Aluminium" title="Aluminium">aluminium</a> are the two most commonly used structural metals, and they are also the most abundant metals in the <a href="/wiki/Crust_(geology)#Earth.27s_crust" title="Crust (geology)">Earth's crust</a>. Iron is most commonly used in the form of an alloy, <a href="/wiki/Steel" title="Steel">steel</a>, which contains up to 2.1% <a href="/wiki/Carbon" title="Carbon">carbon</a>, making it much harder than pure iron.</p>
+<p>Because metals are good conductors of electricity, they are valuable in <a href="/wiki/Electrical" title="Electrical" class="mw-redirect">electrical</a> appliances and for carrying an <a href="/wiki/Electric_current" title="Electric current">electric current</a> over long distances with little energy loss or dissipation. Thus, electrical power grids rely on metal cables to distribute electricity. Home electrical systems, for example, are wired with copper for its good conducting properties and easy machinability. The high <a href="/wiki/Thermal_conductivity" title="Thermal conductivity">thermal conductivity</a> of most metals also makes them useful for stovetop cooking utensils.</p>
+<p>The study of <a href="/wiki/Metal" title="Metal">metallic</a> elements and their <a href="/wiki/Alloy" title="Alloy">alloys</a> makes up a significant portion of the fields of solid-state chemistry, physics, materials science and engineering.</p>
+<p>Metallic solids are held together by a high density of shared, delocalized electrons, known as "<a href="/wiki/Metallic_bond" title="Metallic bond" class="mw-redirect">metallic bonding</a>". In a metal, atoms readily lose their outermost ("valence") <a href="/wiki/Electron" title="Electron">electrons</a>, forming positive <a href="/wiki/Ion" title="Ion">ions</a>. The free electrons are spread over the entire solid, which is held together firmly by electrostatic interactions between the ions and the electron cloud.<sup id="cite_ref-mortimer_1-0" class="reference"><a href="#cite_note-mortimer-1"><span>[</span>1<span>]</span></a></sup> The large number of <a href="/wiki/Free_electron_model" title="Free electron model">free electrons</a> gives metals their high values of electrical and thermal conductivity. The free electrons also prevent transmission of visible light, making metals opaque, shiny and <a href="/wiki/Lustrous" title="Lustrous" class="mw-redirect">lustrous</a>.</p>
+<p>More advanced models of metal properties consider the effect of the positive ions cores on the delocalised electrons. As most metals have crystalline structure, those ions are usually arranged into a periodic lattice. Mathematically, the potential of the ion cores can be treated by various models, the simplest being the <a href="/wiki/Nearly_free_electron_model" title="Nearly free electron model">nearly free electron model</a>.</p>
+<h3><span class="mw-headline" id="Minerals">Minerals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=4" title="Edit section: Minerals">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Different_minerals.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Different_minerals.jpg/220px-Different_minerals.jpg" width="220" height="169" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Different_minerals.jpg/330px-Different_minerals.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Different_minerals.jpg/440px-Different_minerals.jpg 2x" data-file-width="2000" data-file-height="1536" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Different_minerals.jpg" class="internal" title="Enlarge"></a></div>
+A collection of various minerals.</div>
+</div>
+</div>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Minerals" title="Minerals" class="mw-redirect">Minerals</a></div>
+<p><a href="/wiki/Mineral" title="Mineral">Minerals</a> are naturally occurring solids formed through various <a href="/wiki/Geology" title="Geology">geological</a> processes under high pressures. To be classified as a true mineral, a substance must have a <a href="/wiki/Crystal_structure" title="Crystal structure">crystal structure</a> with uniform physical properties throughout. Minerals range in composition from pure <a href="/wiki/Chemical_element" title="Chemical element">elements</a> and simple <a href="/wiki/Salt_(chemistry)" title="Salt (chemistry)">salts</a> to very complex <a href="/wiki/Silicate" title="Silicate">silicates</a> with thousands of known forms. In contrast, a <a href="/wiki/Rock_(geology)" title="Rock (geology)">rock</a> sample is a random aggregate of minerals and/or <a href="/wiki/Mineraloid" title="Mineraloid">mineraloids</a>, and has no specific chemical composition. The vast majority of the rocks of the <a href="/wiki/Earth%27s_crust" title="Earth's crust" class="mw-redirect">Earth's crust</a> consist of quartz (crystalline SiO<sub>2</sub>), feldspar, mica, <a href="/wiki/Chlorite_group" title="Chlorite group">chlorite</a>, <a href="/wiki/Kaolin" title="Kaolin" class="mw-redirect">kaolin</a>, calcite, <a href="/wiki/Epidote" title="Epidote">epidote</a>, <a href="/wiki/Olivine" title="Olivine">olivine</a>, <a href="/wiki/Augite" title="Augite">augite</a>, <a href="/wiki/Hornblende" title="Hornblende">hornblende</a>, <a href="/wiki/Magnetite" title="Magnetite">magnetite</a>, <a href="/wiki/Hematite" title="Hematite">hematite</a>, <a href="/wiki/Limonite" title="Limonite">limonite</a> and a few other minerals. Some minerals, like <a href="/wiki/Quartz" title="Quartz">quartz</a>, <a href="/wiki/Mica" title="Mica">mica</a> or <a href="/wiki/Feldspar" title="Feldspar">feldspar</a> are common, while others have been found in only a few locations worldwide. The largest group of minerals by far is the <a href="/wiki/Silicate_minerals" title="Silicate minerals">silicates</a> (most rocks are ≥95% silicates), which are composed largely of <a href="/wiki/Silicon" title="Silicon">silicon</a> and <a href="/wiki/Oxygen" title="Oxygen">oxygen</a>, with the addition of ions of <a href="/wiki/Aluminium" title="Aluminium">aluminium</a>, <a href="/wiki/Magnesium" title="Magnesium">magnesium</a>, <a href="/wiki/Iron" title="Iron">iron</a>, <a href="/wiki/Calcium" title="Calcium">calcium</a> and other metals.</p>
+<h3><span class="mw-headline" id="Ceramics">Ceramics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=5" title="Edit section: Ceramics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Si3N4bearings.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/6/64/Si3N4bearings.jpg/220px-Si3N4bearings.jpg" width="220" height="189" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/en/thumb/6/64/Si3N4bearings.jpg/330px-Si3N4bearings.jpg 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/6/64/Si3N4bearings.jpg/440px-Si3N4bearings.jpg 2x" data-file-width="528" data-file-height="454" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Si3N4bearings.jpg" class="internal" title="Enlarge"></a></div>
+Si<sub>3</sub>N<sub>4</sub> ceramic bearing parts</div>
+</div>
+</div>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Ceramic_engineering" title="Ceramic engineering">Ceramic engineering</a></div>
+<p>Ceramic solids are composed of inorganic compounds, usually <a href="/wiki/Oxide" title="Oxide">oxides</a> of chemical elements. They are chemically inert, and often are capable of withstanding chemical erosion that occurs in an acidic or caustic environment. Ceramics generally can withstand high temperatures ranging from 1000 to 1600&#160;°C (1800 to 3000&#160;°F). Exceptions include non-oxide inorganic materials, such as <a href="/wiki/Nitride" title="Nitride">nitrides</a>, <a href="/wiki/Boride" title="Boride">borides</a> and <a href="/wiki/Carbide" title="Carbide">carbides</a>.</p>
+<p>Traditional ceramic raw materials include <a href="/wiki/Clay" title="Clay">clay</a> minerals such as <a href="/wiki/Kaolinite" title="Kaolinite">kaolinite</a>, more recent materials include aluminium oxide (<a href="/wiki/Alumina" title="Alumina" class="mw-redirect">alumina</a>). The modern ceramic materials, which are classified as advanced ceramics, include <a href="/wiki/Silicon_carbide" title="Silicon carbide">silicon carbide</a> and <a href="/wiki/Tungsten_carbide" title="Tungsten carbide">tungsten carbide</a>. Both are valued for their abrasion resistance, and hence find use in such applications as the wear plates of crushing equipment in mining operations.</p>
+<p>Most ceramic materials, such as alumina and its compounds, are <a href="/wiki/Ceramics_processing" title="Ceramics processing" class="mw-redirect">formed</a> from fine powders, yielding a fine grained <a href="/wiki/Polycrystalline" title="Polycrystalline" class="mw-redirect">polycrystalline</a> <a href="/wiki/Microstructure" title="Microstructure">microstructure</a> which is filled with <a href="/wiki/Light_scattering" title="Light scattering">light scattering</a> centers comparable to the <a href="/wiki/Wavelength" title="Wavelength">wavelength</a> of <a href="/wiki/Visible_light" title="Visible light" class="mw-redirect">visible light</a>. Thus, they are generally opaque materials, as opposed to <a href="/wiki/Transparent_materials" title="Transparent materials" class="mw-redirect">transparent materials</a>. Recent nanoscale (e.g. <a href="/wiki/Sol-gel" title="Sol-gel">sol-gel</a>) technology has, however, made possible the production of polycrystalline <a href="/wiki/Transparent_ceramics" title="Transparent ceramics">transparent ceramics</a> such as transparent alumina and alumina compounds for such applications as high-power lasers. Advanced ceramics are also used in the medicine, electrical and electronics industries.</p>
+<p><a href="/wiki/Ceramic_engineering" title="Ceramic engineering">Ceramic engineering</a> is the science and technology of creating solid-state ceramic materials, parts and devices. This is done either by the action of heat, or, at lower temperatures, using <a href="/wiki/Precipitation_(chemistry)" title="Precipitation (chemistry)">precipitation reactions</a> from chemical solutions. The term includes the purification of raw materials, the study and production of the chemical compounds concerned, their formation into components, and the study of their structure, composition and properties.</p>
+<p>Mechanically speaking, ceramic materials are brittle, hard, strong in compression and weak in shearing and tension. <a href="/wiki/Brittle" title="Brittle" class="mw-redirect">Brittle</a> materials may exhibit significant <a href="/wiki/Tensile_strength" title="Tensile strength" class="mw-redirect">tensile strength</a> by supporting a static load. <a href="/wiki/Toughness" title="Toughness">Toughness</a> indicates how much energy a material can absorb before mechanical failure, while <a href="/wiki/Fracture_toughness" title="Fracture toughness">fracture toughness</a> (denoted K<sub>Ic</sub> ) describes the ability of a material with inherent <a href="/wiki/Crystallographic_defect" title="Crystallographic defect">microstructural flaws</a> to resist <a href="/wiki/Fracture" title="Fracture">fracture</a> via crack growth and propagation. If a material has a large value of <a href="/wiki/Fracture_toughness" title="Fracture toughness">fracture toughness</a>, the basic principles of <a href="/wiki/Fracture_mechanics" title="Fracture mechanics">fracture mechanics</a> suggest that it will most likely undergo ductile fracture. Brittle fracture is very characteristic of most <a href="/wiki/Ceramic_Engineering" title="Ceramic Engineering" class="mw-redirect">ceramic</a> and <a href="/wiki/Glass-ceramic" title="Glass-ceramic">glass-ceramic</a> materials which typically exhibit low (and inconsistent) values of K<sub>Ic</sub>.</p>
+<p>For an example of applications of ceramics, the extreme hardness of <a href="/wiki/Zirconium_dioxide" title="Zirconium dioxide">Zirconia</a> is utilized in the manufacture of knife blades, as well as other industrial cutting tools. Ceramics such as <a href="/wiki/Alumina" title="Alumina" class="mw-redirect">alumina</a>, <a href="/wiki/Boron_carbide" title="Boron carbide">boron carbide</a> and <a href="/wiki/Silicon_carbide" title="Silicon carbide">silicon carbide</a> have been used in <a href="/wiki/Bulletproof_vest" title="Bulletproof vest">bulletproof vests</a> to repel large-caliber <a href="/wiki/Rifle" title="Rifle">rifle</a> fire. <a href="/wiki/Silicon_nitride" title="Silicon nitride">Silicon nitride</a> parts are used in ceramic ball bearings, where their high hardness makes them wear resistant. In general, ceramics are also chemically resistant and can be used in wet environments where steel bearings would be susceptible to oxidation (or rust).</p>
+<p>As another example of ceramic applications, in the early 1980s, <a href="/wiki/Toyota" title="Toyota">Toyota</a> researched production of an <a href="/wiki/Adiabatic" title="Adiabatic" class="mw-redirect">adiabatic</a> ceramic engine with an <a href="/wiki/Operating_temperature" title="Operating temperature">operating temperature</a> of over 6000&#160;°F (3300&#160;°C). Ceramic engines do not require a cooling system and hence allow a major weight reduction and therefore greater fuel efficiency. In a conventional metallic engine, much of the energy released from the fuel must be dissipated as <a href="/wiki/Waste_heat" title="Waste heat">waste heat</a> in order to prevent a meltdown of the metallic parts. Work is also being done in developing ceramic parts for <a href="/wiki/Gas_turbine" title="Gas turbine">gas turbine</a> <a href="/wiki/Heat_engine" title="Heat engine">engines</a>. Turbine engines made with ceramics could operate more efficiently, giving aircraft greater range and payload for a set amount of fuel. However, such engines are not in production because the manufacturing of ceramic parts in the sufficient precision and durability is difficult and costly. Processing methods often result in a wide distribution of microscopic flaws which frequently play a detrimental role in the sintering process, resulting in the proliferation of cracks, and ultimate mechanical failure.</p>
+<h3><span class="mw-headline" id="Glass_ceramics">Glass ceramics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=6" title="Edit section: Glass ceramics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Glass-ceramic" title="Glass-ceramic">Glass-ceramic</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Glass_ceramic_cooktop.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Glass_ceramic_cooktop.jpg/220px-Glass_ceramic_cooktop.jpg" width="220" height="144" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/1/16/Glass_ceramic_cooktop.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/1/16/Glass_ceramic_cooktop.jpg 2x" data-file-width="320" data-file-height="209" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Glass_ceramic_cooktop.jpg" class="internal" title="Enlarge"></a></div>
+A high strength glass-ceramic cooktop with negligible <a href="/wiki/Thermal_expansion" title="Thermal expansion">thermal expansion</a>.</div>
+</div>
+</div>
+<p>Glass-ceramic materials share many properties with both non-crystalline glasses and <a href="/wiki/Crystalline" title="Crystalline" class="mw-redirect">crystalline</a> <a href="/wiki/Ceramic_materials" title="Ceramic materials">ceramics</a>. They are formed as a glass, and then partially crystallized by heat treatment, producing both <a href="/wiki/Amorphous" title="Amorphous" class="mw-redirect">amorphous</a> and <a href="/wiki/Crystalline" title="Crystalline" class="mw-redirect">crystalline</a> phases so that crystalline grains are embedded within a non-crystalline intergranular phase.</p>
+<p>Glass-ceramics are used to make cookware (originally known by the brand name <a href="/wiki/CorningWare" title="CorningWare">CorningWare</a>) and stovetops which have both high resistance to <a href="/wiki/Thermal_shock" title="Thermal shock">thermal shock</a> and extremely low <a href="/wiki/Permeability_(fluid)" title="Permeability (fluid)" class="mw-redirect">permeability</a> to liquids. The negative <a href="/wiki/Coefficient_of_thermal_expansion" title="Coefficient of thermal expansion" class="mw-redirect">coefficient of thermal expansion</a> of the crystalline ceramic phase can be balanced with the positive coefficient of the glassy phase. At a certain point (~70% crystalline) the glass-ceramic has a net coefficient of thermal expansion close to zero. This type of glass-ceramic exhibits excellent mechanical properties and can sustain repeated and quick temperature changes up to 1000&#160;°C.</p>
+<p>Glass ceramics may also occur naturally when <a href="/wiki/Lightning" title="Lightning">lightning</a> strikes the crystalline (e.g. quartz) grains found in most beach <a href="/wiki/Sand" title="Sand">sand</a>. In this case, the extreme and immediate heat of the lightning (~2500&#160;°C) creates hollow, branching rootlike structures called <a href="/wiki/Fulgurite" title="Fulgurite">fulgurite</a> via <a href="/wiki/Melting" title="Melting">fusion</a>.</p>
+<h3><span class="mw-headline" id="Organic_solids">Organic solids</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=7" title="Edit section: Organic solids">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Organic_chemistry" title="Organic chemistry">Organic chemistry</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:PaperAutofluorescence.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/PaperAutofluorescence.jpg/250px-PaperAutofluorescence.jpg" width="250" height="188" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/PaperAutofluorescence.jpg/375px-PaperAutofluorescence.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/PaperAutofluorescence.jpg/500px-PaperAutofluorescence.jpg 2x" data-file-width="6400" data-file-height="4800" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:PaperAutofluorescence.jpg" class="internal" title="Enlarge"></a></div>
+The individual wood pulp fibers in this sample are around 10 <a href="/wiki/Micrometre" title="Micrometre">µm</a> in diameter.</div>
+</div>
+</div>
+<p>Organic chemistry studies the structure, properties, composition, reactions, and preparation by synthesis (or other means) of chemical compounds of <a href="/wiki/Carbon" title="Carbon">carbon</a> and <a href="/wiki/Hydrogen" title="Hydrogen">hydrogen</a>, which may contain any number of other elements such as <a href="/wiki/Nitrogen" title="Nitrogen">nitrogen</a>, <a href="/wiki/Oxygen" title="Oxygen">oxygen</a> and the halogens: <a href="/wiki/Fluorine" title="Fluorine">fluorine</a>, <a href="/wiki/Chlorine" title="Chlorine">chlorine</a>, <a href="/wiki/Bromine" title="Bromine">bromine</a> and <a href="/wiki/Iodine" title="Iodine">iodine</a>. Some organic compounds may also contain the elements <a href="/wiki/Phosphorus" title="Phosphorus">phosphorus</a> or <a href="/wiki/Sulfur" title="Sulfur">sulfur</a>. Examples of organic <a href="/wiki/Solids" title="Solids" class="mw-redirect">solids</a> include wood, <a href="/wiki/Paraffin_wax" title="Paraffin wax">paraffin wax</a>, <a href="/wiki/Naphthalene" title="Naphthalene">naphthalene</a> and a wide variety of <a href="/wiki/Polymers" title="Polymers" class="mw-redirect">polymers</a> and plastics.</p>
+<h4><span class="mw-headline" id="Wood">Wood</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=8" title="Edit section: Wood">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Wood" title="Wood">Wood</a></div>
+<p><a href="/wiki/Wood" title="Wood">Wood</a> is a natural organic material consisting primarily of <a href="/wiki/Cellulose" title="Cellulose">cellulose</a> fibers embedded in a matrix of <a href="/wiki/Lignin" title="Lignin">lignin</a>. Regarding mechanical properties, the fibers are strong in tension, and the lignin matrix resists compression. Thus wood has been an important construction material since humans began building shelters and using boats. Wood to be used for construction work is commonly known as <i><a href="/wiki/Lumber" title="Lumber">lumber</a></i> or <i>timber</i>. In construction, wood is not only a structural material, but is also used to form the mould for <a href="/wiki/Concrete" title="Concrete">concrete</a>.</p>
+<p>Wood-based materials are also extensively used for packaging (e.g. cardboard) and <a href="/wiki/Paper" title="Paper">paper</a> which are both created from the refined pulp. The chemical pulping processes use a combination of high temperature and alkaline (kraft) or acidic (sulfite) chemicals to break the chemical bonds of the lignin before burning it out.</p>
+<h4><span class="mw-headline" id="Polymers">Polymers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=9" title="Edit section: Polymers">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg/220px-Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg" width="220" height="145" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg/330px-Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/82/Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg/440px-Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg 2x" data-file-width="496" data-file-height="326" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Selfassembly_Organic_Semiconductor_Trixler_LMU.jpg" class="internal" title="Enlarge"></a></div>
+STM image of self-assembled <a href="/wiki/Supramolecular" title="Supramolecular" class="mw-redirect">supramolecular</a> chains of the organic semiconductor <a href="/wiki/Quinacridone" title="Quinacridone">quinacridone</a> on <a href="/wiki/Graphite" title="Graphite">graphite</a>.</div>
+</div>
+</div>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Polymer" title="Polymer">Polymer</a></div>
+<p>One important property of carbon in organic chemistry is that it can form certain compounds, the individual molecules of which are capable of attaching themselves to one another, thereby forming a chain or a network. The process is called polymerization and the chains or networks polymers, while the source compound is a monomer. Two main groups of polymers exist: those artificially manufactured are referred to as industrial polymers or synthetic polymers (plastics) and those naturally occurring as biopolymers.</p>
+<p>Monomers can have various chemical substituents, or functional groups, which can affect the chemical properties of organic compounds, such as solubility and chemical reactivity, as well as the physical properties, such as hardness, density, mechanical or tensile strength, abrasion resistance, heat resistance, transparency, color, etc.. In proteins, these differences give the polymer the ability to adopt a biologically active conformation in preference to others (see <a href="/wiki/Self-assembly" title="Self-assembly">self-assembly</a>).</p>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:Plastic_household_items.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Plastic_household_items.jpg/250px-Plastic_household_items.jpg" width="250" height="166" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Plastic_household_items.jpg/375px-Plastic_household_items.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Plastic_household_items.jpg/500px-Plastic_household_items.jpg 2x" data-file-width="601" data-file-height="400" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Plastic_household_items.jpg" class="internal" title="Enlarge"></a></div>
+Household items made of various kinds of plastic.</div>
+</div>
+</div>
+<p>People have been using natural organic polymers for centuries in the form of waxes and <a href="/wiki/Shellac" title="Shellac">shellac</a> which is classified as a thermoplastic polymer. A plant polymer named <a href="/wiki/Cellulose" title="Cellulose">cellulose</a> provided the tensile strength for natural fibers and ropes, and by the early 19th century natural rubber was in widespread use. Polymers are the raw materials (the resins) used to make what are commonly called plastics. Plastics are the final product, created after one or more polymers or additives have been added to a resin during processing, which is then shaped into a final form. Polymers which have been around, and which are in current widespread use, include carbon-based <a href="/wiki/Polyethylene" title="Polyethylene">polyethylene</a>, <a href="/wiki/Polypropylene" title="Polypropylene">polypropylene</a>, <a href="/wiki/Polyvinyl_chloride" title="Polyvinyl chloride">polyvinyl chloride</a>, <a href="/wiki/Polystyrene" title="Polystyrene">polystyrene</a>, <a href="/wiki/Nylon" title="Nylon">nylons</a>, <a href="/wiki/Polyester" title="Polyester">polyesters</a>, <a href="/wiki/Acrylic_resin" title="Acrylic resin">acrylics</a>, <a href="/wiki/Polyurethane" title="Polyurethane">polyurethane</a>, and <a href="/wiki/Polycarbonate" title="Polycarbonate">polycarbonates</a>, and silicon-based <a href="/wiki/Silicone" title="Silicone">silicones</a>. Plastics are generally classified as "commodity", "specialty" and "engineering" plastics.</p>
+<h3><span class="mw-headline" id="Composite_materials">Composite materials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=10" title="Edit section: Composite materials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:Stsheat.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Stsheat.jpg/250px-Stsheat.jpg" width="250" height="156" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Stsheat.jpg/375px-Stsheat.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/f/fd/Stsheat.jpg 2x" data-file-width="480" data-file-height="300" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Stsheat.jpg" class="internal" title="Enlarge"></a></div>
+Simulation of the outside of the <a href="/wiki/Space_Shuttle" title="Space Shuttle">Space Shuttle</a> as it heats up to over 1500 °C during re-entry</div>
+</div>
+</div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:Kohlenstofffasermatte.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kohlenstofffasermatte.jpg/250px-Kohlenstofffasermatte.jpg" width="250" height="188" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kohlenstofffasermatte.jpg/375px-Kohlenstofffasermatte.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/44/Kohlenstofffasermatte.jpg/500px-Kohlenstofffasermatte.jpg 2x" data-file-width="1024" data-file-height="768" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Kohlenstofffasermatte.jpg" class="internal" title="Enlarge"></a></div>
+A cloth of woven <a href="/wiki/Carbon_fiber" title="Carbon fiber" class="mw-redirect">carbon fiber</a> <a href="/wiki/Fiber" title="Fiber">filaments</a>, a common element in <a href="/wiki/Composite_material" title="Composite material">composite materials</a></div>
+</div>
+</div>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Composite_material" title="Composite material">Composite material</a></div>
+<p><a href="/wiki/Composite_material" title="Composite material">Composite materials</a> contain two or more macroscopic phases, one of which is often ceramic. For example, a continuous matrix, and a dispersed phase of ceramic particles or fibers.</p>
+<p>Applications of composite materials range from structural elements such as steel-reinforced concrete, to the thermally insulative tiles which play a key and integral role in NASA's <a href="/wiki/Space_Shuttle_thermal_protection_system" title="Space Shuttle thermal protection system">Space Shuttle thermal protection system</a> which is used to protect the surface of the shuttle from the heat of re-entry into the Earth's atmosphere. One example is <a href="/wiki/Reinforced_Carbon-Carbon" title="Reinforced Carbon-Carbon" class="mw-redirect">Reinforced Carbon-Carbon</a> (RCC), the light gray material which withstands reentry temperatures up to 1510&#160;°C (2750&#160;°F) and protects the nose cap and leading edges of Space Shuttle's wings. RCC is a <a href="/wiki/Laminated" title="Laminated" class="mw-redirect">laminated</a> composite material made from <a href="/wiki/Graphite" title="Graphite">graphite</a> <a href="/wiki/Rayon" title="Rayon">rayon</a> cloth and impregnated with a <a href="/wiki/Phenolic_resin" title="Phenolic resin" class="mw-redirect">phenolic resin</a>. After curing at high temperature in an autoclave, the laminate is pyrolized to convert the resin to carbon, impregnated with <a href="/wiki/Furfural" title="Furfural">furfural</a> alcohol in a vacuum chamber, and cured/pyrolized to convert the furfural alcohol to carbon. In order to provide oxidation resistance for reuse capability, the outer layers of the RCC are converted to silicon carbide.</p>
+<p>Domestic examples of composites can be seen in the "plastic" casings of television sets, cell-phones and so on. These plastic casings are usually a composite made up of a thermoplastic matrix such as <a href="/wiki/Acrylonitrile_butadiene_styrene" title="Acrylonitrile butadiene styrene">acrylonitrile butadiene styrene</a> (ABS) in which <a href="/wiki/Calcium_carbonate" title="Calcium carbonate">calcium carbonate</a> chalk, <a href="/wiki/Talc" title="Talc">talc</a>, glass fibers or carbon fibers have been added for strength, bulk, or electro-static dispersion. These additions may be referred to as reinforcing fibers, or dispersants, depending on their purpose.</p>
+<p>Thus, the matrix material surrounds and supports the reinforcement materials by maintaining their relative positions. The reinforcements impart their special mechanical and physical properties to enhance the matrix properties. A synergism produces material properties unavailable from the individual constituent materials, while the wide variety of matrix and strengthening materials provides the designer with the choice of an optimum combination.</p>
+<h3><span class="mw-headline" id="Semiconductors">Semiconductors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=11" title="Edit section: Semiconductors">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Siliconchip_by_shapeshifter.png" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Siliconchip_by_shapeshifter.png/220px-Siliconchip_by_shapeshifter.png" width="220" height="154" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Siliconchip_by_shapeshifter.png/330px-Siliconchip_by_shapeshifter.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Siliconchip_by_shapeshifter.png/440px-Siliconchip_by_shapeshifter.png 2x" data-file-width="1276" data-file-height="891" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Siliconchip_by_shapeshifter.png" class="internal" title="Enlarge"></a></div>
+Semiconductor chip on crystalline silicon substrate.</div>
+</div>
+</div>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Semiconductors" title="Semiconductors" class="mw-redirect">Semiconductors</a></div>
+<p><a href="/wiki/Semiconductor" title="Semiconductor">Semiconductors</a> are materials that have an electrical resistivity (and conductivity) between that of metallic conductors and non-metallic insulators. They can be found in the <a href="/wiki/Periodic_table" title="Periodic table">periodic table</a> moving diagonally downward right from <a href="/wiki/Boron" title="Boron">boron</a>. They separate the electrical conductors (or metals, to the left) from the insulators (to the right).</p>
+<p>Devices made from semiconductor materials are the foundation of modern electronics, including radio, computers, telephones, etc. Semiconductor devices include the <a href="/wiki/Transistor" title="Transistor">transistor</a>, <a href="/wiki/Solar_cell" title="Solar cell">solar cells</a>, <a href="/wiki/Diode" title="Diode">diodes</a> and <a href="/wiki/Integrated_circuit" title="Integrated circuit">integrated circuits</a>. Solar photovoltaic panels are large semiconductor devices that directly convert light into electrical energy.</p>
+<p>In a metallic conductor, current is carried by the flow of electrons", but in semiconductors, current can be carried either by electrons or by the positively charged "<a href="/wiki/Electron_hole" title="Electron hole">holes</a>" in the <a href="/wiki/Electronic_band_structure" title="Electronic band structure">electronic band structure</a> of the material. Common semiconductor materials include silicon, <a href="/wiki/Germanium" title="Germanium">germanium</a> and <a href="/wiki/Gallium_arsenide" title="Gallium arsenide">gallium arsenide</a>.</p>
+<h3><span class="mw-headline" id="Nanomaterials">Nanomaterials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=12" title="Edit section: Nanomaterials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Nanotechnology" title="Nanotechnology">Nanotechnology</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Nano_Si_640x480.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nano_Si_640x480.jpg/220px-Nano_Si_640x480.jpg" width="220" height="174" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nano_Si_640x480.jpg/330px-Nano_Si_640x480.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nano_Si_640x480.jpg/440px-Nano_Si_640x480.jpg 2x" data-file-width="496" data-file-height="393" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Nano_Si_640x480.jpg" class="internal" title="Enlarge"></a></div>
+Bulk silicon (left) and silicon nanopowder (right)</div>
+</div>
+</div>
+<p>Many traditional solids exhibit different properties when they shrink to nanometer sizes. For example, nanoparticles of usually yellow gold and gray silicon are red in color; gold nanoparticles melt at much lower temperatures (~300&#160;°C for 2.5&#160;nm size) than the gold slabs (1064&#160;°C);<sup id="cite_ref-2" class="reference"><a href="#cite_note-2"><span>[</span>2<span>]</span></a></sup> and metallic nanowires are much stronger than the corresponding bulk metals.<sup id="cite_ref-pure_3-0" class="reference"><a href="#cite_note-pure-3"><span>[</span>3<span>]</span></a></sup><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup> The high surface area of nanoparticles makes them extremely attractive for certain applications in the field of energy. For example, platinum metals may be provide improvements as automotive fuel <a href="/wiki/Catalysis" title="Catalysis">catalysts</a>, as well as <a href="/wiki/Proton_exchange_membrane" title="Proton exchange membrane">proton exchange membrane</a> (PEM) fuel cells. Also, ceramic oxides (or cermets) of <a href="/wiki/Lanthanum" title="Lanthanum">lanthanum</a>, <a href="/wiki/Cerium" title="Cerium">cerium</a>, manganese and nickel are now being developed as <a href="/wiki/Solid_oxide_fuel_cell" title="Solid oxide fuel cell">solid oxide fuel cells</a> (SOFC). Lithium, <a href="/wiki/Lithium%E2%80%93titanate_battery" title="Lithium–titanate battery">lithium–titanate</a> and tantalum nanoparticles are being applied in lithium ion batteries. Silicon nanoparticles have been shown to dramatically expand the storage capacity of lithium ion batteries during the expansion/contraction cycle. Silicon nanowires cycle without significant degradation and present the potential for use in batteries with greatly expanded storage times. Silicon nanoparticles are also being used in new forms of solar energy cells. Thin film deposition of silicon <a href="/wiki/Quantum_dot" title="Quantum dot">quantum dots</a> on the polycrystalline silicon substrate of a photovoltaic (solar) cell increases voltage output as much as 60% by fluorescing the incoming light prior to capture. Here again, surface area of the nanoparticles (and thin films) plays a critical role in maximizing the amount of absorbed radiation.</p>
+<h3><span class="mw-headline" id="Biomaterials">Biomaterials</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=13" title="Edit section: Biomaterials">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Biomaterials" title="Biomaterials" class="mw-redirect">Biomaterials</a></div>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:Woven_bone_matrix.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Woven_bone_matrix.jpg/250px-Woven_bone_matrix.jpg" width="250" height="184" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Woven_bone_matrix.jpg/375px-Woven_bone_matrix.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/e/ec/Woven_bone_matrix.jpg 2x" data-file-width="398" data-file-height="293" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Woven_bone_matrix.jpg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Collagen" title="Collagen">Collagen</a> <a href="/wiki/Fibers" title="Fibers" class="mw-redirect">fibers</a> of woven <a href="/wiki/Bone" title="Bone">bone</a></div>
+</div>
+</div>
+<p>Many natural (or biological) materials are complex composites with remarkable mechanical properties. These complex structures, which have risen from hundreds of million years of evolution, are inspiring materials scientists in the design of novel materials. Their defining characteristics include structural hierarchy, multifunctionality and self-healing capability. Self-organization is also a fundamental feature of many biological materials and the manner by which the structures are assembled from the molecular level up. Thus, <a href="/wiki/Self-assembly" title="Self-assembly">self-assembly</a> is emerging as a new strategy in the chemical synthesis of high performance biomaterials.</p>
+<h2><span class="mw-headline" id="Physical_properties">Physical properties</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=14" title="Edit section: Physical properties">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Physical properties of elements and compounds which provide conclusive evidence of chemical composition include odor, color, volume, density (mass per unit volume), melting point, boiling point, heat capacity, physical form and shape at room temperature (solid, liquid or gas; cubic, trigonal crystals, etc.), hardness, porosity, index of refraction and many others. This section discusses some physical properties of materials in the solid state.</p>
+<h3><span class="mw-headline" id="Mechanical">Mechanical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=15" title="Edit section: Mechanical">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:302px;"><a href="/wiki/File:Torres1.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Torres1.jpg/300px-Torres1.jpg" width="300" height="225" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/36/Torres1.jpg/450px-Torres1.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/36/Torres1.jpg/600px-Torres1.jpg 2x" data-file-width="640" data-file-height="480" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Torres1.jpg" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Granite" title="Granite">Granite</a> rock formation in the <a href="/wiki/Chile" title="Chile">Chilean</a> <a href="/wiki/Patagonia" title="Patagonia">Patagonia</a>. Like most <a href="/wiki/Inorganic" title="Inorganic" class="mw-redirect">inorganic</a> <a href="/wiki/Minerals" title="Minerals" class="mw-redirect">minerals</a> formed by oxidation in the Earth's atmosphere, granite consists primarily of <a href="/wiki/Crystalline" title="Crystalline" class="mw-redirect">crystalline</a> <a href="/wiki/Silica" title="Silica" class="mw-redirect">silica</a> SiO<sub>2</sub> and <a href="/wiki/Alumina" title="Alumina" class="mw-redirect">alumina</a> Al<sub>2</sub>O<sub>3</sub>.</div>
+</div>
+</div>
+<p>The mechanical properties of materials describe characteristics such as their <a href="/wiki/Strength_of_materials" title="Strength of materials">strength</a> and resistance to deformation. For example, steel beams are used in construction because of their high strength, meaning that they neither break nor bend significantly under the applied load.</p>
+<p>Mechanical properties include <a href="/wiki/Elasticity_(physics)" title="Elasticity (physics)">elasticity</a> and <a href="/wiki/Plasticity_(physics)" title="Plasticity (physics)">plasticity</a>, <a href="/wiki/Tensile_strength" title="Tensile strength" class="mw-redirect">tensile strength</a>, <a href="/wiki/Compressive_strength" title="Compressive strength">compressive strength</a>, <a href="/wiki/Shear_strength" title="Shear strength">shear strength</a>, <a href="/wiki/Fracture_toughness" title="Fracture toughness">fracture toughness</a>, <a href="/wiki/Ductility" title="Ductility">ductility</a> (low in brittle materials), and <a href="/wiki/Indentation_hardness" title="Indentation hardness">indentation hardness</a>. <a href="/wiki/Solid_mechanics" title="Solid mechanics">Solid mechanics</a> is the study of the behavior of solid matter under external actions such as external forces and temperature changes.</p>
+<p>A solid does not exhibit macroscopic flow, as fluids do. Any degree of departure from its original shape is called <a href="/wiki/Deformation_(engineering)" title="Deformation (engineering)">deformation</a>. The proportion of deformation to original size is called strain. If the applied <a href="/wiki/Stress_(mechanics)" title="Stress (mechanics)">stress</a> is sufficiently low, almost all solid materials behave in such a way that the strain is directly proportional to the stress (<a href="/wiki/Hooke%27s_law" title="Hooke's law">Hooke's law</a>). The coefficient of the proportion is called the <a href="/wiki/Modulus_of_elasticity" title="Modulus of elasticity" class="mw-redirect">modulus of elasticity</a> or <a href="/wiki/Young%27s_modulus" title="Young's modulus">Young's modulus</a>. This region of deformation is known as the <a href="/wiki/Linear_elasticity" title="Linear elasticity">linearly elastic</a> region. Three models can describe how a solid responds to an applied stress:</p>
+<ul>
+<li><a href="/wiki/Elasticity_(physics)" title="Elasticity (physics)">Elasticity</a> – When an applied stress is removed, the material returns to its undeformed state.</li>
+<li><a href="/wiki/Viscoelasticity" title="Viscoelasticity">Viscoelasticity</a> – These are materials that behave elastically, but also have <a href="/wiki/Friction" title="Friction">damping</a>. When the applied stress is removed, work has to be done against the damping effects and is converted to heat within the material. This results in a <a href="/wiki/Hysteresis_loop" title="Hysteresis loop" class="mw-redirect">hysteresis loop</a> in the stress–strain curve. This implies that the mechanical response has a time-dependence.</li>
+<li><a href="/wiki/Plasticity_(physics)" title="Plasticity (physics)">Plasticity</a> – Materials that behave elastically generally do so when the applied stress is less than a yield value. When the stress is greater than the yield stress, the material behaves plastically and does not return to its previous state. That is, irreversible plastic deformation (or viscous flow) occurs after yield which is permanent.</li>
+</ul>
+<p>Many materials become weaker at high temperatures. Materials which retain their strength at high temperatures, called <a href="/wiki/Refractory" title="Refractory">refractory materials</a>, are useful for many purposes. For example, <a href="/wiki/Glass-ceramic" title="Glass-ceramic">glass-ceramics</a> have become extremely useful for countertop cooking, as they exhibit excellent mechanical properties and can sustain repeated and quick temperature changes up to 1000&#160;°C. In the aerospace industry, high performance materials used in the design of aircraft and/or spacecraft exteriors must have a high resistance to thermal shock. Thus, synthetic fibers spun out of organic polymers and polymer/ceramic/metal composite materials and fiber-reinforced polymers are now being designed with this purpose in mind.</p>
+<h3><span class="mw-headline" id="Thermal">Thermal</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=16" title="Edit section: Thermal">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;"><a href="/wiki/File:1D_normal_modes_(280_kB).gif" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9b/1D_normal_modes_%28280_kB%29.gif/250px-1D_normal_modes_%28280_kB%29.gif" width="250" height="250" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/9/9b/1D_normal_modes_%28280_kB%29.gif 1.5x, //upload.wikimedia.org/wikipedia/commons/9/9b/1D_normal_modes_%28280_kB%29.gif 2x" data-file-width="275" data-file-height="275" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:1D_normal_modes_(280_kB).gif" class="internal" title="Enlarge"></a></div>
+<a href="/wiki/Normal_modes" title="Normal modes" class="mw-redirect">Normal modes</a> of <a href="/wiki/Molecular_vibration" title="Molecular vibration">atomic vibration</a> in a <a href="/wiki/Crystalline" title="Crystalline" class="mw-redirect">crystalline</a> solid.</div>
+</div>
+</div>
+<p>Because solids have <a href="/wiki/Thermal_energy" title="Thermal energy">thermal energy</a>, their atoms vibrate about fixed mean positions within the ordered (or disordered) lattice. The spectrum of lattice vibrations in a crystalline or glassy network provides the foundation for the <a href="/wiki/Kinetic_theory_of_solids" title="Kinetic theory of solids" class="mw-redirect">kinetic theory of solids</a>. This motion occurs at the atomic level, and thus cannot be observed or detected without highly specialized equipment, such as that used in <a href="/wiki/Spectroscopy" title="Spectroscopy">spectroscopy</a>.</p>
+<p>Thermal properties of solids include <a href="/wiki/Thermal_conductivity" title="Thermal conductivity">thermal conductivity</a>, which is the property of a material that indicates its ability to <a href="/wiki/Conduction_(heat)" title="Conduction (heat)" class="mw-redirect">conduct heat</a>. Solids also have a <a href="/wiki/Specific_heat_capacity" title="Specific heat capacity" class="mw-redirect">specific heat capacity</a>, which is the capacity of a material to store energy in the form of heat (or thermal lattice vibrations).</p>
+<h3><span class="mw-headline" id="Electrical">Electrical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=17" title="Edit section: Electrical">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:252px;">
+<div id="mwe_player_0" class="PopUpMediaTransform" style="width:250px;" videopayload="&lt;div class=&quot;mediaContainer&quot; style=&quot;position:relative;display:block;width:342px&quot;&gt;&lt;video id=&quot;mwe_player_1&quot; style=&quot;width:342px;height:240px&quot; poster=&quot;//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flyingsuperconductor.ogg/341px--Flyingsuperconductor.ogg.jpg&quot; controls=&quot;&quot; preload=&quot;none&quot; autoplay=&quot;&quot; class=&quot;kskin&quot; data-durationhint=&quot;9.3257142857143&quot; data-startoffset=&quot;0&quot; data-mwtitle=&quot;Flyingsuperconductor.ogg&quot; data-mwprovider=&quot;wikimediacommons&quot;&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/f/f4/Flyingsuperconductor.ogg/Flyingsuperconductor.ogg.360p.webm&quot; type=&quot;video/webm; codecs=&amp;quot;vp8, vorbis&amp;quot;&quot; transcodekey=&quot;360p.webm&quot; data-title=&quot;Web streamable WebM (360P)&quot; data-shorttitle=&quot;WebM 360P&quot; data-width=&quot;342&quot; data-height=&quot;240&quot; data-bandwidth=&quot;500832&quot; data-framerate=&quot;29.97002997003&quot; /&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/transcoded/f/f4/Flyingsuperconductor.ogg/Flyingsuperconductor.ogg.160p.ogv&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; transcodekey=&quot;160p.ogv&quot; data-title=&quot;Low bandwidth Ogg video (160P)&quot; data-shorttitle=&quot;Ogg 160P&quot; data-width=&quot;228&quot; data-height=&quot;160&quot; data-bandwidth=&quot;175568&quot; data-framerate=&quot;15&quot; /&gt;&lt;source src=&quot;//upload.wikimedia.org/wikipedia/commons/f/f4/Flyingsuperconductor.ogg&quot; type=&quot;video/ogg; codecs=&amp;quot;theora, vorbis&amp;quot;&quot; data-title=&quot;Original Ogg file, 341 × 240 (316 kbps)&quot; data-shorttitle=&quot;Ogg source&quot; data-width=&quot;341&quot; data-height=&quot;240&quot; data-bandwidth=&quot;315639&quot; data-framerate=&quot;29.97002997003&quot; /&gt;Sorry, your browser either has JavaScript disabled or does not have any supported player.&lt;br /&gt;
+You can &lt;a href=&quot;//upload.wikimedia.org/wikipedia/commons/f/f4/Flyingsuperconductor.ogg&quot;&gt;download the clip&lt;/a&gt; or &lt;a href=&quot;https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TimedMediaHandler/Client_download&quot;&gt;download a player&lt;/a&gt; to play the clip in your browser.&lt;/video&gt;&lt;/div&gt;"><img alt="File:Flyingsuperconductor.ogg" style="width:250px;height:176px" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flyingsuperconductor.ogg/250px--Flyingsuperconductor.ogg.jpg" /><a href="//upload.wikimedia.org/wikipedia/commons/f/f4/Flyingsuperconductor.ogg" title="Play media" target="new"><span class="play-btn-large"><span class="mw-tmh-playtext">Play media</span></span></a></div>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Flyingsuperconductor.ogg" class="internal" title="Enlarge"></a></div>
+Video of superconducting levitation of <a href="/wiki/YBCO" title="YBCO" class="mw-redirect">YBCO</a></div>
+</div>
+</div>
+<p>Electrical properties include <a href="/wiki/Electrical_conductivity" title="Electrical conductivity" class="mw-redirect">conductivity</a>, resistance, <a href="/wiki/Electrical_impedance" title="Electrical impedance">impedance</a> and <a href="/wiki/Capacitance" title="Capacitance">capacitance</a>. Electrical conductors such as metals and alloys are contrasted with electrical insulators such as glasses and ceramics. <a href="/wiki/Semiconductors" title="Semiconductors" class="mw-redirect">Semiconductors</a> behave somewhere in between. Whereas conductivity in metals is caused by electrons, both electrons and holes contribute to current in semiconductors. Alternatively, ions support electric current in <a href="/wiki/Fast_ion_conductor" title="Fast ion conductor">ionic conductors</a>.</p>
+<p>Many materials also exhibit <a href="/wiki/Superconductivity" title="Superconductivity">superconductivity</a> at low temperatures; they include metallic elements such as tin and aluminium, various metallic alloys, some heavily doped semiconductors, and certain ceramics. The electrical resistivity of most electrical (metallic) conductors generally decreases gradually as the temperature is lowered, but remains finite. In a superconductor however, the resistance drops abruptly to zero when the material is cooled below its critical temperature. An electric current flowing in a loop of superconducting wire can persist indefinitely with no power source.</p>
+<p>A <a href="/wiki/Dielectric" title="Dielectric">dielectric</a>, or electrical insulator, is a substance that is highly resistant to the flow of electric current. A dielectric, such as plastic, tends to concentrate an applied electric field within itself which property is used in capacitors. A <a href="/wiki/Capacitor" title="Capacitor">capacitor</a> is an electrical device that can store energy in the electric field between a pair of closely spaced conductors (called 'plates'). When voltage is applied to the capacitor, electric charges of equal magnitude, but opposite polarity, build up on each plate. Capacitors are used in electrical circuits as energy-storage devices, as well as in electronic filters to differentiate between high-frequency and low-frequency signals.</p>
+<h4><span class="mw-headline" id="Electro-mechanical">Electro-mechanical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=18" title="Edit section: Electro-mechanical">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<p><a href="/wiki/Piezoelectricity" title="Piezoelectricity">Piezoelectricity</a> is the ability of crystals to generate a voltage in response to an applied mechanical stress. The piezoelectric effect is reversible in that piezoelectric crystals, when subjected to an externally applied voltage, can change shape by a small amount. Polymer materials like rubber, wool, hair, wood fiber, and silk often behave as <a href="/wiki/Electret" title="Electret">electrets</a>. For example, the polymer <a href="/wiki/Polyvinylidene_fluoride" title="Polyvinylidene fluoride">polyvinylidene fluoride</a> (PVDF) exhibits a piezoelectric response several times larger than the traditional piezoelectric material quartz (crystalline SiO<sub>2</sub>). The deformation (~0.1%) lends itself to useful technical applications such as high-voltage sources, loudspeakers, lasers, as well as chemical, biological, and acousto-optic sensors and/or transducers.</p>
+<h3><span class="mw-headline" id="Optical">Optical</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=19" title="Edit section: Optical">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Materials can <a href="/wiki/Transparent_materials" title="Transparent materials" class="mw-redirect">transmit</a> (e.g. glass) or reflect (e.g. metals) visible light.</p>
+<p>Many materials will transmit some wavelengths while blocking others. For example, window glass is transparent to <a href="/wiki/Visible_spectrum" title="Visible spectrum">visible light</a>, but much less so to most of the frequencies of <a href="/wiki/Ultraviolet" title="Ultraviolet">ultraviolet</a> light that cause <a href="/wiki/Sunburn" title="Sunburn">sunburn</a>. This property is used for frequency-selective optical filters, which can alter the color of incident light.</p>
+<p>For some purposes, both the optical and mechanical properties of a material can be of interest. For example, the sensors on an <a href="/wiki/Infrared_homing" title="Infrared homing">infrared homing</a> ("heat-seeking") missile must be protected by a cover which is transparent to <a href="/wiki/Infrared" title="Infrared">infrared radiation</a>. The current material of choice for high-speed infrared-guided missile domes is single-crystal <a href="/wiki/Sapphire" title="Sapphire">sapphire</a>. The optical transmission of sapphire does not actually extend to cover the entire mid-infrared range (3–5&#160;µm), but starts to drop off at wavelengths greater than approximately 4.5&#160;µm at room temperature. While the strength of sapphire is better than that of other available mid-range infrared dome materials at room temperature, it weakens above 600&#160;°C. A long-standing trade-off exists between optical bandpass and mechanical durability; new materials such as <a href="/wiki/Transparent_ceramics" title="Transparent ceramics">transparent ceramics</a> or optical nanocomposites may provide improved performance.</p>
+<p>Guided lightwave transmission involves the field of fiber optics and the ability of certain glasses to transmit, simultaneously and with low loss of intensity, a range of frequencies (multi-mode optical waveguides) with little interference between them. Optical waveguides are used as components in integrated optical circuits or as the transmission medium in optical communication systems.</p>
+<h4><span class="mw-headline" id="Opto-electronic">Opto-electronic</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=20" title="Edit section: Opto-electronic">edit</a><span class="mw-editsection-bracket">]</span></span></h4>
+<div class="hatnote relarticle mainarticle">Main article: <a href="/wiki/Solar_cell" title="Solar cell">Solar cell</a></div>
+<p>A solar cell or photovoltaic cell is a device that converts light energy into electrical energy. Fundamentally, the device needs to fulfill only two functions: photo-generation of charge carriers (electrons and holes) in a light-absorbing material, and separation of the charge carriers to a conductive contact that will transmit the electricity (simply put, carrying electrons off through a metal contact into an external circuit). This conversion is called the <a href="/wiki/Photoelectric_effect" title="Photoelectric effect">photoelectric effect</a>, and the field of research related to solar cells is known as photovoltaics.</p>
+<p>Solar cells have many applications. They have long been used in situations where electrical power from the grid is unavailable, such as in remote area power systems, Earth-orbiting satellites and space probes, handheld calculators, wrist watches, remote radiotelephones and water pumping applications. More recently, they are starting to be used in assemblies of solar modules (photovoltaic arrays) connected to the electricity grid through an inverter, that is not to act as a sole supply but as an additional electricity source.</p>
+<p>All solar cells require a light absorbing material contained within the cell structure to absorb photons and generate electrons via the photovoltaic effect. The materials used in solar cells tend to have the property of preferentially absorbing the wavelengths of solar light that reach the earth surface. However, some solar cells are optimized for light absorption beyond Earth's atmosphere as well.</p>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=21" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; -webkit-column-width: 30em; column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-mortimer-1"><span class="mw-cite-backlink"><b><a href="#cite_ref-mortimer_1-0">^</a></b></span> <span class="reference-text"><span class="citation book">Mortimer, Charles E. (1975). <i>Chemistry: A Conceptual Approach</i> (3rd ed.). New York:: D. Van Nostrad Company. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/0-442-25545-4" title="Special:BookSources/0-442-25545-4">0-442-25545-4</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASolid&amp;rft.aulast=Mortimer%2C+Charles+E.&amp;rft.au=Mortimer%2C+Charles+E.&amp;rft.btitle=Chemistry%3A+A+Conceptual+Approach&amp;rft.date=1975&amp;rft.edition=3rd&amp;rft.genre=book&amp;rft.isbn=0-442-25545-4&amp;rft.place=New+York%3A&amp;rft.pub=D.+Van+Nostrad+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-2">^</a></b></span> <span class="reference-text"><span class="citation journal">Buffat, Ph.; Borel, J.-P. (1976). "Size effect on the melting temperature of gold particles". <i>Physical Review A</i> <b>13</b> (6): 2287. <a href="/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="http://adsabs.harvard.edu/abs/1976PhRvA..13.2287B">1976PhRvA..13.2287B</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.1103%2FPhysRevA.13.2287">10.1103/PhysRevA.13.2287</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASolid&amp;rft.atitle=Size+effect+on+the+melting+temperature+of+gold+particles&amp;rft.au=Borel%2C+J.-P.&amp;rft.au=Buffat%2C+Ph.&amp;rft.aufirst=Ph.&amp;rft.aulast=Buffat&amp;rft.date=1976&amp;rft.genre=article&amp;rft_id=info%3Abibcode%2F1976PhRvA..13.2287B&amp;rft_id=info%3Adoi%2F10.1103%2FPhysRevA.13.2287&amp;rft.issue=6&amp;rft.jtitle=Physical+Review+A&amp;rft.pages=2287&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=13" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-pure-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-pure_3-0">^</a></b></span> <span class="reference-text"><span class="citation book">Walter H. Kohl (1995). <a rel="nofollow" class="external text" href="http://books.google.com/?id=-Ll6qjWB-RUC&amp;pg=PA164"><i>Handbook of materials and techniques for vacuum devices</i></a>. Springer. pp.&#160;164–167. <a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&#160;<a href="/wiki/Special:BookSources/1-56396-387-6" title="Special:BookSources/1-56396-387-6">1-56396-387-6</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASolid&amp;rft.aulast=Walter+H.+Kohl&amp;rft.au=Walter+H.+Kohl&amp;rft.btitle=Handbook+of+materials+and+techniques+for+vacuum+devices&amp;rft.date=1995&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fbooks.google.com%2F%3Fid%3D-Ll6qjWB-RUC%26pg%3DPA164&amp;rft.isbn=1-56396-387-6&amp;rft.pages=164-167&amp;rft.pub=Springer&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4">^</a></b></span> <span class="reference-text"><span class="citation journal">Shpak, Anatoly P; Kotrechko, Sergiy O; Mazilova, Tatjana I; Mikhailovskij, Igor M (2009). "Inherent tensile strength of molybdenum nanocrystals". <i>Science and Technology of Advanced Materials</i> <b>10</b> (4): 045004. <a href="/wiki/Bibcode" title="Bibcode">Bibcode</a>:<a rel="nofollow" class="external text" href="http://adsabs.harvard.edu/abs/2009STAdM..10d5004S">2009STAdM..10d5004S</a>. <a href="/wiki/Digital_object_identifier" title="Digital object identifier">doi</a>:<a rel="nofollow" class="external text" href="//dx.doi.org/10.1088%2F1468-6996%2F10%2F4%2F045004">10.1088/1468-6996/10/4/045004</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3ASolid&amp;rft.atitle=Inherent+tensile+strength+of+molybdenum+nanocrystals&amp;rft.aufirst=Anatoly+P&amp;rft.au=Kotrechko%2C+Sergiy+O&amp;rft.aulast=Shpak&amp;rft.au=Mazilova%2C+Tatjana+I&amp;rft.au=Mikhailovskij%2C+Igor+M&amp;rft.au=Shpak%2C+Anatoly+P&amp;rft.date=2009&amp;rft.genre=article&amp;rft_id=info%3Abibcode%2F2009STAdM..10d5004S&amp;rft_id=info%3Adoi%2F10.1088%2F1468-6996%2F10%2F4%2F045004&amp;rft.issue=4&amp;rft.jtitle=Science+and+Technology+of+Advanced+Materials&amp;rft.pages=045004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.volume=10" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Solid&amp;action=edit&amp;section=22" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="http://www.solidswiki.com">Wiki on equipment for handling and processing Bulk Solids</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:States_of_matter" title="Template:States of matter"><span title="View this template" style=";;background:none transparent;border:none;">v</span></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:States_of_matter" title="Template talk:States of matter"><span title="Discuss this template" style=";;background:none transparent;border:none;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:States_of_matter&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:114%"><a href="/wiki/State_of_matter" title="State of matter">States of matter</a></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">State</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><strong class="selflink">Solid</strong></li>
+<li><a href="/wiki/Liquid" title="Liquid">Liquid</a></li>
+<li><a href="/wiki/Gas" title="Gas">Gas</a> / <a href="/wiki/Vapor" title="Vapor">Vapor</a></li>
+<li><a href="/wiki/Plasma_(physics)" title="Plasma (physics)">Plasma</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="15" style="width:0%;padding:0px 0px 0px 2px">
+<div><a href="/wiki/File:Phase_change_-_en.svg" class="image"><img alt="Phase change - en.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Phase_change_-_en.svg/250px-Phase_change_-_en.svg.png" width="250" height="266" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Phase_change_-_en.svg/375px-Phase_change_-_en.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Phase_change_-_en.svg/500px-Phase_change_-_en.svg.png 2x" data-file-width="493" data-file-height="524" /></a></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Low energy</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bose%E2%80%93Einstein_condensate" title="Bose–Einstein condensate">Bose–Einstein condensate</a></li>
+<li><a href="/wiki/Fermionic_condensate" title="Fermionic condensate">Fermionic condensate</a></li>
+<li><a href="/wiki/Degenerate_matter" title="Degenerate matter">Degenerate matter</a></li>
+<li><a href="/wiki/Quantum_Hall_effect" title="Quantum Hall effect">Quantum Hall</a></li>
+<li><a href="/wiki/Rydberg_matter" title="Rydberg matter">Rydberg matter</a></li>
+<li><a href="/wiki/Strange_matter" title="Strange matter">Strange matter</a></li>
+<li><a href="/wiki/Superfluidity" title="Superfluidity">Superfluid</a></li>
+<li><a href="/wiki/Supersolid" title="Supersolid">Supersolid</a></li>
+<li><a href="/wiki/Photonic_matter" title="Photonic matter" class="mw-redirect">Photonic matter</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">High energy</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/QCD_matter" title="QCD matter">QCD matter</a></li>
+<li><a href="/wiki/Quark%E2%80%93gluon_plasma" title="Quark–gluon plasma">Quark–gluon plasma</a></li>
+<li><a href="/wiki/Supercritical_fluid" title="Supercritical fluid">Supercritical fluid</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Other states</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Colloid" title="Colloid">Colloid</a></li>
+<li><a href="/wiki/Glass" title="Glass">Glass</a></li>
+<li><a href="/wiki/Liquid_crystal" title="Liquid crystal">Liquid crystal</a></li>
+<li><a href="/wiki/Quantum_spin_liquid" title="Quantum spin liquid">Quantum spin liquid</a></li>
+<li>Magnetically ordered
+<ul>
+<li><a href="/wiki/Antiferromagnetism" title="Antiferromagnetism">Antiferromagnet</a></li>
+<li><a href="/wiki/Ferrimagnetism" title="Ferrimagnetism">Ferrimagnet</a></li>
+<li><a href="/wiki/Ferromagnetism" title="Ferromagnetism">Ferromagnet</a></li>
+</ul>
+</li>
+<li><a href="/wiki/String-net_liquid" title="String-net liquid">String-net liquid</a></li>
+<li><a href="/wiki/Superglass" title="Superglass">Superglass</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Phase_transition" title="Phase transition">Transitions</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Boiling" title="Boiling">Boiling</a></li>
+<li><a href="/wiki/Boiling_point" title="Boiling point">Boiling point</a></li>
+<li><a href="/wiki/Condensation" title="Condensation">Condensation</a></li>
+<li><a href="/wiki/Critical_line_(thermodynamics)" title="Critical line (thermodynamics)">Critical line</a></li>
+<li><a href="/wiki/Critical_point_(thermodynamics)" title="Critical point (thermodynamics)">Critical point</a></li>
+<li><a href="/wiki/Crystallization" title="Crystallization">Crystallization</a></li>
+<li><a href="/wiki/Deposition_(phase_transition)" title="Deposition (phase transition)">Deposition</a></li>
+<li><a href="/wiki/Evaporation" title="Evaporation">Evaporation</a></li>
+<li><a href="/wiki/Flash_evaporation" title="Flash evaporation">Flash evaporation</a></li>
+<li><a href="/wiki/Freezing" title="Freezing">Freezing</a></li>
+<li><a href="/wiki/Chemical_ionization" title="Chemical ionization">Chemical ionization</a></li>
+<li><a href="/wiki/Ionization" title="Ionization">Ionization</a></li>
+<li><a href="/wiki/Lambda_point" title="Lambda point">Lambda point</a></li>
+<li><a href="/wiki/Melting" title="Melting">Melting</a></li>
+<li><a href="/wiki/Melting_point" title="Melting point">Melting point</a></li>
+<li><a href="/wiki/Plasma_recombination" title="Plasma recombination">Recombination</a></li>
+<li><a href="/wiki/Regelation" title="Regelation">Regelation</a></li>
+<li><a href="/wiki/Vapor%E2%80%93liquid_equilibrium" title="Vapor–liquid equilibrium">Saturated fluid</a></li>
+<li><a href="/wiki/Sublimation_(phase_transition)" title="Sublimation (phase transition)">Sublimation</a></li>
+<li><a href="/wiki/Supercooling" title="Supercooling">Supercooling</a></li>
+<li><a href="/wiki/Triple_point" title="Triple point">Triple point</a></li>
+<li><a href="/wiki/Vaporization" title="Vaporization">Vaporization</a></li>
+<li><a href="/wiki/Vitrification" title="Vitrification">Vitrification</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Quantities</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Enthalpy_of_fusion" title="Enthalpy of fusion">Enthalpy of fusion</a></li>
+<li><a href="/wiki/Enthalpy_of_sublimation" title="Enthalpy of sublimation">Enthalpy of sublimation</a></li>
+<li><a href="/wiki/Enthalpy_of_vaporization" title="Enthalpy of vaporization">Enthalpy of vaporization</a></li>
+<li><a href="/wiki/Latent_heat" title="Latent heat">Latent heat</a></li>
+<li><a href="/wiki/Latent_internal_energy" title="Latent internal energy">Latent internal energy</a></li>
+<li><a href="/wiki/Trouton%27s_ratio" title="Trouton's ratio">Trouton's ratio</a></li>
+<li><a href="/wiki/Volatility_(chemistry)" title="Volatility (chemistry)">Volatility</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Concepts</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Binodal" title="Binodal">Binodal</a></li>
+<li><a href="/wiki/Compressed_fluid" title="Compressed fluid">Compressed fluid</a></li>
+<li><a href="/wiki/Cooling_curve" title="Cooling curve">Cooling curve</a></li>
+<li><a href="/wiki/Equation_of_state" title="Equation of state">Equation of state</a></li>
+<li><a href="/wiki/Leidenfrost_effect" title="Leidenfrost effect">Leidenfrost effect</a></li>
+<li><a href="/wiki/Mpemba_effect" title="Mpemba effect">Mpemba effect</a></li>
+<li><a href="/wiki/Order_and_disorder_(physics)" title="Order and disorder (physics)">Order and disorder (physics)</a></li>
+<li><a href="/wiki/Spinodal" title="Spinodal">Spinodal</a></li>
+<li><a href="/wiki/Superconductivity" title="Superconductivity">Superconductivity</a></li>
+<li><a href="/wiki/Superheated_water" title="Superheated water">Superheated vapor</a></li>
+<li><a href="/wiki/Superheating" title="Superheating">Superheating</a></li>
+<li><a href="/wiki/Thermo-dielectric_effect" title="Thermo-dielectric effect">Thermo-dielectric effect</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Lists</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><i><b><a href="/wiki/List_of_states_of_matter" title="List of states of matter">List of states of matter</a></b></i></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="navbox" style="border-spacing:0">
+<tr>
+<td style="padding:2px">
+<table class="nowraplinks hlist navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Help:Authority_control" title="Help:Authority control">Authority control</a></th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Integrated_Authority_File" title="Integrated Authority File">GND</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://d-nb.info/gnd/4016918-2">4016918-2</a></span></li>
+<li><a href="/wiki/National_Diet_Library" title="National Diet Library">NDL</a>: <span class="uid"><a rel="nofollow" class="external text" href="http://id.ndl.go.jp/auth/ndlna/00566774">00566774</a></span></li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1132
+CPU time usage: 0.441 seconds
+Real time usage: 0.558 seconds
+Preprocessor visited node count: 1479/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 55827/2097152 bytes
+Template argument size: 77/2097152 bytes
+Highest expansion depth: 8/40
+Expensive parser function count: 1/500
+Lua time usage: 0.150/10.000 seconds
+Lua memory usage: 2.73 MB/50 MB
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  317.063      1 - -total
+ 20.56%   65.189      1 - Template:Reflist
+ 18.72%   59.347      1 - Template:Pp-move
+ 15.20%   48.204      1 - Template:Continuum_mechanics
+ 13.95%   44.215      1 - Template:Sidebar_with_collapsible_lists
+ 11.48%   36.396      2 - Template:Cite_book
+ 10.73%   34.032      1 - Template:Other_uses
+ 10.70%   33.936      1 - Template:Authority_control
+  9.74%   30.892      1 - Template:About
+  8.34%   26.437      1 - Template:Hatnote
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:18993816-0!*!0!!en!4!* and timestamp 20150726123337 and revision id 673147719
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Solid&amp;oldid=673147719">https://en.wikipedia.org/w/index.php?title=Solid&amp;oldid=673147719</a>"					</div>
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Phases_of_matter" title="Category:Phases of matter">Phases of matter</a></li><li><a href="/wiki/Category:Solids" title="Category:Solids">Solids</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Wikipedia_move-protected_pages" title="Category:Wikipedia move-protected pages">Wikipedia move-protected pages</a></li><li><a href="/wiki/Category:Wikipedia_indefinitely_move-protected_pages" title="Category:Wikipedia indefinitely move-protected pages">Wikipedia indefinitely move-protected pages</a></li><li><a href="/wiki/Category:Wikipedia_articles_with_GND_identifiers" title="Category:Wikipedia articles with GND identifiers">Wikipedia articles with GND identifiers</a></li><li><a href="/wiki/Category:Articles_containing_video_clips" title="Category:Articles containing video clips">Articles containing video clips</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Solid&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Solid" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Solid"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Talk:Solid"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Solid" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=Solid&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Solid&amp;action=history"  title="Past versions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search" title="Search Wikipedia [f]" accesskey="f" id="searchInput" /><input type="hidden" value="Special:Search" name="title" /><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton" /><input type="submit" name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" />							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikimedia Shop">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Solid" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Solid" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Solid&amp;oldid=673147719" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Solid&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="//www.wikidata.org/wiki/Q11438" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Solid&amp;id=673147719" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Solid">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Solid&amp;oldid=673147719&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Solid&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-af"><a href="//af.wikipedia.org/wiki/Vastestof" title="Vastestof – Afrikaans" lang="af" hreflang="af">Afrikaans</a></li><li class="interlanguage-link interwiki-als"><a href="//als.wikipedia.org/wiki/Festk%C3%B6rper" title="Festkörper – Alemannisch" lang="als" hreflang="als">Alemannisch</a></li><li class="interlanguage-link interwiki-ar"><a href="//ar.wikipedia.org/wiki/%D8%B5%D9%84%D8%A8_(%D8%AD%D8%A7%D9%84%D8%A9_%D9%81%D9%8A%D8%B2%D9%8A%D8%A7%D8%A6%D9%8A%D8%A9)" title="صلب (حالة فيزيائية) – Arabic" lang="ar" hreflang="ar">العربية</a></li><li class="interlanguage-link interwiki-an"><a href="//an.wikipedia.org/wiki/Solido" title="Solido – Aragonese" lang="an" hreflang="an">Aragonés</a></li><li class="interlanguage-link interwiki-ast"><a href="//ast.wikipedia.org/wiki/S%C3%B3lidu" title="Sólidu – Asturian" lang="ast" hreflang="ast">Asturianu</a></li><li class="interlanguage-link interwiki-az"><a href="//az.wikipedia.org/wiki/B%C9%99rk_cism" title="Bərk cism – Azerbaijani" lang="az" hreflang="az">Azərbaycanca</a></li><li class="interlanguage-link interwiki-bn"><a href="//bn.wikipedia.org/wiki/%E0%A6%95%E0%A6%A0%E0%A6%BF%E0%A6%A8" title="কঠিন – Bengali" lang="bn" hreflang="bn">বাংলা</a></li><li class="interlanguage-link interwiki-zh-min-nan"><a href="//zh-min-nan.wikipedia.org/wiki/K%C3%B2%CD%98-th%C3%A9" title="Kò͘-thé – Chinese (Min Nan)" lang="zh-min-nan" hreflang="zh-min-nan">Bân-lâm-gú</a></li><li class="interlanguage-link interwiki-be"><a href="//be.wikipedia.org/wiki/%D0%A6%D0%B2%D1%91%D1%80%D0%B4%D0%B0%D0%B5_%D1%86%D0%B5%D0%BB%D0%B0" title="Цвёрдае цела – Belarusian" lang="be" hreflang="be">Беларуская</a></li><li class="interlanguage-link interwiki-be-x-old"><a href="//be-x-old.wikipedia.org/wiki/%D0%A6%D1%8C%D0%B2%D1%91%D1%80%D0%B4%D0%B0%D0%B5_%D1%86%D0%B5%D0%BB%D0%B0" title="Цьвёрдае цела – беларуская (тарашкевіца)‎" lang="be-x-old" hreflang="be-x-old">Беларуская (тарашкевіца)‎</a></li><li class="interlanguage-link interwiki-bg"><a href="//bg.wikipedia.org/wiki/%D0%A2%D0%B2%D1%8A%D1%80%D0%B4%D0%BE_%D1%82%D1%8F%D0%BB%D0%BE" title="Твърдо тяло – Bulgarian" lang="bg" hreflang="bg">Български</a></li><li class="interlanguage-link interwiki-bs"><a href="//bs.wikipedia.org/wiki/%C4%8Cvrsta_tvar" title="Čvrsta tvar – Bosnian" lang="bs" hreflang="bs">Bosanski</a></li><li class="interlanguage-link interwiki-bxr"><a href="//bxr.wikipedia.org/wiki/%D0%A5%D0%B0%D1%82%D1%83%D1%83_%D0%B1%D1%8D%D0%B5" title="Хатуу бэе – буряад" lang="bxr" hreflang="bxr">Буряад</a></li><li class="interlanguage-link interwiki-ca"><a href="//ca.wikipedia.org/wiki/S%C3%B2lid" title="Sòlid – Catalan" lang="ca" hreflang="ca">Català</a></li><li class="interlanguage-link interwiki-cs"><a href="//cs.wikipedia.org/wiki/Pevn%C3%A1_l%C3%A1tka" title="Pevná látka – Czech" lang="cs" hreflang="cs">Čeština</a></li><li class="interlanguage-link interwiki-sn"><a href="//sn.wikipedia.org/wiki/Godo" title="Godo – Shona" lang="sn" hreflang="sn">ChiShona</a></li><li class="interlanguage-link interwiki-cy"><a href="//cy.wikipedia.org/wiki/Solid" title="Solid – Welsh" lang="cy" hreflang="cy">Cymraeg</a></li><li class="interlanguage-link interwiki-da"><a href="//da.wikipedia.org/wiki/Fast_form" title="Fast form – Danish" lang="da" hreflang="da">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="//de.wikipedia.org/wiki/Festk%C3%B6rper" title="Festkörper – German" lang="de" hreflang="de">Deutsch</a></li><li class="interlanguage-link interwiki-et"><a href="//et.wikipedia.org/wiki/Tahkis" title="Tahkis – Estonian" lang="et" hreflang="et">Eesti</a></li><li class="interlanguage-link interwiki-el"><a href="//el.wikipedia.org/wiki/%CE%A3%CF%84%CE%B5%CF%81%CE%B5%CF%8C" title="Στερεό – Greek" lang="el" hreflang="el">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="//es.wikipedia.org/wiki/S%C3%B3lido" title="Sólido – Spanish" lang="es" hreflang="es">Español</a></li><li class="interlanguage-link interwiki-eo"><a href="//eo.wikipedia.org/wiki/Solido" title="Solido – Esperanto" lang="eo" hreflang="eo">Esperanto</a></li><li class="interlanguage-link interwiki-eu"><a href="//eu.wikipedia.org/wiki/Solido" title="Solido – Basque" lang="eu" hreflang="eu">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="//fa.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%AF" title="جامد – Persian" lang="fa" hreflang="fa">فارسی</a></li><li class="interlanguage-link interwiki-hif"><a href="//hif.wikipedia.org/wiki/Solid" title="Solid – Fiji Hindi" lang="hif" hreflang="hif">Fiji Hindi</a></li><li class="interlanguage-link interwiki-fr"><a href="//fr.wikipedia.org/wiki/%C3%89tat_solide" title="État solide – French" lang="fr" hreflang="fr">Français</a></li><li class="interlanguage-link interwiki-ga"><a href="//ga.wikipedia.org/wiki/Solad" title="Solad – Irish" lang="ga" hreflang="ga">Gaeilge</a></li><li class="interlanguage-link interwiki-gv"><a href="//gv.wikipedia.org/wiki/Stooaltane" title="Stooaltane – Manx" lang="gv" hreflang="gv">Gaelg</a></li><li class="interlanguage-link interwiki-gl"><a href="//gl.wikipedia.org/wiki/S%C3%B3lido" title="Sólido – Galician" lang="gl" hreflang="gl">Galego</a></li><li class="interlanguage-link interwiki-gu"><a href="//gu.wikipedia.org/wiki/%E0%AA%98%E0%AA%A8" title="ઘન – Gujarati" lang="gu" hreflang="gu">ગુજરાતી</a></li><li class="interlanguage-link interwiki-ko"><a href="//ko.wikipedia.org/wiki/%EA%B3%A0%EC%B2%B4" title="고체 – Korean" lang="ko" hreflang="ko">한국어</a></li><li class="interlanguage-link interwiki-hy"><a href="//hy.wikipedia.org/wiki/%D5%8A%D5%AB%D5%B6%D5%A4_%D5%B4%D5%A1%D6%80%D5%B4%D5%AB%D5%B6" title="Պինդ մարմին – Armenian" lang="hy" hreflang="hy">Հայերեն</a></li><li class="interlanguage-link interwiki-hi"><a href="//hi.wikipedia.org/wiki/%E0%A4%A0%E0%A5%8B%E0%A4%B8" title="ठोस – Hindi" lang="hi" hreflang="hi">हिन्दी</a></li><li class="interlanguage-link interwiki-hr"><a href="//hr.wikipedia.org/wiki/Krutine" title="Krutine – Croatian" lang="hr" hreflang="hr">Hrvatski</a></li><li class="interlanguage-link interwiki-io"><a href="//io.wikipedia.org/wiki/Solido" title="Solido – Ido" lang="io" hreflang="io">Ido</a></li><li class="interlanguage-link interwiki-id"><a href="//id.wikipedia.org/wiki/Padat" title="Padat – Indonesian" lang="id" hreflang="id">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-ia"><a href="//ia.wikipedia.org/wiki/Solido" title="Solido – Interlingua" lang="ia" hreflang="ia">Interlingua</a></li><li class="interlanguage-link interwiki-is"><a href="//is.wikipedia.org/wiki/Storkuhamur" title="Storkuhamur – Icelandic" lang="is" hreflang="is">Íslenska</a></li><li class="interlanguage-link interwiki-it"><a href="//it.wikipedia.org/wiki/Solido" title="Solido – Italian" lang="it" hreflang="it">Italiano</a></li><li class="interlanguage-link interwiki-he"><a href="//he.wikipedia.org/wiki/%D7%9E%D7%95%D7%A6%D7%A7" title="מוצק – Hebrew" lang="he" hreflang="he">עברית</a></li><li class="interlanguage-link interwiki-kn"><a href="//kn.wikipedia.org/wiki/%E0%B2%98%E0%B2%A8" title="ಘನ – Kannada" lang="kn" hreflang="kn">ಕನ್ನಡ</a></li><li class="interlanguage-link interwiki-ka"><a href="//ka.wikipedia.org/wiki/%E1%83%9B%E1%83%A7%E1%83%90%E1%83%A0%E1%83%98_%E1%83%A1%E1%83%AE%E1%83%94%E1%83%A3%E1%83%9A%E1%83%98" title="მყარი სხეული – Georgian" lang="ka" hreflang="ka">ქართული</a></li><li class="interlanguage-link interwiki-kk"><a href="//kk.wikipedia.org/wiki/%D2%9A%D0%B0%D1%82%D1%82%D1%8B_%D0%B4%D0%B5%D0%BD%D0%B5" title="Қатты дене – Kazakh" lang="kk" hreflang="kk">Қазақша</a></li><li class="interlanguage-link interwiki-sw"><a href="//sw.wikipedia.org/wiki/Mango" title="Mango – Swahili" lang="sw" hreflang="sw">Kiswahili</a></li><li class="interlanguage-link interwiki-ht"><a href="//ht.wikipedia.org/wiki/Solid" title="Solid – Haitian" lang="ht" hreflang="ht">Kreyòl ayisyen</a></li><li class="interlanguage-link interwiki-la"><a href="//la.wikipedia.org/wiki/Solidum" title="Solidum – Latin" lang="la" hreflang="la">Latina</a></li><li class="interlanguage-link interwiki-lv"><a href="//lv.wikipedia.org/wiki/Cieta_viela" title="Cieta viela – Latvian" lang="lv" hreflang="lv">Latviešu</a></li><li class="interlanguage-link interwiki-lt"><a href="//lt.wikipedia.org/wiki/Kietasis_k%C5%ABnas" title="Kietasis kūnas – Lithuanian" lang="lt" hreflang="lt">Lietuvių</a></li><li class="interlanguage-link interwiki-li"><a href="//li.wikipedia.org/wiki/Vaste_stof" title="Vaste stof – Limburgish" lang="li" hreflang="li">Limburgs</a></li><li class="interlanguage-link interwiki-jbo"><a href="//jbo.wikipedia.org/wiki/sligu" title="sligu – Lojban" lang="jbo" hreflang="jbo">Lojban</a></li><li class="interlanguage-link interwiki-hu"><a href="//hu.wikipedia.org/wiki/Szil%C3%A1rd_halmaz%C3%A1llapot" title="Szilárd halmazállapot – Hungarian" lang="hu" hreflang="hu">Magyar</a></li><li class="interlanguage-link interwiki-mk"><a href="//mk.wikipedia.org/wiki/%D0%A6%D0%B2%D1%80%D1%81%D1%82%D0%B0_%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%D0%BD%D0%B0_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%98%D0%B1%D0%B0" title="Цврста агрегатна состојба – Macedonian" lang="mk" hreflang="mk">Македонски</a></li><li class="interlanguage-link interwiki-ml"><a href="//ml.wikipedia.org/wiki/%E0%B4%96%E0%B4%B0%E0%B4%82" title="ഖരം – Malayalam" lang="ml" hreflang="ml">മലയാളം</a></li><li class="interlanguage-link interwiki-arz"><a href="//arz.wikipedia.org/wiki/%D8%B5%D9%84%D8%A8" title="صلب – Egyptian Arabic" lang="arz" hreflang="arz">مصرى</a></li><li class="interlanguage-link interwiki-ms"><a href="//ms.wikipedia.org/wiki/Pepejal" title="Pepejal – Malay" lang="ms" hreflang="ms">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-mn"><a href="//mn.wikipedia.org/wiki/%D0%A5%D0%B0%D1%82%D1%83%D1%83" title="Хатуу – Mongolian" lang="mn" hreflang="mn">Монгол</a></li><li class="interlanguage-link interwiki-nl"><a href="//nl.wikipedia.org/wiki/Vaste_stof" title="Vaste stof – Dutch" lang="nl" hreflang="nl">Nederlands</a></li><li class="interlanguage-link interwiki-ne"><a href="//ne.wikipedia.org/wiki/%E0%A4%A0%E0%A5%8B%E0%A4%B8" title="ठोस – Nepali" lang="ne" hreflang="ne">नेपाली</a></li><li class="interlanguage-link interwiki-new"><a href="//new.wikipedia.org/wiki/%E0%A4%A0%E0%A5%8B%E0%A4%B8_%E0%A4%AA%E0%A4%A6%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%A5" title="ठोस पदार्थ – Newari" lang="new" hreflang="new">नेपाल भाषा</a></li><li class="interlanguage-link interwiki-ja"><a href="//ja.wikipedia.org/wiki/%E5%9B%BA%E4%BD%93" title="固体 – Japanese" lang="ja" hreflang="ja">日本語</a></li><li class="interlanguage-link interwiki-no"><a href="//no.wikipedia.org/wiki/Faststoff" title="Faststoff – Norwegian" lang="no" hreflang="no">Norsk bokmål</a></li><li class="interlanguage-link interwiki-nn"><a href="//nn.wikipedia.org/wiki/Fast_stoff" title="Fast stoff – Norwegian Nynorsk" lang="nn" hreflang="nn">Norsk nynorsk</a></li><li class="interlanguage-link interwiki-nov"><a href="//nov.wikipedia.org/wiki/Solide" title="Solide – Novial" lang="nov" hreflang="nov">Novial</a></li><li class="interlanguage-link interwiki-oc"><a href="//oc.wikipedia.org/wiki/Solid" title="Solid – Occitan" lang="oc" hreflang="oc">Occitan</a></li><li class="interlanguage-link interwiki-om"><a href="//om.wikipedia.org/wiki/Jajjaboo" title="Jajjaboo – Oromo" lang="om" hreflang="om">Oromoo</a></li><li class="interlanguage-link interwiki-uz"><a href="//uz.wikipedia.org/wiki/Qattiq_jism" title="Qattiq jism – Uzbek" lang="uz" hreflang="uz">Oʻzbekcha/ўзбекча</a></li><li class="interlanguage-link interwiki-pa"><a href="//pa.wikipedia.org/wiki/%E0%A8%A0%E0%A9%8B%E0%A8%B8" title="ਠੋਸ – Punjabi" lang="pa" hreflang="pa">ਪੰਜਾਬੀ</a></li><li class="interlanguage-link interwiki-pnb"><a href="//pnb.wikipedia.org/wiki/%D9%B9%DA%BE%D9%88%D8%B3" title="ٹھوس – Western Punjabi" lang="pnb" hreflang="pnb">پنجابی</a></li><li class="interlanguage-link interwiki-pms"><a href="//pms.wikipedia.org/wiki/S%C3%B2lid_(f%C3%ACsica)" title="Sòlid (fìsica) – Piedmontese" lang="pms" hreflang="pms">Piemontèis</a></li><li class="interlanguage-link interwiki-nds"><a href="//nds.wikipedia.org/wiki/Faststoff" title="Faststoff – Low German" lang="nds" hreflang="nds">Plattdüütsch</a></li><li class="interlanguage-link interwiki-pl"><a href="//pl.wikipedia.org/wiki/Cia%C5%82o_sta%C5%82e" title="Ciało stałe – Polish" lang="pl" hreflang="pl">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="//pt.wikipedia.org/wiki/S%C3%B3lido" title="Sólido – Portuguese" lang="pt" hreflang="pt">Português</a></li><li class="interlanguage-link interwiki-ro"><a href="//ro.wikipedia.org/wiki/Solid" title="Solid – Romanian" lang="ro" hreflang="ro">Română</a></li><li class="interlanguage-link interwiki-qu"><a href="//qu.wikipedia.org/wiki/Sinchiyasqa" title="Sinchiyasqa – Quechua" lang="qu" hreflang="qu">Runa Simi</a></li><li class="interlanguage-link interwiki-ru"><a href="//ru.wikipedia.org/wiki/%D0%A2%D0%B2%D1%91%D1%80%D0%B4%D0%BE%D0%B5_%D1%82%D0%B5%D0%BB%D0%BE" title="Твёрдое тело – Russian" lang="ru" hreflang="ru">Русский</a></li><li class="interlanguage-link interwiki-sco"><a href="//sco.wikipedia.org/wiki/Solit" title="Solit – Scots" lang="sco" hreflang="sco">Scots</a></li><li class="interlanguage-link interwiki-si"><a href="//si.wikipedia.org/wiki/%E0%B6%9D%E0%B6%B1" title="ඝන – Sinhala" lang="si" hreflang="si">සිංහල</a></li><li class="interlanguage-link interwiki-simple"><a href="//simple.wikipedia.org/wiki/Solid" title="Solid – Simple English" lang="simple" hreflang="simple">Simple English</a></li><li class="interlanguage-link interwiki-sk"><a href="//sk.wikipedia.org/wiki/Pevn%C3%A1_l%C3%A1tka" title="Pevná látka – Slovak" lang="sk" hreflang="sk">Slovenčina</a></li><li class="interlanguage-link interwiki-sl"><a href="//sl.wikipedia.org/wiki/Trdnina" title="Trdnina – Slovenian" lang="sl" hreflang="sl">Slovenščina</a></li><li class="interlanguage-link interwiki-so"><a href="//so.wikipedia.org/wiki/Adke" title="Adke – Somali" lang="so" hreflang="so">Soomaaliga</a></li><li class="interlanguage-link interwiki-ckb"><a href="//ckb.wikipedia.org/wiki/%DA%95%DB%95%D9%82%DB%95" title="ڕەقە – Central Kurdish" lang="ckb" hreflang="ckb">کوردیی ناوەندی</a></li><li class="interlanguage-link interwiki-sr"><a href="//sr.wikipedia.org/wiki/%D0%A7%D0%B2%D1%80%D1%81%D1%82%D0%BE_%D0%B0%D0%B3%D1%80%D0%B5%D0%B3%D0%B0%D1%82%D0%BD%D0%BE_%D1%81%D1%82%D0%B0%D1%9A%D0%B5" title="Чврсто агрегатно стање – Serbian" lang="sr" hreflang="sr">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="//sh.wikipedia.org/wiki/%C4%8Cvrsto_agregatno_stanje" title="Čvrsto agregatno stanje – Serbo-Croatian" lang="sh" hreflang="sh">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-fi"><a href="//fi.wikipedia.org/wiki/Kiinte%C3%A4_olomuoto" title="Kiinteä olomuoto – Finnish" lang="fi" hreflang="fi">Suomi</a></li><li class="interlanguage-link interwiki-sv"><a href="//sv.wikipedia.org/wiki/Fast_form" title="Fast form – Swedish" lang="sv" hreflang="sv">Svenska</a></li><li class="interlanguage-link interwiki-ta"><a href="//ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%A3%E0%AF%8D%E0%AE%AE%E0%AE%AE%E0%AF%8D_(%E0%AE%87%E0%AE%AF%E0%AE%B1%E0%AF%8D%E0%AE%AA%E0%AE%BF%E0%AE%AF%E0%AE%B2%E0%AF%8D)" title="திண்மம் (இயற்பியல்) – Tamil" lang="ta" hreflang="ta">தமிழ்</a></li><li class="interlanguage-link interwiki-th"><a href="//th.wikipedia.org/wiki/%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%82%E0%B9%87%E0%B8%87" title="ของแข็ง – Thai" lang="th" hreflang="th">ไทย</a></li><li class="interlanguage-link interwiki-tr"><a href="//tr.wikipedia.org/wiki/Kat%C4%B1" title="Katı – Turkish" lang="tr" hreflang="tr">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="//uk.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B5%D1%80%D0%B4%D0%B5_%D1%82%D1%96%D0%BB%D0%BE" title="Тверде тіло – Ukrainian" lang="uk" hreflang="uk">Українська</a></li><li class="interlanguage-link interwiki-ur"><a href="//ur.wikipedia.org/wiki/%D9%B9%DA%BE%D9%88%D8%B3" title="ٹھوس – Urdu" lang="ur" hreflang="ur">اردو</a></li><li class="interlanguage-link interwiki-vi"><a href="//vi.wikipedia.org/wiki/Ch%E1%BA%A5t_r%E1%BA%AFn" title="Chất rắn – Vietnamese" lang="vi" hreflang="vi">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh-classical"><a href="//zh-classical.wikipedia.org/wiki/%E5%9B%BA%E9%AB%94" title="固體 – Classical Chinese" lang="zh-classical" hreflang="zh-classical">文言</a></li><li class="interlanguage-link interwiki-vls"><a href="//vls.wikipedia.org/wiki/Vaste_stoffe" title="Vaste stoffe – West Flemish" lang="vls" hreflang="vls">West-Vlams</a></li><li class="interlanguage-link interwiki-war"><a href="//war.wikipedia.org/wiki/Solido" title="Solido – Waray" lang="war" hreflang="war">Winaray</a></li><li class="interlanguage-link interwiki-wuu"><a href="//wuu.wikipedia.org/wiki/%E5%9B%BA%E4%BD%93" title="固体 – Wu Chinese" lang="wuu" hreflang="wuu">吴语</a></li><li class="interlanguage-link interwiki-yi"><a href="//yi.wikipedia.org/wiki/%D7%A1%D7%90%D7%9C%D7%99%D7%93%D7%A2%D7%A8_%D7%A7%D7%A2%D7%A8%D7%A4%D7%A2%D7%A8" title="סאלידער קערפער – Yiddish" lang="yi" hreflang="yi">ייִדיש</a></li><li class="interlanguage-link interwiki-zh-yue"><a href="//zh-yue.wikipedia.org/wiki/%E5%9B%BA%E9%AB%94" title="固體 – Cantonese" lang="zh-yue" hreflang="zh-yue">粵語</a></li><li class="interlanguage-link interwiki-zh"><a href="//zh.wikipedia.org/wiki/%E5%9B%BA%E4%BD%93" title="固体 – Chinese" lang="zh" hreflang="zh">中文</a></li><li class="uls-p-lang-dummy"><a href="#"></a></li>					</ul>
+				<div class='after-portlet after-portlet-lang'><span class="wb-langlinks-edit wb-langlinks-link"><a href="//www.wikidata.org/wiki/Q11438#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 26 July 2015, at 12:33.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="//wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Solid&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="//wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="//en.wikipedia.org/static/1.26wmf15/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="//en.wikipedia.org/static/1.26wmf15/resources/assets/poweredby_mediawiki_132x47.png 1.5x, //en.wikipedia.org/static/1.26wmf15/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" /></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","mw.PopUpMediaTransform":"loading","site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"//en.wikipedia.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=mw.PopUpMediaTransform\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<link rel="stylesheet" href="//en.wikipedia.org/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.gadget.DRN-wizard%2CReferenceTooltips%2CWatchlistGreenIndicators%2Ccharinsert%2Cfeatured-articles-links%2CrefToolbar%2Cswitcher%2Cteahouse%7Cext.wikimediaBadges&amp;only=styles&amp;skin=vector&amp;*" />
+<script>if(window.mw){
+mw.loader.load(["ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.cirrusSearch.loggingSchema","mmv.bootstrap.autostart","ext.imageMetrics.loader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.wikimediaEvents.statsd","ext.wikimediaEvents.geoFeatures","ext.navigationTiming","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.WatchlistGreenIndicators","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.visualEditor.targetLoader","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"//en.wikipedia.org/w/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":133,"wgHostname":"mw1074"});
+}</script>
+	</body>
+</html>

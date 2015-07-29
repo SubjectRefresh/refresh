@@ -3,6 +3,7 @@ var cheerio = require('cheerio');
 var bing = require('node-bing-api')({ accKey: "InGGbJ6KRh/VpRJgiQLn1dwXms5Od8n8k9KGbTBdjb4" });
 var fs = require('fs');
 var natural = require("natural");
+var tokenizer = new natural.TreebankWordTokenizer();
 
 var researchModule = function() {
     var self = this;
@@ -25,7 +26,11 @@ var researchModule = function() {
                     output += body;
                     count += 1;
                     if (count == 3) {
-                        callback(output);
+                        var $ = cheerio.load(output);
+                        var text = $("p").text();
+                        var textTokenizer = tokenizer.tokenize(text);
+                        
+                        callback(textTokenizer);
                     }
                 });
             }

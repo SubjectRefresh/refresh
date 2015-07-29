@@ -96,6 +96,10 @@ app.get("/revise", function (req, res) {
     var syllabus = req.body.syllabus;
 });
 
+app.get("/CIE", function(req, res) {
+    res.JSON({ hello: "world"});
+});
+
 // Initialising the Express.JS Web Server to Listen on Port 3000
 var server = app.listen(3000, function () {
     var host = server.address().address;
