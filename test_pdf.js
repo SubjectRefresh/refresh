@@ -9,7 +9,7 @@ Array.prototype.last = function() {
     return this[this.length - 1];
 }
 
-function collectURLs(number, callback) { // returns an array of the links and numbers for each syllabus
+function collectURLs(number, convert, callback) { // returns an array of the links and numbers for each syllabus
     // PLEASE PASS <number> AS A STRING!
     var newArray = [];
     var links = {
@@ -33,74 +33,77 @@ function collectURLs(number, callback) { // returns an array of the links and nu
                 if (String(newArray[i].number) == String(number)) { // we got a match for the subject
                     links.syllabus = newArray[i].link;
                     request(baseURL + newArray[i].dom_object.find("a").attr("href"), function(error2, response2, body2) {
-                    	console.log("PDFList.js: ".bold + "Successfully Requested Website For List Of PDFs".green);
+                        console.log("PDFList.js: ".bold + "Successfully Requested Website For List Of PDFs".green);
                         $new = cheerio.load(body2);
                         $new(".binaryLink").find("a").each(function() {
                             var PDFLink = $new(this).attr("href");
                             links.pdfs.push(PDFLink); // is working
-                            console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
+                            //    console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
                         });
-                        console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
+                        //console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
                     });
                 }
             }
-        }
-        if (callback !== undefined) {
-            callback(links);
+            console.log("collectURLs has finished".red);
+            if (convert) {
+                doPDFConversions(links, function(html) { // insert pdf conversion function here and return HTML to the callback
+                    if (callback !== undefined) {
+                        callback(html);
+                    }
+                });
+            }
         }
     });
 }
 
 /* end from pdflist.js */
 
-function doPDFConversions(number, callback) {
+function doPDFConversions(urls, callback) {
+    console.log("starting doPDFConversions".green);
     var status = [false, "creation of html from pdf failed"];
     var urls_glob;
-    collectURLs(number, function(urls) { // grab the url for the subject based on number
-        urls_glob = urls;
-        if (urls.pdfs.length != 0){
-	        // this is getting run BEFORE collectURLs has finished and therefore urls is empty
-	        console.log("PDFList.js: ".bold + "collectURLs() gave us: ".green + String(urls.pdfs.length -1).blue + " PDFs".green);
-	    }
-	    else {
-	    	console.log("PDFList.js: ".bold + "collectURLs gave us: ".red + String(urls.pdfs.length).blue + " PDFs".red);
-	    }
-        for (i = 0; i < urls.pdfs.length - 1; i++) {
-            request(urls.pdfs[i], function(err, res, body) { // grab the PDF from the url
-                fs.writeFile("html.html", body, function(err) {
-                    if (err) {
-                        status = [false, err]
-                    }
-                });
-                var pdftohtml = require('pdftohtmljs'),
-                    converter = new pdftohtml("./html.html", "./sample.html"); // make a PDF object
-
-                converter.preset('default');
-
-                converter.success(function() {
-                    console.log("Conversion done");
-                    status = [true, "ok"];
-                });
-
-                converter.error(function(error) {
-                    console.log("Conversion error: " + error);
-                    status = [false, error];
-                });
-
-                converter.progress(function(ret) {
-                    console.log((ret.current * 100.0) / ret.total + " %");
-                });
-
-                converter.convert();
-            });
-        }
-    });
-    if (callback !== undefined) {
-        callback(status, urls_glob);
+    urls_glob = urls;
+    if (urls.pdfs.length != 0) {
+        // this is getting run BEFORE collectURLs has finished and therefore urls is empty
+        console.log("PDFList.js: ".bold + "collectURLs() gave us: ".green + String(urls.pdfs.length - 1).blue + " PDFs".green);
+    } else {
+        console.log("PDFList.js: ".bold + "collectURLs gave us: ".red + String(urls.pdfs.length).blue + " PDFs".red);
     }
-};
+    for (i = 0; i < urls.pdfs.length - 1; i++) {
+        request(urls.pdfs[i], function(err, res, body) { // grab the PDF from the url
+            fs.writeFile("html.html", body, function(err) {
+                if (err) {
+                    status = [false, err]
+                }
+            });
+            var pdftohtml = require('pdftohtmljs'),
+                converter = new pdftohtml("./html.html", "./sample.html"); // make a PDF object
 
-doPDFConversions("0600", function(status, urls) {
-    if (status[0]) console.log(urls);
-    //else console.log(status);
+            converter.preset('default');
+
+            converter.success(function() {
+                console.log("Conversion done");
+                status = [true, "ok"];
+            });
+
+            converter.error(function(error) {
+                console.log("Conversion error: " + error);
+                status = [false, error];
+            });
+
+            converter.progress(function(ret) {
+                console.log((ret.current * 100.0) / ret.total + " %");
+            });
+
+            converter.convert();
+        });
+    }
+    console.log("doPDFConversions has finished".red);
+    if (callback !== undefined) {
+        callback(status, "<html><img src='images/cat.png' alt='Cat'></html>");
+    }
+}
+
+collectURLs("0600", true, function(status, urls) {
+    console.log("collectURLs has finished");
 });

@@ -12,7 +12,7 @@ console.log("PDFList.js: ".bold + " Successfully Declared `last`".green);
 var collectModule = function() {
     var self = this;
 
-    self.collectURLs = function(number, callback) { // returns an array of the links and numbers for each syllabus
+    self.collectURLs = function(number, convert, callback) { // returns an array of the links and numbers for each syllabus
         // PLEASE PASS <number> AS A STRING!
         var newArray = [];
         var links = {
@@ -41,15 +41,20 @@ var collectModule = function() {
                             $new(".binaryLink").find("a").each(function() {
                                 var PDFLink = $new(this).attr("href");
                                 links.pdfs.push(PDFLink); // is working
-                                console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
+                                //    console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
                             });
-                            console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
+                            //console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
                         });
                     }
                 }
-            }
-            if (callback !== undefined) {
-                callback(links);
+                console.log("collectURLs has finished".red);
+                if (convert) {
+                    doPDFConversions(links, function(html) { // insert pdf conversion function here and return HTML to the callback
+                        if (callback !== undefined) {
+                            callback(html);
+                        }
+                    });
+                }
             }
         });
     }
