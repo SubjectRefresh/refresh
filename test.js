@@ -13,7 +13,7 @@ function test(inputArray, callback) {
     var outputContentWrapper = [];
     var output = []
     var arrayLength = inputArray.length;
-    console.log("Question got to loading the array");
+    console.log("Test.JS got to loading the array");
 
     for (var i = 0; i < arrayLength; i++) {
 
@@ -32,17 +32,17 @@ function test(inputArray, callback) {
 
         }
         var res = request('POST', 'https://api.textrazor.com', {
-            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=phrases%2Cwords"
+            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=entities"
         });
-<<<<<<< HEAD
         var data = JSON.parse(res.getBody().toString('utf8'));
+        console.log("Test.JS:".bold + " Successfully attempted communication with TextRazor".green);
         var entities = data.response.entities;
         if (entities != undefined) {
             for (g = 0; g < entities.length; g++) {
                 console.log(entities[g].entityEnglishId);
                 if (entities[g].entityEnglishId != "") {
                     var isAlreadyIn = output.indexOf("GCSE " + entities[g].entityEnglishId)
-                    console.log(isAlreadyIn);
+                    console.log("=====" + isAlreadyIn + "=====");
                     if (isAlreadyIn == -1) {
                         output.push("GCSE " + entities[g].entityEnglishId);
                     }
@@ -51,10 +51,6 @@ function test(inputArray, callback) {
         }
     }
     callback(output);
-=======
-        console.log(res.getBody().toString('utf8'));
-    }
->>>>>>> origin/master
 }
 test(myStringArray, function (output) {
     console.log(output);

@@ -9,8 +9,35 @@ var convertModule = function () {
 
     self.covert = function (inputArray, callback) {
 
-        var output = ["properties of solids", "State"];
-        callback(output);
+        var root = "";
+        var question = "";
+        var outputContentWrapper = [];
+        var output = [];
+        var researchPoints = [];
+        console.log("Conv.JS:".bold + " Successfully Defined Global Variables".green);
+
+        var arrayLength = inputArray.length;
+
+        for (var i = 0; i < arrayLength; i++) {
+
+            var sentence = inputArray[i]
+
+            for (c = 0; c < sentence.length; c++) {
+
+                if (sentence[c] == " ") {
+
+                    var root = sentence.slice(c + 1, sentence.length)
+                    var keyword = sentence.slice(0, c);
+                    researchPoints.push(root)
+                    break;
+
+                }
+
+            }
+
+        }
+        console.log("Conv.JS:".bold + " Successfully Finished `convert`".green);
+        callback(researchPoints);
     }
 
     console.log("Convert.JS:".bold + " Successfully Defined `convert`".green);
