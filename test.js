@@ -32,10 +32,16 @@ function test(inputArray, callback) {
 
         }
         var res = request('POST', 'https://api.textrazor.com', {
-            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=phrases%2Cwords"
+            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=entities"
         });
-        console.log(res.getBody().toString('utf8'));
+        var data = JSON.parse(res.getBody().toString('utf8'));
+        var entities = data.response.entities;
+        for (g = 0; g < entities.length; g++) {
+            console.log(entities[g].entityEnglishId);
+            output.push("GCSE " + entities[g].entityEnglishId)
+        }
     }
+    callback(output);
 }
 test(myStringArray, function (output) {
     console.log(output);
