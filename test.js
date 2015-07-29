@@ -40,12 +40,15 @@ function test(inputArray, callback) {
             for (g = 0; g < entities.length; g++) {
                 console.log(entities[g].entityEnglishId);
                 if (entities[g].entityEnglishId != "") {
-                    output.push("GCSE " + entities[g].entityEnglishId);
+                    var isAlreadyIn = output.indexOf("GCSE " + entities[g].entityEnglishId)
+                    console.log(isAlreadyIn);
+                    if (isAlreadyIn == -1) {
+                        output.push("GCSE " + entities[g].entityEnglishId);
+                    }
                 }
             }
         }
     }
-    console.log(output);
     callback(output);
 }
 test(myStringArray, function (output) {
