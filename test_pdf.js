@@ -2,6 +2,14 @@ var request = require("request");
 var cheerio = require("cheerio");
 var colors = require("colors");
 var fs = require("fs");
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
+
 var baseURL = "http://www.cie.org.uk";
 
 /* from pdflist.js */
