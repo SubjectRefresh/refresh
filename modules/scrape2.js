@@ -20,6 +20,7 @@ parseHTML = function(number) {
 
 		for (i = 0; i < blarg.length; i++) {
 			if (blarg[i].indexOf("State the distinguishing properties of solids") > -1) {
+				console.log(blarg[i]);
 				break;
 			} else {
 				console.log("Shifted!");
