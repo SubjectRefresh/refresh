@@ -8,26 +8,30 @@ console.log("App.JS: ".bold + " Successfully Imported Required Packages".green);
 
 
 // Imports for External Refresh Node.JS Functions
+var list = require('./list.js');
 var examBoard = require('./exam.js');
+var scrape = require('./scrape.js');
 var convert = require('./convert.js');
 var research = require('./research.js');
 var question = require('./question.js');
-var scrape = require('./scrape.js');
+var answer = require('./answer.js');
 console.log("App.JS: ".bold + " Successfully Imported External Functions".green);
 
 
 // Instantiating External Refresh Packages
+var listModule = new list();
 var examBoardModule = new examBoard();
+var scrapeModule = new scrape();
 var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
-var scrapeModule = new scrape();
+var answerModule = new answer();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".green);
 
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".bold + " Successfully Created Express.JS Web Server".green);
+console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
 
 
 // Initialising Middleware
@@ -41,7 +45,7 @@ console.log("App.JS: ".bold + " Successfully Initialised Middleware".green);
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".bold + " Successfully Public Folder".green);
+console.log("App.JS: ".bold + " Successfully Created Public Folder".green);
 
 
 
@@ -59,7 +63,7 @@ app.post("/dashboard", function (req, res) {
     // Paste this inside your callback
     // Template Engine Stuff Goes Here
 });
-console.log("App.JS: ".bold + " Successfully Created App Route".green);
+//console.log("App.JS: ".bold + " Successfully Created App Route".green);
 
 
 app.get("/sandpit", function (req, res) {
@@ -71,7 +75,6 @@ app.get("/sandpit", function (req, res) {
         res.send(output);
     });
 });
-console.log("App.JS: ".bold + " Successfully Created Sandpit".green);
 
 
 // Initialising the Express.JS Web Server to Listen on Port 3000
@@ -79,12 +82,5 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     
-    scrapeModule.convertPDFtoHTML();
-
-    console.log("Refresh Running at localhost:3000");
+    console.log("App.JS".bold + " Refresh Running at localhost:3000".green);
 });
-<<<<<<< HEAD
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".green);
-console.log('+==+ Reached the Finish of App.JS +==+'.rainbow);
-=======
->>>>>>> origin/master
