@@ -44,7 +44,7 @@ function test(inputArray, callback) {
                     var isAlreadyIn = output.indexOf("GCSE " + entities[g].entityEnglishId)
                     console.log("=====" + isAlreadyIn + "=====");
                     if (isAlreadyIn == -1) {
-                        output.push("GCSE " + entities[g].entityEnglishId);
+                        output.push(["GCSE " + entities[g].entityEnglishId, keyword]);
                     }
                 }
             }
@@ -53,5 +53,6 @@ function test(inputArray, callback) {
     callback(output);
 }
 test(myStringArray, function (output) {
+    console.log(["Subject", "Keyword", "Property of subject to be acted on by keyword"])
     console.log(output);
 });
