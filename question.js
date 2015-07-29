@@ -69,7 +69,7 @@ var questionModule = function () {
 };
 
 /* developius added this */
-questionModule.question(["random question"],function(){var x = null;}); // I've got no clue how to test the code I added above - help!
+//questionModule.question(["random question"],function(){var x = null;}); // I've got no clue how to test the code I added above - help!
 /* end of developius additions */
 
 console.log("Question.JS:".bold + " Successfully finished question".green);
