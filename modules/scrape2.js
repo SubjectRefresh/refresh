@@ -2,6 +2,14 @@ var pdf = require("pdftohtmljs");
 var fs = require("fs");
 var cheerio = require("cheerio");
 var natural = require("natural");
+var colors = require("colors");
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
 
 parseHTML = function(number) {
 	fs.readFile('../temporary/CIE' + number + ".html", 'utf8', function(err, data) {
