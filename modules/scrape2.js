@@ -28,15 +28,18 @@ parseHTML = function(number) {
 			}
 		}
 
-		for (i = 0; i < blarg.length; i++) {
+		blarg = test;
+
+		for (i = blarg.length; i > 0; i--) {
 			if (blarg[i].indexOf("State the distinguishing properties of solids") > -1) {
 				console.log(blarg[i]);
 				break;
 			} else {
 				console.log("Shifted!");
-				test.shift()
+				test.pop()
 			}
 		}
+		
 		console.log(test);
 	});
 }
