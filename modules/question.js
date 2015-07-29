@@ -21,8 +21,7 @@ var questionModule = function () {
         console.log(entityPositions);
         callback(entityPositions);
     }
-}
-console.log("Convert.JS:".bold + " Successfully Defined `convert`".blue);
 };
+console.log("Convert.JS:".bold + " Successfully Defined `convert`".blue);
  
 module.exports = questionModule;
