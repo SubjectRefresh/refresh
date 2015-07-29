@@ -3,6 +3,15 @@ var cheerio = require('cheerio');
 var bing = require('node-bing-api')({ accKey: "InGGbJ6KRh/VpRJgiQLn1dwXms5Od8n8k9KGbTBdjb4" });
 var fs = require('fs');
 var natural = require("natural");
+var colors = require("colors");
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
+
 var tokenizer = new natural.TreebankWordTokenizer();
 var nounInflector = new natural.NounInflector();
 
