@@ -32,8 +32,9 @@ function test(inputArray, callback) {
 
         }
         var res = request('POST', 'https://api.textrazor.com', {
-            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=entities"
+            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=phrases%2Cwords"
         });
+<<<<<<< HEAD
         var data = JSON.parse(res.getBody().toString('utf8'));
         var entities = data.response.entities;
         if (entities != undefined) {
@@ -50,6 +51,10 @@ function test(inputArray, callback) {
         }
     }
     callback(output);
+=======
+        console.log(res.getBody().toString('utf8'));
+    }
+>>>>>>> origin/master
 }
 test(myStringArray, function (output) {
     console.log(output);
