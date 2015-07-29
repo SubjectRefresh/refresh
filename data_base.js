@@ -1,3 +1,7 @@
+/////////////////////////////////////////////////////////////USE OF CODE ///////////////////////////
+//Login('tom@tom.com','pass')
+//AddUser('gib','hansome','tom@tom.com','pass','davedave')
+
 var mysql = require('mysql');
 var crypto = require('crypto');
 //connect to server
@@ -7,8 +11,7 @@ var connection = mysql.createConnection({
     password: 'AWDRGY123123',
     database: 'hexcompu_refresh'
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 connection.connect();
 console.log('Server Login');
@@ -63,72 +66,4 @@ function Login(eMail,pass){
         
     });
 }
-Login('tom@tom.com','pass')
-//AddUser('gib','hansome','tom@tom.com','pass','davedave')
-=======
-=======
->>>>>>> origin/master
 
-connection.connect();
-
-var databaseModule = function() {
-    var self = this;
-<<<<<<< HEAD
-    
-    self.addUser = function(fn, ln, em, psswd, usrnm, callback) {
-        var salt = crypto.randomBytes(128).toString('base64');
-        crypto.pbkdf2(psswd, salt, 10000, 512, function (err, derivedKey) {
-            psswd = derivedKey;
-            connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fn, ln, em, psswd, usrnm, salt], function (err, rows, fields) {
-                if (err) throw err;
-                callback(true);
-            });
-        });
-    };
-    
-=======
-    
-    self.addUser = function(fn, ln, em, psswd, usrnm, callback) {
-        var salt = crypto.randomBytes(128).toString('base64');
-        crypto.pbkdf2(psswd, salt, 10000, 512, function (err, derivedKey) {
-            psswd = derivedKey;
-            connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fn, ln, em, psswd, usrnm, salt], function (err, rows, fields) {
-                if (err) throw err;
-                callback(true);
-            });
-        });
-    };
-    
->>>>>>> origin/master
-    self.login = function(em, psswd, callback) {
-        connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [em], function (err, rows, fields) {
-            var salt = rows[0]['Salt'];
-            crypto.pbkdf2(psswd, salt, 10000, 512, function (err, derivedKey) {
-                psswd = derivedKey;
-                if (err) throw err;
-                console.log(rows);
-
-                var hash = rows[0]['Hash'];
-                var both = psswd + salt;
-                console.log(rows[0]['Salt'])
-                console.log(both)
-                console.log(hash + salt)
-                if (both == psswd) {
-                    console.log('SUCCESSFUL LOGIN')
-                };
-
-                connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [em, psswd], function (err, rows, fields) {
-                    if (err) throw err;
-                    
-                });
-            });
-        });
-    };
-};
-
-<<<<<<< HEAD
-module.exports = databaseModule;
->>>>>>> origin/master
-=======
-module.exports = databaseModule;
->>>>>>> origin/master
