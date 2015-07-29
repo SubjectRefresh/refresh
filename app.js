@@ -12,6 +12,7 @@ var examBoard = require('./exam.js');
 var convert = require('./convert.js');
 var research = require('./research.js');
 var question = require('./question.js');
+var scrape = require('./scrape.js');
 console.log("App.JS: ".bold + " Successfully Imported External Functions".green);
 
 
@@ -20,6 +21,7 @@ var examBoardModule = new examBoard();
 var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
+var scrapeModule = new scrape();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".green);
 
 
@@ -76,6 +78,8 @@ console.log("App.JS: ".bold + " Successfully Created Sandpit".green);
 var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
+    
+    scrapeModule.convertPDFtoHTML();
 
     console.log("Refresh Running at localhost:3000");
 });
