@@ -2,9 +2,9 @@ var myStringArray = ["State the distinguishing properties of solids, liquids and
 
 
 var utf8 = require('utf8');
-var request = require("request");
+var request = require('sync-request');
 var colors = require("colors");
-var request = require('request');
+//var request = require('request');
 
 function test(inputArray, callback) {
 
@@ -12,14 +12,13 @@ function test(inputArray, callback) {
     var question = "";
     var outputContentWrapper = [];
     var output = []
-
     var arrayLength = inputArray.length;
     console.log("Question got to loading the array");
 
     for (var i = 0; i < arrayLength; i++) {
 
         var sentence = inputArray[i]
-
+        global.ready = true;
 
         for (c = 0; c < sentence.length; c++) {
 
@@ -32,12 +31,10 @@ function test(inputArray, callback) {
             }
 
         }
-        request.post({
-            url: 'https://api.textrazor.com',
+        var res = request('POST', 'https://api.textrazor.com', {
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=phrases%2Cwords"
-        }, function (err, response, body) {
-            console.log(body);
         });
+        console.log(res.getBody().toString('utf8'));
     }
 }
 test(myStringArray, function (output) {
