@@ -19,7 +19,7 @@ var questionModule = function () {
             entityPositions.push(data.response.entities[i].matchedText);
         }
         console.log(entityPositions);
-        callback(output);
+        callback(entityPositions);
     }
 }
 console.log("Convert.JS:".bold + " Successfully Defined `convert`".blue);
