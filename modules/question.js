@@ -1,6 +1,14 @@
 var colors = require("colors");
 var utf8 = require('utf8');
 var request = require('sync-request');
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
+
 console.log("Question.JS:".bold + " Successfully Imported Required Packages".blue);
  
 var questionModule = function () {
