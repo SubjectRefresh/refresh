@@ -7,15 +7,18 @@ var questionModule = function () {
     var self = this;
 
     self.covert = function (inputString, callback) {
-        var output = [];
-
-
+        var output = "";
+        var entityPositions = [];
+        var entityPositionsContentWrapper = [];
         var res = request('POST', 'https://api.textrazor.com', {
+
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(inputString) + "&extractors=" + utf8.encode("entities")
         });
         var data = JSON.parse(res.getBody().toString('utf8'));
-
-        console.log(data);
+        for (i = 0; i < data.response.entities.length; i++) {
+            entityPositions.push(data.response.entities[i].matchedText);
+        }
+        console.log(entityPositions);
         callback(output);
     }
 }
