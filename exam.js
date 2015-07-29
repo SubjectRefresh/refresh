@@ -10,7 +10,7 @@ var examBoardModule = function() {
         return this[this.length - 1];
     }
 
-    self.collectURLs function(number, convert, callback) {
+    self.collectURLs = function(number, convert, callback) {
         // Number Parameter Must be a String
         var newArray = [];
         var links = {
