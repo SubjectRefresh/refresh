@@ -10,37 +10,39 @@ parseHTML = function(number) {
 		}
 		console.log("Success!");
 		$ = cheerio.load(data);
-		var blarg = $("body").text();
-		// console.log(blarg);
+		var bulletpointsplit = $("body").text();
+		// console.log(bulletpointsplit);
 
-		blarg = blarg.split("•");
-		//console.log(blarg);
+		bulletpointsplit = bulletpointsplit.split("•");
+		//console.log(bulletpointsplit);
 
-		var test = blarg;
+		var temparray = bulletpointsplit;
 
-		for (i = 0; i < blarg.length; i++) {
-			if (blarg[i].indexOf("State the distinguishing properties of solids") > -1) {
-				console.log(blarg[i]);
+		for (i = 0; i < bulletpointsplit.length; i++) {
+			if (bulletpointsplit[i].indexOf("State the distinguishing properties of solids") > -1) {
+				console.log(bulletpointsplit[i]);
 				break;
 			} else {
 				console.log("Shifted!");
-				test.shift()
+				temparray.shift()
 			}
 		}
 
-		blarg = test;
-
-		for (i = blarg.length; i > 0; i--) {
-			if (blarg[i].indexOf("State the distinguishing properties of solids") > -1) {
-				console.log(blarg[i]);
-				break;
-			} else {
-				console.log("Shifted!");
-				test.pop()
-			}
-		}
+		console.log(temparray);
+		var bulletpointsplit2 = [];
+		bulletpointsplit2 = temparray;
 		
-		console.log(test);
+		for (i = temparray.length; i > 0; i=i-1) {
+			if (temparray[i].indexOf("different units and/or different linkages") > -1) {
+				console.log(temparray[i]);
+				break;
+			} else {
+				console.log("Popped!");
+				temparray.pop()
+			}
+		}
+
+		console.log(temparray);
 	});
 }
 
