@@ -151,7 +151,6 @@ if (process.argv[2]){
 }
 else {
     process.argv[2] = 80;
-    console.log("80");
 }
 var server = app.listen(process.argv[2], function () {
     var host = server.address().address;
