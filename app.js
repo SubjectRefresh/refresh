@@ -146,6 +146,12 @@ app.post("/dashboard", function (req, res) {
 });
 
 // Initialising the Express.JS Web Server to Listen on Port process.argv[2]
+if (process.argv[2]){
+}
+else {
+    process.argv[2] = 80;
+    console.log("80");
+}
 var server = app.listen(process.argv[2], function () {
     var host = server.address().address;
     var port = server.address().port;
