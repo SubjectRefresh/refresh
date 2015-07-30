@@ -124,7 +124,7 @@ app.get("/revise", function (req, res) {
 
 app.get("/CIE", function(req, res) {
     listModule.examBoardCIE(function(data) {
-        res.JSON({ subjectData: data });
+        res.send({ subjectData: data });
     });
 });
 
