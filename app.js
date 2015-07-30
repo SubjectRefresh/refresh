@@ -6,10 +6,10 @@ var fs = require("fs");
 var colors = require("colors");
 
 colors.setTheme({
-  title: ['white', 'italic'],
-  error: ['bgRed', 'white', 'title'],
-  info: ['bgYellow', 'white', 'italic'],
-  success: ['bgGreen', 'white'],
+    title: ['white', 'italic'],
+    error: ['bgRed', 'white', 'title'],
+    info: ['bgYellow', 'white', 'italic'],
+    success: ['bgGreen', 'white'],
 });
 
 console.log("App.JS: ".title + " Successfully Imported Required Packages".success);
@@ -64,32 +64,32 @@ app.get("/", function (req, res) {
     });
 });
 
-app.post("/register", function(req, res) {
+app.post("/register", function (req, res) {
     var firstName = req.body.fName;
     var lastName = req.body.lName;
     var email = req.body.eMail;
     var password = req.body.pass;
     var username = req.body.uName;
-    databaseModule.addUser(firstName, lastName, email, password, username, function() {
-        fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+    databaseModule.addUser(firstName, lastName, email, password, username, function () {
+        fs.readFile("pages/syllabus-choice.html", "ASCII", function (err, data) {
             res.send(data);
-        });                   
+        });
     });
     console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
 });
 
-app.get("/finnTest", function(req, res) {
-    fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+app.get("/finnTest", function (req, res) {
+    fs.readFile("pages/syllabus-choice.html", "ASCII", function (err, data) {
         res.send(data);
-    }); 
+    });
 });
 
-app.get("/login", function(req, res) {
+app.get("/login", function (req, res) {
     res.send("Login Page");
 });
 
-app.get("/dashboard", function(req, res) {
-    researchModule.researchTopic("properties of solids", "state", function(output) {
+app.get("/dashboard", function (req, res) {
+    researchModule.researchTopic("properties of solids", "state", function (output) {
         res.send(output);
     });
 });
@@ -97,7 +97,7 @@ app.get("/dashboard", function(req, res) {
 app.post("/dashboard", function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
-    
+
     // MySQL Shit
     // That Tom needs to do...
 
@@ -105,7 +105,7 @@ app.post("/dashboard", function (req, res) {
     // Template Engine Stuff Goes Here
 });
 
-app.post("/createSyllabus", function(req, res) {
+app.post("/createSyllabus", function (req, res) {
     var email = req.body.email;
     var password = req.body.password;
     var examBoard = req.body.examBoard;
@@ -120,30 +120,32 @@ app.get("/revise", function (req, res) {
     var examBoard = req.body.examBoard;
     var subject = req.body.subject;
     var syllabus = req.body.syllabus;
-    
-    databaseModule.login(email, password, function(output) {
+
+    databaseModule.login(email, password, function (output) {
         if (output == true) {
-            
+
         }
     });
 });
 
-app.post("/CIE", function(req, res) {
-    listModule.examBoardCIE(function(data) {
-        res.send({ subjectData: data });
+app.post("/CIE", function (req, res) {
+    listModule.examBoardCIE(function (data) {
+        res.send({
+            subjectData: data
+        });
     });
 });
 
-app.post("/CIEsubject", function(req, res) {
+app.post("/CIEsubject", function (req, res) {
     var syllabusNumber = String(req.body.syllabusNumber);
     //syllabusNumber = "0620";
     console.log(syllabusNumber);
-    examBoardModule.collectURLs(syllabusNumber, function(data) {
+    examBoardModule.collectURLs(syllabusNumber, function (data) {
         res.send(data);
     });
 });
 
-app.post("/dashboard", function(req, res) {
+app.post("/dashboard", function (req, res) {
     var email = req.body.email;
     email = "MasterYoda";
     var password = req.body.password;
@@ -156,15 +158,15 @@ app.post("/dashboard", function(req, res) {
     syllabus = "2015 Syllabus"
     var url = req.body.url;
     url = ""
-    databaseModule.login(email, password, function(output) {
+    databaseModule.login(email, password, function (output) {
         if (output == true) {
-            databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
-                scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
-                    scrapeModule.scrape(examBoard, subject, syllabus, function(points) {
-                        convertModule.convert(points, function(searchFields) {
-                            researchModule.researchTopic(searchFields, function(usefulSentences) {
-                                questionModule.question(usefulSentences, function(toStore) {
-                                    fs.writeFile("files/" + examBoard + subject + syllabus + ".sentenceData", toStore, function(err) {
+            databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function () {
+                scrapeModule.convertPDF(examBoard, subject, syllabus, url, function () {
+                    scrapeModule.scrape(examBoard, subject, syllabus, function (points) {
+                        convertModule.convert(points, function (searchFields) {
+                            researchModule.researchTopic(searchFields, function (usefulSentences) {
+                                questionModule.question(usefulSentences, function (toStore) {
+                                    fs.writeFile("files/" + examBoard + subject + syllabus + ".sentenceData", toStore, function (err) {
                                         if (err) throw err;
                                     });
                                 });
@@ -174,7 +176,7 @@ app.post("/dashboard", function(req, res) {
                 });
             });
         } else {
-            
+
         }
     });
 });
@@ -183,6 +185,6 @@ app.post("/dashboard", function(req, res) {
 var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
-    
+
     console.log("App.JS".title + " Refresh Running at localhost:3000".success);
 });
