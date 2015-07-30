@@ -9,7 +9,7 @@ colors.setTheme({
   success: ['bgGreen', 'white'],
 });
 
-console.log("Convert.JS:".bold + " Successfully Imported Required Packages".blue);
+console.log("Convert.JS:".title + " Successfully Imported Required Packages".success);
 
 var convertModule = function () {
     var self = this;
@@ -23,7 +23,7 @@ var convertModule = function () {
         var outputContentWrapper = [];
         var output = []
         var arrayLength = inputArray.length;
-        console.log("Test.JS got to loading the array");
+        console.log("Test.JS: ".title + "got to loading the array".success);
 
         for (var i = 0; i < arrayLength; i++) {
 
@@ -46,7 +46,7 @@ var convertModule = function () {
             });
             var data = JSON.parse(res.getBody().toString('utf8'));
             //console.log(res.getBody().toString('utf8'));
-            console.log("Test.JS:".bold + " Successfully attempted communication with TextRazor".green);
+            console.log("Test.JS:".title + " Successfully attempted communication with TextRazor".success);
             var entities = data.response.entities;
             if (entities != undefined) {
                 for (g = 0; g < entities.length; g++) {
@@ -70,7 +70,7 @@ var convertModule = function () {
         callback(output);
     }
 
-    console.log("Convert.JS:".bold + " Successfully Defined `convert`".blue);
+    console.log("Convert.JS:".title + " Successfully Defined `convert`".success);
 };
 
 module.exports = convertModule;

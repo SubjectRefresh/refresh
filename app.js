@@ -33,13 +33,10 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
-<<<<<<< HEAD
 var databaseModule = new databaseModule();
 console.log("App.JS: ".title + " Successfully Instantiated Packages".success);
-=======
 var databaseModule = new database();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
->>>>>>> origin/master
 
 // Creating Express.JS Web Server
 var app = express();
