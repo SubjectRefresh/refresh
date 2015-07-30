@@ -38,9 +38,9 @@ var databaseModule = new databaseModule();
 console.log("App.JS: ".title + " Successfully Instantiated Packages".success);
 var databaseModule = new database();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
-=======
+
 var databaseModule = new database();
->>>>>>> origin/master
+
 
 // Creating Express.JS Web Server
 var app = express();
