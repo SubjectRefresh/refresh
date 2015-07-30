@@ -16,6 +16,17 @@
     <script src="common/bootstrap/js/bootstrap.min.js"></script>
     <script src="common/js/data_base.js"></script>    
     <!-- End of Stylesheets -->
+
+    <!-- Cookies! -->
+    <script>
+    function changeCookie(){
+        var email = document.getElementsByName("eMail");
+        var password = document.getElementsByName("pass");
+        document.cookie = "email=" + email + "; path=/";
+        document.cookie = "pass=" + password + "; path=/";
+    }
+    </script>
+
 </head>
 
 <body id="body1">
@@ -40,10 +51,10 @@
                         <input type="text" placeholder="User Name" name="uName">
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email" name="eMail">
+                        <input type="email" placeholder="Email" name="eMail" onchange="changeCookie()">
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password" name="pass">
+                        <input type="password" placeholder="Password" name="pass" onchange="changeCookie()">
                     </div>
                     <div class="form-group">
                         <button type="submit">MAKE AN ACCOUNT</button>
