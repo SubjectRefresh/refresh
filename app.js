@@ -97,12 +97,6 @@ app.get("/login", function (req, res) {
     res.send("Login Page");
 });
 
-app.get("/dashboard", function (req, res) {
-    researchModule.researchTopic("properties of solids", "state", function (output) {
-        res.send(output);
-    });
-});
-
 app.post("/CIE", function (req, res) {
     listModule.examBoardCIE(function (data) {
         res.send({
