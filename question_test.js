@@ -3,7 +3,9 @@ var request = require('sync-request');
 var colors = require("colors");
 
 function question(inputString, callback) {
-    var sentence = inputString.join(" ");
+
+    var sentence = inputString;
+    //var sentence = inputString.join(" ");
     var output = "";
     var entityPositions = [];
     var entityPositionsContentWrapper = [];
@@ -18,6 +20,7 @@ function question(inputString, callback) {
     console.log(entityPositions);
     callback(output);
 }
+
 
 question("Solid is one of the four fundamental states of matter ). It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a liquid , a solid object does not flow to take on the shape of its container , nor does it expand to fill the entire volume available to it like a gas does. The atoms in a solid are tightly bound to each other , either in a regular geometric lattice ) or irregularly )", function (output) {
     console.log(output);
