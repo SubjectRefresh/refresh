@@ -7,12 +7,12 @@ var colors = require("colors");
 
 colors.setTheme({
   title: ['white', 'italic'],
-  error: ['bgRed', 'white', 'bold'],
+  error: ['bgRed', 'white', 'title'],
   info: ['bgYellow', 'white', 'italic'],
   success: ['bgGreen', 'white'],
 });
 
-console.log("App.JS: ".bold + " Successfully Imported Required Packages".success);
+console.log("App.JS: ".title + " Successfully Imported Required Packages".success);
 
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
@@ -23,7 +23,7 @@ var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
 var database = require('./data_base.js');
-console.log("App.JS: ".bold + " Successfully Imported External Functions".blue);
+console.log("App.JS: ".title + " Successfully Imported External Functions".success);
 
 // Instantiating External Refresh Packages
 var listModule = new list();
@@ -34,11 +34,11 @@ var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
 var databaseModule = new databaseModule();
-console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
+console.log("App.JS: ".title + " Successfully Instantiated Packages".success);
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".bold + " Successfully Initialised Express.JS Web Server".blue);
+console.log("App.JS: ".title + " Successfully Initialised Express.JS Web Server".success);
 
 // Initialising Middleware
 app.use(bodyParser.json());
@@ -46,12 +46,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
-console.log("App.JS: ".bold + " Successfully Initialised Middleware".blue);
+console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
 
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".bold + " Successfully Created Public Folder".blue);
+console.log("App.JS: ".title + " Successfully Created Public Folder".success);
 
 
 // App Routes
@@ -115,5 +115,5 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     
-    console.log("App.JS".bold + " Refresh Running at localhost:3000".blue);
+    console.log("App.JS".title + " Refresh Running at localhost:3000".success);
 });

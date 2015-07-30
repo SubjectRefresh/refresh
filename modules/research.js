@@ -20,9 +20,9 @@ var researchModule = function() {
     
     self.researchTopic = function(topic, commandWord, callback) {
         var topicWordsSplit = topic.split(" ");
-        console.log("Research.JS:".bold + " Searching Bing".blue);
+        console.log("Research.JS:".title + " Searching Bing".success);
         bing.web(topic, {top:3, skip:0}, function(err, res, body) {
-            console.log("Research.JS:".bold + " Received Bing Search Results".blue);
+            console.log("Research.JS:".title + " Received Bing Search Results".success);
             var URL = []
             URL.push(body.d.results[0].Url);
             URL.push(body.d.results[1].Url);
@@ -31,9 +31,9 @@ var researchModule = function() {
             var output = "";
             var count = 0;
             for (var i = 0; i < 3; i++) {
-                console.log("Research.JS:".bold + (" Requesting Webpage, " + URL[i]).blue);
+                console.log("Research.JS:".title + (" Requesting Webpage, " + URL[i]).success);
                 request(URL[i], function(err, res, body) {
-                    console.log("Research.JS:".bold + " Received Webpage!".blue);
+                    console.log("Research.JS:".title + " Received Webpage!".success);
                     output += body;
                     count += 1;
                     if (count == 3) {
