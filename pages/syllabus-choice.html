@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>Refresh :: Syllabus Choice</title>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../public/common/css/main.css">
-    <script src="../public/common/js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/common/css/main.css">
+    <script src="/common/js/jquery.min.js" type="text/javascript"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="../public/common/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/common/bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="../public/common/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/common/bootstrap/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="../public/common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/common/bootstrap/js/bootstrap.min.js"></script>
     <!-- End of Stylesheets -->
 </head>
 
@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="http://www.subjectrefresh.info">
-        <img alt="Brand" src="../public/common/img/secondlogo.png" style="width:45px;">
+        <img alt="Brand" src="/common/img/secondlogo.png" style="width:45px;">
       </a>
     </div>
 
@@ -47,33 +47,24 @@
     <div class="container">
         <div class="row" id="needs_margin_top">
             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent">
-                <h1 style="font-weight:bold;"><font style="color:#3D3D3D;"> Select a Board</font></h1>
+              <label for="selectBoard">Board</label>
                 <select id="selectBoard" name="course" class="form-control">
                     <option value="CIE">CIE</option>
-                    <option value="Edexcel">Edexcel</option>
-                    <option value="AQA">AQA</option>
-                    <option value="OCR">OCR</option>
+                    <option class="disabled" value="Edexcel">Edexcel</option>
+                    <option class="disabled" value="AQA">AQA</option>
+                    <option class="disabled" value="OCR">OCR</option>
                 </select>
-<br/>
-<div class="dropdown" style="width:100%;">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-    Subjects
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width:100%;text-align:center;">
-    <li class="disabled"><a href="#">Here</a></li>
-  </ul>
-</div> 
-<br/>
-<div class="dropdown" style="width:100%;">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width:100%;">
-    Syllabus
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="width:100%;text-align:center;">
-    <li><a href="#">Here</a></li>
-  </ul>
-</div>                      
+                <label for="selectSubject">Subject</label>
+                <select id="selectSubject" name="subject" class="form-control">
+                    <option value="number">Subject</option>
+                </select>
+                <label for="syllabus">Syllabus</label>
+                <select id="syllabus" name="course" class="form-control">
+                    <option value="CIE">CIE</option>
+                    <option class="disabled" value="Edexcel">Edexcel</option>
+                    <option class="disabled" value="AQA">AQA</option>
+                    <option class="disabled" value="OCR">OCR</option>
+                </select>
 <hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
     <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center><br/>
 
@@ -86,9 +77,14 @@
     <script type="text/javascript">
         $("#selectBoard").on("change",function(){
             console.log($(this).val());
-            $.post("CIE", { name: "John", time: "2pm" }).success(function() function( data) {
-                  console.log( data.name ); // John
-                  console.log( data.time ); // 2pm
+            $.post("CIE").success(function() {
+                  console.log(data.subjectData);
+            }, "json");
+        });
+        $("#selectSubject").on("change",function(){
+            console.log($(this).val());
+            $.post("CIESubject", {syllabusNumber:$(this).val()}).success(function(urls) {
+                  console.log(urls);
             }, "json");
         });
     </script>
