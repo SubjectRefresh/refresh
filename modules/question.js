@@ -3,7 +3,7 @@
 //I/O Details:
 //
 //I - Array of arrays of sentences to process
-//O - Array of gaps in the gap fill: [[Word, startPos, endPos],[Word, startPos, endPos]]
+//O - Array of gaps in the gap fill: [[[[Entity, StartPos, EndPos],[Entity, StartPos, EndPos]],sentence],[[[Entity, StartPos, EndPos],[Entity, StartPos, EndPos]],sentence]]
 //
 /////////////////////////////////////////////////////////////////////////
 
