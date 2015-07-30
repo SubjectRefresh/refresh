@@ -53,14 +53,8 @@ var databaseModule = function() {
         salt = generateSalt(SaltLength);
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
-<<<<<<< Updated upstream
-            if (err) throw err;
-            callback();
-=======
-            if (err) console.log( err );
->>>>>>> Stashed changes
-            connection.end();
-
+        if (err) console.log( err );
+        connection.end();
         });
     };
     
