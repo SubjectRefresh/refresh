@@ -120,12 +120,34 @@ app.get("/revise", function (req, res) {
     var examBoard = req.body.examBoard;
     var subject = req.body.subject;
     var syllabus = req.body.syllabus;
+    
+    databaseModule.login(email, password, function(output) {
+        if (output == true) {
+            
+        }
+    });
 });
 
 app.post("/CIE", function(req, res) {
     listModule.examBoardCIE(function(data) {
         res.send({ subjectData: data });
     });
+});
+
+app.post("/CIEsubject", function(req, res) {
+    var syllabusNumber = String(req.body.syllabusNumber);
+    console.log(syllabusNumber);
+    examBoardModule.collectURLs(syllabusNumber, function(data) {
+        res.send(data);
+    });
+});
+
+app.post("/chooseSubject", function(req, res) {
+    var email = req.body.email;
+    var password = req.body.password;
+    var examBoard = req.body.examBoard;
+    var subject = req.body.subject;
+    var syllabus = req.body.syllabus;
 });
 
 // Initialising the Express.JS Web Server to Listen on Port 3000

@@ -18,8 +18,6 @@ var databaseModule = function() {
         database: 'hexcompu_refresh'
     });
 
-    console.log('Server Login');
-
     var SaltLength = 9;
     
     function createHash(password,salt) {
@@ -50,12 +48,14 @@ var databaseModule = function() {
     
     self.addUser = function(fName, lName, eMail, pass, uName, callback) {
         connection.connect();
-        salt = generateSalt(SaltLength)
+        
+        console.log('Server Login');
+        salt = generateSalt(SaltLength);
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
             if (err) throw err;
+            callback();
             connection.end();
-            callback(true);
 
         });
     };
@@ -66,14 +66,25 @@ var databaseModule = function() {
             if (err) throw err;
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
-                connection.end();
                 callback(true);
-            } else{
-                console.log('Login Denied');
                 connection.end();
+                }
+            else{
+
+                console.log('Login Denied');
                 callback(false);
+                connection.end();
             }
 
+        });
+    };
+    
+    self.createSyllabusEntry = function(eMail, examBoard, examSubject, examSyllabus, callback) {
+        var toStore = examBoard + ":" + examSubject + ":" + examSyllabus + ";";
+        connection.connect();
+        connection.query('UPDATE UserData SET Syllabii = ? WHERE Email = ?', [toStore, eMail], function(err, rows, fields) {
+            if (err) throw err;
+            callback();
         });
     };
 };

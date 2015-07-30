@@ -16,14 +16,19 @@ var examBoardModule = function() {
     Array.prototype.last = function() {
         return this[this.length - 1];
     }
+    
+    String.prototype.trim = function() {  
+        return this.replace(/^\s+|\s+$/g,"");  
+    }  
 
-    self.collectURLs = function(number, convert, callback) {
+    self.collectURLs = function(number, callback) {
         // Number Parameter Must be a String
         var newArray = [];
         var links = {
             syllabus: null,
             pdfs: []
         };
+        var baseURL = "http://www.cie.org.uk"
         console.log("PDFList.js: ".bold + "Successfully Defined Global Variables".green);
         request("http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/", function(error, response, body) {
             if (!error && response.statusCode == 200) {
@@ -37,28 +42,30 @@ var examBoardModule = function() {
                         "link": baseURL + selector // link
                     });
                 });
+                console.log(newArray);
                 for (i = 0; i < newArray.length; i++) {
                     if (String(newArray[i].number) == String(number)) { // we got a match for the subject
                         links.syllabus = newArray[i].link;
                         request(baseURL + newArray[i].dom_object.find("a").attr("href"), function(error2, response2, body2) {
                             console.log("PDFList.js: ".bold + "Successfully Requested Website For List Of PDFs".green);
                             $new = cheerio.load(body2);
-                            $new(".binaryLink").find("a").each(function() {
+                            
+                            $new(".binaryLink").find("a").each(function(i, elem) {
                                 var PDFLink = $new(this).attr("href");
-                                links.pdfs.push(PDFLink); // is working
+                                var PDFName = $new(this).text().replace("\n", "").trim();
+                                var PDFName = PDFName.split("(")[0].trim();
+                                links.pdfs.push(PDFLink, PDFName);
+                                if (i == $new(".binaryLink").find("a").length - 1) {
+                                    callback(links.pdfs);
+                                }
+                                console.log("collectURLs has finished".red);
+                                
+                                // is working
                                 //    console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
                             });
                             //console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
                         });
                     }
-                }
-                console.log("collectURLs has finished".red);
-                if (convert) {
-                    doPDFConversions(links, function(html) { // insert pdf conversion function here and return HTML to the callback
-                        if (callback !== undefined) {
-                            callback(html);
-                        }
-                    });
                 }
             }
         });
