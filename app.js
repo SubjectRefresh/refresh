@@ -145,10 +145,10 @@ app.post("/dashboard", function (req, res) {
     });
 });
 
-// Initialising the Express.JS Web Server to Listen on Port 3000
-var server = app.listen(3000, function () {
+// Initialising the Express.JS Web Server to Listen on Port process.argv[2]
+var server = app.listen(process.argv[2], function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log("App.JS".title + " Refresh Running at localhost:3000".success);
+    console.log("App.JS".title + " Refresh Running at ".success + host.blue + ":".success + String(port).blue);
 });
