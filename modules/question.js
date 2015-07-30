@@ -1,3 +1,12 @@
+/////////////////////////////////////////////////////////////////////////
+//
+//I/O Details:
+//
+//I - Array of sentences to process
+//O - Array of gaps in the gap fill: [[Word, startPos, endPos],[Word, startPos, endPos]]
+//
+/////////////////////////////////////////////////////////////////////////
+
 var colors = require("colors");
 var utf8 = require('utf8');
 var request = require('sync-request');

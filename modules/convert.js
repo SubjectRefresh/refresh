@@ -1,12 +1,20 @@
+/////////////////////////////////////////////////////////////////////////
+//
+//I/O Details:
+//
+//I - Array of sentences to process
+//O - Array of searchable terms as strings
+//
+/////////////////////////////////////////////////////////////////////////
 var utf8 = require('utf8');
 var request = require('sync-request');
 var colors = require("colors");
 
 colors.setTheme({
-  title: ['white', 'italic'],
-  error: ['bgRed', 'white', 'bold'],
-  info: ['bgYellow', 'white', 'italic'],
-  success: ['bgGreen', 'white'],
+    title: ['white', 'italic'],
+    error: ['bgRed', 'white', 'bold'],
+    info: ['bgYellow', 'white', 'italic'],
+    success: ['bgGreen', 'white'],
 });
 
 console.log("Convert.JS:".title + " Successfully Imported Required Packages".success);
