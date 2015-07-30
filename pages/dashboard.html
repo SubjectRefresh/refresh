@@ -15,6 +15,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="common/js/angularModule.js"></script>
     <!-- End of Stylesheets -->
+
+    <!-- Cookies! -->
+    <script>
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+      }
+      return "";
+    }
+    email = getCookie("email");
+    password = getCookie("password");
+    console.log(email + " " + password);
+    </script>
+    
 </head>
 
 <body id="body1" ng-controller="RefreshController as Refresh">
