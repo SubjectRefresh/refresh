@@ -83,10 +83,9 @@
         });
         $("#selectSubject").on("change",function(){
             console.log($(this).val());
-            $.post("CIESubject", {syllabusNumber:$(this).val()}).success(function(urls) {
+            $.post("CIESubject", {"syllabusNumber":$(this).val()}).success(function(urls) {
                   console.log(urls);
             }, "json");
         });
     </script>
-
 </html>
