@@ -34,7 +34,7 @@ var examBoardModule = function() {
 
                 subjectArray.length = subjectArray.length - 4;
                 console.log("Exam.JS:".bold + " Successfully Got `subjectArray`".green);
-                //callback(subjectArray); //Future Callback
+                callback(subjectArray);
             }
         });
     };
