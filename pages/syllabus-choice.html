@@ -50,20 +50,17 @@
               <label for="selectBoard">Board</label>
                 <select id="selectBoard" name="course" class="form-control">
                     <option value="CIE">CIE</option>
-                    <option class="disabled" value="Edexcel">Edexcel</option>
-                    <option class="disabled" value="AQA">AQA</option>
-                    <option class="disabled" value="OCR">OCR</option>
+                    <option class="disabled" value="Edexcel" disabled="disabled">Edexcel</option>
+                    <option class="disabled" value="AQA" disabled="disabled">AQA</option>
+                    <option class="disabled" value="OCR" disabled="disabled">OCR</option>
                 </select>
                 <label for="selectSubject">Subject</label>
                 <select id="selectSubject" name="subject" class="form-control">
-                    <option value="number">Subject</option>
+                  <option disabled="" id="remove_subject">Loading...</option>
                 </select>
                 <label for="syllabus">Syllabus</label>
-                <select id="syllabus" name="course" class="form-control">
-                    <option value="CIE">CIE</option>
-                    <option class="disabled" value="Edexcel">Edexcel</option>
-                    <option class="disabled" value="AQA">AQA</option>
-                    <option class="disabled" value="OCR">OCR</option>
+                <select id="syllabus" name="syllabus" class="form-control">
+                    <option disabled="" id="remove_syllabus">Loading...</option>
                 </select>
 <hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
     <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center><br/>
@@ -75,17 +72,47 @@
 </body>
     
     <script type="text/javascript">
-        $("#selectBoard").on("change",function(){
-            console.log($(this).val());
-            $.post("CIE").success(function() {
-                  console.log(data.subjectData);
-            }, "json");
+      Array.prototype.last = function() {
+        return this[this.length - 1];
+      }
+
+      function updateSubjects(){
+        $.post("CIE").success(function(data) {
+          for (i=0;i<data.subjectData.length-1;i++){
+            var i_n = data.subjectData[i].split("-");
+            var rest = i_n.pop().toString();
+            $("#selectSubject").append("<option value='" + rest.replace(/ /g,'') + "'>" + i_n.last() + "</option>");
+            $("#remove_subject").remove();
+          }
+        }, "json").done(function() {
+          console.log("Finished looking for syllabuses");
         });
-        $("#selectSubject").on("change",function(){
-            console.log($(this).val());
-            $.post("CIESubject", {"syllabusNumber":$(this).val()}).success(function(urls) {
-                  console.log(urls);
-            }, "json");
+      }
+      function updateSyllabus() {
+ //       console.log("syllabus change - got " + this);
+        $.post("CIESubject", {"syllabusNumber":this}).success(function(urls) {
+          for (i=0;i<urls.length-1;i++){
+            console.log(urls[i]);
+            $("#syllabus").append("<option value='" + urls[i] + "'>" + urls[i] + "</option>");
+            $("#remove_syllabus").remove();
+          }
+        }, "json").done(function(){
+          console.log("Finished looking for subjects");
         });
+      }
+      $("#selectBoard").on("change",function(){
+        updateSubjects();
+      });
+      $("#selectBoard").on("click",function(){
+        updateSubjects();
+      });
+      $("#selectSubject").on("change",function(){
+        console.log($("#selectSubject").find(":selected").attr("value"));
+        updateSyllabus($("#selectSubject").find(":selected"));
+      });
+      $("#selectSubject").on("click",function(){
+        console.log($("#selectSubject").find(":selected").attr("value"));
+        updateSyllabus($("#selectSubject").find(":selected"));
+      });
     </script>
 </html>
