@@ -22,6 +22,7 @@ var convert = require('./modules/convert.js');
 var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
+var database = require('./data_base.js');
 console.log("App.JS: ".bold + " Successfully Imported External Functions".blue);
 
 // Instantiating External Refresh Packages
@@ -32,6 +33,7 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
+var databaseModule = new databaseModule();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
 
 // Creating Express.JS Web Server
