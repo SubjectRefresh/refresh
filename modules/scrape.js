@@ -3,6 +3,8 @@ var fs = require("fs");
 var cheerio = require("cheerio");
 var natural = require("natural");
 var colors = require("colors");
+var request = require("request");
+var path = require("path");
 
 colors.setTheme({
   title: ['white', 'italic'],
@@ -15,7 +17,7 @@ var parseHTML = function(number) {
     var self = this;
     
     self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
-        fs.readFile("files/" + examBoard + examSubject + examSyllabus + ".html", 'utf8', function(err, data) {
+        fs.readFile("../files/" + examBoard + examSubject + examSyllabus + ".html", 'utf8', function(err, data) {
             if (err) throw err;
             console.log("Success!");
             $ = cheerio.load(data);
@@ -57,9 +59,9 @@ var parseHTML = function(number) {
     
     self.convertPDF = function(examBoard, examSubject, examSyllabus, url, callback) {
         request(url, function(err, res, body) {
-            fs.writeFile("files/" + examBoard + examSubject + examSyllabus + ".pdf", function(err) {
+            fs.writeFile(path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".pdf")), function(err) {
                 if (err) throw err;
-                var converter = new pdf("files/" + examBoard + examSubject + examSyllabus + ".pdf", "files/" + examBoard + examSubject + examSyllabus + ".html");
+                var converter = new pdf(path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".pdf"), path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".html"))));
                 converter.convert();
                 converter.success(function() {
                     callback();

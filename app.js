@@ -121,7 +121,7 @@ app.post("/dashboard", function (req, res) {
     var subject = req.body.subject;
     var syllabus = req.body.syllabus;
     var url = req.body.url;
-    url = ""
+    url = "";
     databaseModule.login(email, password, function (output) {
         if (output == true) {
             databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function () {
