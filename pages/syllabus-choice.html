@@ -126,8 +126,8 @@
                 i_n = "http://cie.org.uk" + i_n;
                 console.log(i_n);
             }
-            var password = "JDog";
-            var email = "Jim@bob.com"
+            var password = "(Abcde12345)";
+            var email = "OliCallaghan@icloud.com"
             var examBoardBuffer = document.getElementById("selectBoard");
             var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
             $.post("/dashboard", {"email" : email, "password" : password, "examBoard" : examBoard, "subject" : subject, "syllabus" : syllabus, "url" : i_n}).success(function(data) {

@@ -53,15 +53,15 @@ var databaseModule = function() {
         salt = generateSalt(SaltLength);
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
-            if (err) console.log( err );
-            callback(true);
-            connection.end();
+        if (err) console.log( err );
+        connection.end();
+        callback(true);
         });
     };
     
     self.login = function(eMail, pass, callback){
         connection.connect();
-        connection.query('SELECT hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
+        connection.query('SELECT Hash,Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
