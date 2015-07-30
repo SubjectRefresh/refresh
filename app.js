@@ -33,7 +33,7 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
-var databaseModule = new databaseModule();
+var databaseModule = new database();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
 
 // Creating Express.JS Web Server
@@ -62,10 +62,13 @@ app.get("/", function (req, res) {
 });
 
 app.post("/register", function(req, res) {
-    var firstName = req.body.firstName;
-    var lastName = req.body.lastName;
-    var email = req.body.email;
-    var password = req.body.password;
+    var firstName = req.body.fName;
+    var lastName = req.body.lName;
+    var email = req.body.eMail;
+    var password = req.body.pass;
+    var username = req.body.uName;
+    databaseModule.addUser(firstName, lastName, email, password, username);
+    console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
 });
 
 app.get("/login", function(req, res) {
