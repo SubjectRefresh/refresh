@@ -51,7 +51,7 @@ var parseHTML = function(number) {
                 }
             }
 
-            callback();
+            callback(temparray);
         });
     };
     

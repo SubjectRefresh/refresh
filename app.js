@@ -145,13 +145,34 @@ app.post("/CIEsubject", function(req, res) {
 
 app.post("/dashboard", function(req, res) {
     var email = req.body.email;
+    email = "MasterYoda";
     var password = req.body.password;
+    password = "JediKnight";
     var examBoard = req.body.examBoard;
+    examBoard = "CIE";
     var subject = req.body.subject;
+    subject = "Chemistry";
     var syllabus = req.body.syllabus;
+    syllabus = "2015 Syllabus"
+    var url = req.body.url;
+    url = ""
     databaseModule.login(email, password, function(output) {
         if (output == true) {
-            databaseModule.create
+            databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
+                scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
+                    scrapeModule.scrape(examBoard, subject, syllabus, function(points) {
+                        convertModule.convert(points, function(searchFields) {
+                            researchModule.researchTopic(searchFields, function(usefulSentences) {
+                                questionModule.question(usefulSentences, function(toStore) {
+                                    fs.writeFile("files/" + examBoard + subject + syllabus + ".sentenceData", toStore, function(err) {
+                                        if (err) throw err;
+                                    });
+                                });
+                            })
+                        });
+                    });
+                });
+            });
         } else {
             
         }
