@@ -88,12 +88,12 @@
           console.log("Finished looking for syllabuses");
         });
       }
-      function updateSyllabus() {
- //       console.log("syllabus change - got " + this);
-        $.post("CIESubject", {"syllabusNumber":this}).success(function(urls) {
+      function updateSyllabus(i_n) {
+        console.log("the needed syllabus is " + i_n);
+        $.post("CIESubject", {"syllabusNumber":i_n}).success(function(urls) {
           for (i=0;i<urls.length-1;i++){
             console.log(urls[i]);
-            $("#syllabus").append("<option value='" + urls[i] + "'>" + urls[i] + "</option>");
+            $("#syllabus").append("<option value='" + urls[i][0] + "'>" + urls[i][1] + "</option>");
             $("#remove_syllabus").remove();
           }
         }, "json").done(function(){
@@ -107,12 +107,10 @@
         updateSubjects();
       });
       $("#selectSubject").on("change",function(){
-        console.log($("#selectSubject").find(":selected").attr("value"));
-        updateSyllabus($("#selectSubject").find(":selected"));
+        updateSyllabus($("#selectSubject").find(":selected").attr("value"));
       });
       $("#selectSubject").on("click",function(){
-        console.log($("#selectSubject").find(":selected").attr("value"));
-        updateSyllabus($("#selectSubject").find(":selected"));
+        updateSyllabus($("#selectSubject").find(":selected").attr("value"));
       });
     </script>
 </html>
