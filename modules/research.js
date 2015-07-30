@@ -68,11 +68,11 @@ var researchModule = function() {
                                 }
                                 if (tokenizedText[w] == ")") {clause -= 1;}
                                 console.log(tokenizedText[w], "URL");
-                                if (natural.JaroWinklerDistance(tokenizedText[w], "URL") > 0.5) { 
+                                if (natural.JaroWinklerDistance(tokenizedText[w], "URL") > 0.8) { 
                                     irrelevent = true;
-                                } if (natural.JaroWinklerDistance(tokenizedText[w], "exam") > 0.5) {
+                                } if (natural.JaroWinklerDistance(tokenizedText[w], "exam") > 0.8) {
                                     irrelevent = true;
-                                } if (natural.JaroWinklerDistance(tokenizedText[w], "GCSE") > 0.5) {
+                                } if (natural.JaroWinklerDistance(tokenizedText[w], "GCSE") > 0.8) {
                                     irrelevent = true;
                                 }
                             }

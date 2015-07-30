@@ -1,40 +1,62 @@
 var pdf = require("pdftohtmljs");
 var fs = require("fs");
-var cheerio = require("cheerio"); 
+var cheerio = require("cheerio");
+var natural = require("natural");
+var colors = require("colors");
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
+
 
 var scrapeModule = function() {
     var self = this;
-
-    self.convertPDFtoHTML = function(number) {
-        var converter = new pdf("temporary/syllabus.pdf", "temporary/sample.html");
-        console.log("BLAH!");
-
-        converter.preset("default");
-
-        converter.success(function() {
-            console.log("Conversion Done!");
-        });
-
-        converter.error(function(err) {
-            console.log("Error: " + err);
-        });
-
-        converter.convert();
-    };
-
+    
     self.parseHTML = function(number) {
-        fs.readFile('./temporary/CIE' + number + ".html", 'utf8', function(err, data) {
+        fs.readFile('../temporary/CIE' + number + ".html", 'utf8', function(err, data) {
             if (err) {
-                return console.log(err);
+                throw err;
             }
             console.log("Success!");
-            $ = cheerio.load(body);
-            console.log($.text());
+            $ = cheerio.load(data);
+            var bulletpointsplit = $("body").text();
+            // console.log(bulletpointsplit);
 
+            bulletpointsplit = bulletpointsplit.split("•");
+            //console.log(bulletpointsplit);
+
+            var temparray = bulletpointsplit;
+
+            for (i = 0; i < bulletpointsplit.length; i++) {
+                if (bulletpointsplit[i].indexOf("State the distinguishing properties of solids") > -1) {
+                    console.log(bulletpointsplit[i]);
+                    break;
+                } else {
+                    console.log("Shifted!");
+                    temparray.shift()
+                }
+            }
+
+            console.log(temparray);
+            var bulletpointsplit2 = [];
+            bulletpointsplit2 = temparray;
+
+            for (i = temparray.length; i > 0; i=i-1) {
+                if (temparray[i].indexOf("different units and/or different linkages") > -1) {
+                    console.log(temparray[i]);
+                    break;
+                } else {
+                    console.log("Popped!");
+                    temparray.pop()
+                }
+            }
+
+            console.log(temparray);
         });
     }
-
-    //self.parseHTML("0600");
 };
 
 module.exports = scrapeModule;

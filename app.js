@@ -12,7 +12,7 @@ colors.setTheme({
   success: ['bgGreen', 'white'],
 });
 
-console.log("App.JS: ".title + " Successfully Imported Required Packages".success);
+console.log("App.JS: ".title + "Successfully Imported Required Packages".success);
 
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
@@ -23,7 +23,7 @@ var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
 var database = require('./data_base.js');
-console.log("App.JS: ".title + " Successfully Imported External Functions".success);
+console.log("App.JS: ".title + "Successfully Imported External Functions".success);
 
 // Instantiating External Refresh Packages
 var listModule = new list();
@@ -44,7 +44,7 @@ var databaseModule = new database();
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".title + " Successfully Initialised Express.JS Web Server".success);
+console.log("App.JS: ".title + "Successfully Initialised Express.JS Web Server".success);
 
 // Initialising Middleware
 app.use(bodyParser.json());
@@ -52,12 +52,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(multer());
-console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
+console.log("App.JS: ".title + "Successfully Initialised Middleware".success);
 
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".title + " Successfully Created Public Folder".success);
+console.log("App.JS: ".title + "Successfully Created Public Folder".success);
 
 
 // App Routes
@@ -84,7 +84,8 @@ app.post("/register", function(req, res) {
 app.get("/finnTest", function(req, res) {
     fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
         res.send(data);
-    }); 
+    });
+    scrapeModule.parseHTML(0600);
 });
 
 app.get("/login", function(req, res) {
@@ -98,8 +99,13 @@ app.get("/dashboard", function(req, res) {
 });
 
 app.post("/dashboard", function (req, res) {
-    var email = req.body.email;
-    var password = req.body.password;
+    var email = req.body.eMail;
+    var password = req.body.pass;
+    databaseModule.login(email, password, function(login) {
+        if (login == true) {
+            console.log("Logged In!");
+        }
+    });
     
     // MySQL Shit
     // That Tom needs to do...
@@ -134,5 +140,5 @@ var server = app.listen(3000, function () {
     var host = server.address().address;
     var port = server.address().port;
     
-    console.log("App.JS".title + " Refresh Running at localhost:3000".success);
+    console.log("App.JS: ".title + "Refresh Running at localhost:3000".success);
 });

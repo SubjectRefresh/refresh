@@ -18,8 +18,6 @@ var databaseModule = function() {
         database: 'hexcompu_refresh'
     });
 
-
-    connection.connect();
     console.log('Server Login');
 
     var SaltLength = 9;
@@ -51,26 +49,29 @@ var databaseModule = function() {
     }
     
     self.addUser = function(fName, lName, eMail, pass, uName, callback) {
+        connection.connect();
         salt = generateSalt(SaltLength)
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
             if (err) throw err;
-            callback();
+            connection.end();
+            callback(true);
 
         });
     };
     
-    self.login = function(eMail,pass){
+    self.login = function(eMail, pass, callback){
+        connection.connect();
         connection.query('SELECT Hash,Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) throw err;
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
-                return true;
-                }
-            else{
-
+                connection.end();
+                callback(true);
+            } else{
                 console.log('Login Denied');
-                return false;
+                connection.end();
+                callback(false);
             }
 
         });
