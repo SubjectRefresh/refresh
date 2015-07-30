@@ -143,12 +143,19 @@ app.post("/CIEsubject", function(req, res) {
     });
 });
 
-app.post("/chooseSubject", function(req, res) {
+app.post("/dashboard", function(req, res) {
     var email = req.body.email;
     var password = req.body.password;
     var examBoard = req.body.examBoard;
     var subject = req.body.subject;
     var syllabus = req.body.syllabus;
+    databaseModule.login(email, password, function(output) {
+        if (output == true) {
+            databaseModule.create
+        } else {
+            
+        }
+    });
 });
 
 // Initialising the Express.JS Web Server to Listen on Port 3000

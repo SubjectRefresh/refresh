@@ -58,7 +58,7 @@ var examBoardModule = function() {
                                 if (i == $new(".binaryLink").find("a").length - 1) {
                                     callback(links.pdfs);
                                 }
-                                console.log("collectURLs has finished".red);
+                                console.log("collectURLs has finished".green);
                                 
                                 // is working
                                 //    console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
