@@ -136,6 +136,7 @@ app.post("/CIE", function(req, res) {
 
 app.post("/CIEsubject", function(req, res) {
     var syllabusNumber = String(req.body.syllabusNumber);
+    //syllabusNumber = "0620";
     console.log(syllabusNumber);
     examBoardModule.collectURLs(syllabusNumber, function(data) {
         res.send(data);
