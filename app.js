@@ -72,8 +72,10 @@ app.post("/register", function(req, res) {
     var email = req.body.eMail;
     var password = req.body.pass;
     var username = req.body.uName;
-    databaseModule.addUser(firstName, lastName, email, password, username, function()m {
-        res.send("Registered");                   
+    databaseModule.addUser(firstName, lastName, email, password, username, function() {
+        fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+            res.send(data);
+        });                   
     });
     console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
 });

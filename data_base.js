@@ -4,24 +4,25 @@
 
 var mysql = require('mysql');
 var crypto = require('crypto');
-//connect to server
-var connection = mysql.createConnection({
-    host: '185.38.45.194',
-    user: 'hexcompu_ref',
-    password: 'AWDRGY123123',
-    database: 'hexcompu_refresh'
-});
-
-
-connection.connect();
-console.log('Server Login');
-
-var SaltLength = 9;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var databaseModule = function() {
     var self = this;
+    
+    //connect to server
+    var connection = mysql.createConnection({
+        host: '185.38.45.194',
+        user: 'hexcompu_ref',
+        password: 'AWDRGY123123',
+        database: 'hexcompu_refresh'
+    });
+
+
+    connection.connect();
+    console.log('Server Login');
+
+    var SaltLength = 9;
     
     function createHash(password,salt) {
     var hash = md5(password + salt);
