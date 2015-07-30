@@ -128,8 +128,6 @@ app.post("/CIE", function(req, res) {
     });
 });
 
-app.
-
 // Initialising the Express.JS Web Server to Listen on Port 3000
 var server = app.listen(3000, function () {
     var host = server.address().address;
