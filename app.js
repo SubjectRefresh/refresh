@@ -70,10 +70,12 @@ app.post("/register", function(req, res) {
     var email = req.body.eMail;
     var password = req.body.pass;
     var username = req.body.uName;
-    databaseModule.addUser(firstName, lastName, email, password, username, function() {
-        fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
-            res.send(data);
-        });                   
+    databaseModule.addUser(firstName, lastName, email, password, username, function(output) {
+        if (output == true) {
+            fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+                res.send(data);
+            });  
+        }               
     });
     console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
 });
@@ -92,17 +94,6 @@ app.get("/dashboard", function(req, res) {
     researchModule.researchTopic("properties of solids", "state", function(output) {
         res.send(output);
     });
-});
-
-app.post("/dashboard", function (req, res) {
-    var email = req.body.email;
-    var password = req.body.password;
-    
-    // MySQL Shit
-    // That Tom needs to do...
-
-    // Paste this inside your callback
-    // Template Engine Stuff Goes Here
 });
 
 app.post("/createSyllabus", function(req, res) {
@@ -145,17 +136,11 @@ app.post("/CIEsubject", function(req, res) {
 
 app.post("/dashboard", function(req, res) {
     var email = req.body.email;
-    email = "MasterYoda";
     var password = req.body.password;
-    password = "JediKnight";
     var examBoard = req.body.examBoard;
-    examBoard = "CIE";
     var subject = req.body.subject;
-    subject = "Chemistry";
     var syllabus = req.body.syllabus;
-    syllabus = "2015 Syllabus"
     var url = req.body.url;
-    url = ""
     databaseModule.login(email, password, function(output) {
         if (output == true) {
             databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
@@ -166,6 +151,7 @@ app.post("/dashboard", function(req, res) {
                                 questionModule.question(usefulSentences, function(toStore) {
                                     fs.writeFile("files/" + examBoard + subject + syllabus + ".sentenceData", toStore, function(err) {
                                         if (err) throw err;
+                                        res.send("HEY! :D");
                                     });
                                 });
                             })
