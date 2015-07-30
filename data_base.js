@@ -59,9 +59,12 @@ function Login(eMail,pass){
         if (err) throw err;
         if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
             console.log('Login Successful');
+            return true;
             }
         else{
+            
             console.log('Login Denied');
+            return false;
         }
         
     });
