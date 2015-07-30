@@ -85,6 +85,7 @@ var databaseModule = function() {
         connection.query('UPDATE UserData SET Syllabii = ? WHERE Email = ?', [toStore, eMail], function(err, rows, fields) {
             if (err) throw err;
             callback();
+            connection.end();
         });
     };
 };
