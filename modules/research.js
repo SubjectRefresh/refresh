@@ -45,21 +45,46 @@ var researchModule = function() {
                             var workingSentence = [];
                             var tokenizedText = tokenizer.tokenize(sentenceArray[i]);
                             var clause = 0;
-                            for (w in tokenizedText) {
-                                var usefulSentence = false;
+                            var usefulSentence = false;
+                            var irrelevent = false;
+                            for (var w = 0; w < tokenizedText.length; w++) {
                                 var pOSBuffer = "";
                                 if (tokenizedText[w] == "(") {clause += 1;}
-                                else if (tokenizedText[w] == ")") {clause -= 1;}
                                 for (k in topicWordsSplit) {
-                                    
+                                    if (topicWordsSplit[k] != "of") {
+                                        if (natural.JaroWinklerDistance(tokenizedText[w], topicWordsSplit[k]) > 0.7) {
+                                            usefulSentence = true;
+                                        }   
+                                    }
                                 }
-                                if (w == tokenizedText.length - 1) {
-                                    usefulSentences.push(workingSentence);
+                                if (clause == 0) {
+                                    if (w == tokenizedText.length - 1) {
+                                        workingSentence += tokenizedText[w];
+                                    } else if ((w != "(") || (w != ")")) {
+                                        workingSentence += tokenizedText[w] + " ";
+                                    } else {
+                                        workingSentence += tokenizedText[w];
+                                    }
+                                }
+                                if (tokenizedText[w] == ")") {clause -= 1;}
+                                console.log(tokenizedText[w], "URL");
+                                if (natural.JaroWinklerDistance(tokenizedText[w], "URL") > 0.5) { 
+                                    irrelevent = true;
+                                } if (natural.JaroWinklerDistance(tokenizedText[w], "exam") > 0.5) {
+                                    irrelevent = true;
+                                } if (natural.JaroWinklerDistance(tokenizedText[w], "GCSE") > 0.5) {
+                                    irrelevent = true;
                                 }
                             }
-                            console.log(workingSentence);
+                            workingSentence += ".";
+                            if ((usefulSentence == true) && (irrelevent == false)) {
+                                usefulSentences.push(workingSentence);
+                                console.log(workingSentence);
+                            }
+                            if (usefulSentences.length > 2) {
+                                break;
+                            }
                         }
-                        
                         callback(usefulSentences);
                     }
                 });

@@ -33,10 +33,14 @@ var convertModule = new convert();
 var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
+<<<<<<< HEAD
 var databaseModule = new databaseModule();
 console.log("App.JS: ".title + " Successfully Instantiated Packages".success);
 var databaseModule = new database();
 console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
+=======
+var databaseModule = new database();
+>>>>>>> origin/master
 
 // Creating Express.JS Web Server
 var app = express();
@@ -69,10 +73,18 @@ app.post("/register", function(req, res) {
     var email = req.body.eMail;
     var password = req.body.pass;
     var username = req.body.uName;
-    databaseModule.addUser(firstName, lastName, email, password, username, function()m {
-        res.send("Registered");                   
+    databaseModule.addUser(firstName, lastName, email, password, username, function() {
+        fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+            res.send(data);
+        });                   
     });
     console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
+});
+
+app.get("/finnTest", function(req, res) {
+    fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+        res.send(data);
+    }); 
 });
 
 app.get("/login", function(req, res) {

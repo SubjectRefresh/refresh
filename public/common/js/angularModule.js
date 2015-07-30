@@ -5,4 +5,7 @@
 	app.controller("RefreshController", function() {
 		this.firstname = "Dorris";
 	});
+    app.watch('selectedTestAccount', function(newValue){
+        alert(newValue);
+    });
 })()
