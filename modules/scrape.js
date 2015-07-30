@@ -64,9 +64,9 @@ var parseHTML = function(number) {
             fileName = fileName.replace("/", "-");
             console.log(fileName);
             fileName = fileName.substring(0, fileName.length - 4);
-            fs.writeFile(path.join(__dirname, ("../files/" + fileName + ".pdf")), function(err) {
+            fs.writeFile(path.join(__dirname, ("../files/" + fileName + ".pdf")), body, function(err) {
                 if (err) throw err;
-                var converter = new pdf(path.join(__dirname, ("../files/" + fileName + ".pdf"), path.join(__dirname, ("../files/" + fileName + ".html"))));
+                var converter = new pdf(path.join(__dirname, ("files/" + fileName + ".pdf"), path.join(__dirname, ("files/" + fileName + ".html"))));
                 converter.convert();
                 converter.success(function() {
                     callback();
