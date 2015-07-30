@@ -54,7 +54,7 @@ var examBoardModule = function() {
                                 var PDFLink = $new(this).attr("href");
                                 var PDFName = $new(this).text().replace("\n", "").trim();
                                 var PDFName = PDFName.split("(")[0].trim();
-                                links.pdfs.push(PDFLink, PDFName);
+                                links.pdfs.push([PDFLink, PDFName]);
                                 if (i == $new(".binaryLink").find("a").length - 1) {
                                     callback(links.pdfs);
                                 }
