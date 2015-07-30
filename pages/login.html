@@ -15,6 +15,17 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="common/bootstrap/js/bootstrap.min.js"></script>
     <!-- End of Stylesheets -->
+
+    <!-- Cookies! -->
+    <script>
+    function changeCookie(){
+        var email = document.getElementsByName("eMail");
+        var password = document.getElementsByName("pass");
+        document.cookie = "email=" + email + "; path=/";
+        document.cookie = "pass=" + password + "; path=/";
+    }
+    </script>
+    
 </head>
 
 <body id="body1">
