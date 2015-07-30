@@ -11,52 +11,47 @@ colors.setTheme({
   success: ['bgGreen', 'white'],
 });
 
+parseHTML = function(number) {
+	fs.readFile('../temporary/CIE' + number + ".html", 'utf8', function(err, data) {
+		if (err) {
+			throw err;
+		}
+		console.log("Success!");
+		$ = cheerio.load(data);
+		var bulletpointsplit = $("body").text();
+		// console.log(bulletpointsplit);
 
-var scrapeModule = function() {
-    var self = this;
-    
-    self.parseHTML = function(number) {
-        fs.readFile('../temporary/CIE' + number + ".html", 'utf8', function(err, data) {
-            if (err) {
-                throw err;
-            }
-            console.log("Success!");
-            $ = cheerio.load(data);
-            var bulletpointsplit = $("body").text();
-            // console.log(bulletpointsplit);
+		bulletpointsplit = bulletpointsplit.split("•");
+		//console.log(bulletpointsplit);
 
-            bulletpointsplit = bulletpointsplit.split("•");
-            //console.log(bulletpointsplit);
+		var temparray = bulletpointsplit;
 
-            var temparray = bulletpointsplit;
+		for (i = 0; i < bulletpointsplit.length; i++) {
+			if (bulletpointsplit[i].indexOf("State the distinguishing properties of solids") > -1) {
+				console.log(bulletpointsplit[i]);
+				break;
+			} else {
+				console.log("Shifted!");
+				temparray.shift()
+			}
+		}
 
-            for (i = 0; i < bulletpointsplit.length; i++) {
-                if (bulletpointsplit[i].indexOf("State the distinguishing properties of solids") > -1) {
-                    console.log(bulletpointsplit[i]);
-                    break;
-                } else {
-                    console.log("Shifted!");
-                    temparray.shift()
-                }
-            }
+		console.log(temparray);
+		var bulletpointsplit2 = [];
+		bulletpointsplit2 = temparray;
+		
+		for (i = temparray.length; i > 0; i=i-1) {
+			if (temparray[i].indexOf("different units and/or different linkages") > -1) {
+				console.log(temparray[i]);
+				break;
+			} else {
+				console.log("Popped!");
+				temparray.pop()
+			}
+		}
 
-            console.log(temparray);
-            var bulletpointsplit2 = [];
-            bulletpointsplit2 = temparray;
+		console.log(temparray);
+	});
+}
 
-            for (i = temparray.length; i > 0; i=i-1) {
-                if (temparray[i].indexOf("different units and/or different linkages") > -1) {
-                    console.log(temparray[i]);
-                    break;
-                } else {
-                    console.log("Popped!");
-                    temparray.pop()
-                }
-            }
-
-            console.log(temparray);
-        });
-    }
-};
-
-module.exports = scrapeModule;
+parseHTML("0600");
