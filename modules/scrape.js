@@ -59,9 +59,14 @@ var parseHTML = function(number) {
     
     self.convertPDF = function(examBoard, examSubject, examSyllabus, url, callback) {
         request(url, function(err, res, body) {
-            fs.writeFile(path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".pdf")), function(err) {
+            var fileName = String(examBoard + examSubject + examSyllabus.replace("/", "-"));
+            console.log(examSyllabus);
+            fileName = fileName.replace("/", "-");
+            console.log(fileName);
+            fileName = fileName.substring(0, fileName.length - 4);
+            fs.writeFile(path.join(__dirname, ("../files/" + fileName + ".pdf")), function(err) {
                 if (err) throw err;
-                var converter = new pdf(path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".pdf"), path.join(__dirname, ("files/" + examBoard + examSubject + examSyllabus + ".html"))));
+                var converter = new pdf(path.join(__dirname, ("../files/" + fileName + ".pdf"), path.join(__dirname, ("../files/" + fileName + ".html"))));
                 converter.convert();
                 converter.success(function() {
                     callback();
