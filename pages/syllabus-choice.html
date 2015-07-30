@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Refresh :: Syllabus Choice</title>
@@ -17,144 +18,154 @@
 
 <body id="body1">
     <!-- Main Width of Content -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://www.subjectrefresh.info">
-        <img alt="Brand" src="/common/img/secondlogo.png" style="width:45px;">
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><strong>DASHBOARD</strong></a></li>
-        <li class="active"><a href="#"><strong>LEARN</strong></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><strong>LOGOUT</strong></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.subjectrefresh.info">
+                    <img alt="Brand" src="/common/img/secondlogo.png" style="width:45px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#"><strong>DASHBOARD</strong></a></li>
+                    <li class="active"><a href="#"><strong>LEARN</strong></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><strong>LOGOUT</strong></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div class="container">
         <div class="row" id="needs_margin_top">
             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent">
-              <h1>Course selection</h1>
+                <h1>Course selection</h1>
                 <form>
-              <label for="selectBoard">Board</label>
-                <select id="selectBoard" name="course" class="form-control">
-                    <option value="CIE">CIE</option>
-                    <option class="disabled" value="Edexcel" disabled="disabled">Edexcel</option>
-                    <option class="disabled" value="AQA" disabled="disabled">AQA</option>
-                    <option class="disabled" value="OCR" disabled="disabled">OCR</option>
-                </select>
-                <label for="selectSubject">Subject</label>
-                <select id="selectSubject" name="subject" class="form-control">
-                  <option disabled="" id="remove_subject">Loading...</option>
-                </select>
-                <label for="selectSyllabus">Syllabus</label>
-                <select id="selectSyllabus" name="syllabus" class="form-control">
-                    <option disabled="" id="remove_syllabus">Loading...</option>
-                </select>
-<hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
-    <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center><br/>
-
+                    <label for="selectBoard">Board</label>
+                    <select id="selectBoard" name="course" class="form-control">
+                        <option value="CIE">CIE</option>
+                        <option class="disabled" value="Edexcel" disabled="disabled">Edexcel</option>
+                        <option class="disabled" value="AQA" disabled="disabled">AQA</option>
+                        <option class="disabled" value="OCR" disabled="disabled">OCR</option>
+                    </select>
+                    <label for="selectSubject">Subject</label>
+                    <select id="selectSubject" name="subject" class="form-control">
+                        <option disabled="" id="remove_subject">Loading...</option>
+                    </select>
+                    <label for="selectSyllabus">Syllabus</label>
+                    <select id="selectSyllabus" name="syllabus" class="form-control">
+                        <option disabled="" id="remove_syllabus">Loading...</option>
+                    </select>
+                    <hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
+                    <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center>
+                    <br/>
             </div>
         </div>
     </div>
     <!-- bootstrap fotter - needs inputting -->
 </body>
-    
-    <script type="text/javascript">
-      Array.prototype.last = function() {
-        return this[this.length - 1];
-      }
+<script type="text/javascript">
+Array.prototype.last = function() {
+    return this[this.length - 1];
+}
 
-      function updateSubjects(){
-          var examBoardBuffer = document.getElementById("selectBoard");
-            var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
-        $.post(examBoard).success(function(data) {
-          $("#selectSubject").find("option").each(function(){
+function updateSubjects() {
+    var examBoardBuffer = document.getElementById("selectBoard");
+    var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
+    $.post(examBoard).success(function(data) {
+        $("#selectSubject").find("option").each(function() {
             $(this).remove();
-          });
-          for (i=0;i<data.subjectData.length-1;i++){
+        });
+        for (i = 0; i < data.subjectData.length - 1; i++) {
             var i_n = data.subjectData[i].split("-");
             var rest = i_n.pop().toString();
-            $("#selectSubject").append("<option value='" + rest.replace(/ /g,'') + "'>" + i_n.last() + "</option>");
+            $("#selectSubject").append("<option value='" + rest.replace(/ /g, '') + "'>" + i_n.last() + "</option>");
             $("#remove_subject").remove();
-          }
-        }, "json").done(function() {
-          console.log("Finished looking for syllabuses");
-        });
-      }
-      function updateSyllabus(i_n) {
-        console.log("the needed syllabus is " + i_n);
-          var examBoardBuffer = document.getElementById("selectBoard");
-            var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
-        $.post(examBoard + "Subject", {"syllabusNumber":i_n}).success(function(urls) {
-          $("#selectSyllabus").find("option").each(function(){
+        }
+    }, "json").done(function() {
+        console.log("Finished looking for syllabuses");
+    });
+}
+
+function updateSyllabus(i_n) {
+    console.log("the needed syllabus is " + i_n);
+    var examBoardBuffer = document.getElementById("selectBoard");
+    var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
+    $.post(examBoard + "Subject", {
+        "syllabusNumber": i_n
+    }).success(function(urls) {
+        $("#selectSyllabus").find("option").each(function() {
             $(this).remove();
-          });
-          for (i=0;i<urls.length-1;i++){
+        });
+        for (i = 0; i < urls.length - 1; i++) {
             console.log(urls[i]);
             $("#selectSyllabus").append("<option onclick='goGetSyllabus(" + i_n + ")' value='" + urls[i][0] + "'>" + urls[i][1] + "</option>");
             $("#remove_syllabus").remove();
-          }
-        }, "json").done(function(){
-          console.log("Finished looking for subjects");
-        });
-      }
-      function goGetSyllabus(i_n){
-            var examBoardBuffer = document.getElementById("selectBoard");
-            var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
-          
-            var subjectBuffer = document.getElementById("selectSubject");
-            var subject = subjectBuffer.options[subjectBuffer.selectedIndex].value;
-          
-            var syllabusBuffer = document.getElementById("selectSyllabus");
-            var syllabus = syllabusBuffer.options[syllabusBuffer.selectedIndex].value;
-          
-            if (examBoard == "CIE") {
-                i_n = "http://cie.org.uk" + i_n;
-                console.log(i_n);
-            }
-            var password = "(Abcde12345)";
-            var email = "OliCallaghan@icloud.com"
-            var examBoardBuffer = document.getElementById("selectBoard");
-            var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
-            $.post("/dashboard", {"email" : email, "password" : password, "examBoard" : examBoard, "subject" : subject, "syllabus" : syllabus, "url" : i_n}).success(function(data) {
-                $("html").html(data);
-            });
-            // Oli: i_n = the url for the PDF - do with it what you want.
-      }
-        
-      $("#selectBoard").on("change",function(){
-        updateSubjects();
-      });
-      $("#selectBoard").on("click",function(){
-        updateSubjects();
-      });
-      $("#selectSubject").on("change",function(){
-        updateSyllabus($("#selectSubject").find(":selected").attr("value"));
-      });
-      $("#selectSubject").on("click",function(){
-        updateSyllabus($("#selectSubject").find(":selected").attr("value"));
-      });
-      $("#selectSyllabus").on("click",function(){
-        goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
-      });
-      $("#selectSyllabus").on("change",function(){
-        goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
-      });
-        
-        
-    </script>
+        }
+    }, "json").done(function() {
+        console.log("Finished looking for subjects");
+    });
+}
+
+function goGetSyllabus(i_n) {
+    var examBoardBuffer = document.getElementById("selectBoard");
+    var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
+
+    var subjectBuffer = document.getElementById("selectSubject");
+    var subject = subjectBuffer.options[subjectBuffer.selectedIndex].value;
+
+    var syllabusBuffer = document.getElementById("selectSyllabus");
+    var syllabus = syllabusBuffer.options[syllabusBuffer.selectedIndex].value;
+
+    if (examBoard == "CIE") {
+        i_n = "http://cie.org.uk" + i_n;
+        console.log(i_n);
+    }
+    var password = "(Abcde12345)";
+    var email = "OliCallaghan@icloud.com"
+    var examBoardBuffer = document.getElementById("selectBoard");
+    var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
+    $.post("/dashboard", {
+        "email": email,
+        "password": password,
+        "examBoard": examBoard,
+        "subject": subject,
+        "syllabus": syllabus,
+        "url": i_n
+    }).success(function(data) {
+        $("html").html(data);
+    });
+    // Oli: i_n = the url for the PDF - do with it what you want.
+}
+
+$("#selectBoard").on("change", function() {
+    updateSubjects();
+});
+$("#selectBoard").on("click", function() {
+    updateSubjects();
+});
+$("#selectSubject").on("change", function() {
+    updateSyllabus($("#selectSubject").find(":selected").attr("value"));
+});
+$("#selectSubject").on("click", function() {
+    updateSyllabus($("#selectSubject").find(":selected").attr("value"));
+});
+$("#selectSyllabus").on("click", function() {
+    goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
+});
+$("#selectSyllabus").on("change", function() {
+    goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
+});
+</script>
+
 </html>
