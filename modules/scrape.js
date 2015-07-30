@@ -14,8 +14,8 @@ colors.setTheme({
 var parseHTML = function(number) {
     var self = this;
     
-    self.scrape = function() {
-        fs.readFile('files/CIE' + number + ".html", 'utf8', function(err, data) {
+    self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
+        fs.readFile("files/" + examBoard + examSubject + examSyllabus + ".html", 'utf8', function(err, data) {
             if (err) throw err;
             console.log("Success!");
             $ = cheerio.load(data);
@@ -51,7 +51,20 @@ var parseHTML = function(number) {
                 }
             }
 
-            console.log(temparray);
+            callback();
+        });
+    };
+    
+    self.convertPDF = function(examBoard, examSubject, examSyllabus, url, callback) {
+        request(url, function(err, res, body) {
+            fs.writeFile("files/" + examBoard + examSubject + examSyllabus + ".pdf", function(err) {
+                if (err) throw err;
+                var converter = new pdf("files/" + examBoard + examSubject + examSyllabus + ".pdf", "files/" + examBoard + examSubject + examSyllabus + ".html");
+                converter.convert();
+                converter.success(function() {
+                    callback();
+                });
+            });
         });
     };
 }
