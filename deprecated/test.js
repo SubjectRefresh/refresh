@@ -31,16 +31,23 @@ function test(inputArray, callback) {
 
         }
         var res = request('POST', 'https://api.textrazor.com', {
+<<<<<<< Updated upstream:deprecated/test.js
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=" + utf8.encode("entities,dependency-trees")
         });
         var data = JSON.parse(res.getBody().toString('utf8'));
         //console.log(res.getBody().toString('utf8'));
         console.log("Test.JS:".bold + " Successfully attempted communication with TextRazor".green);
+=======
+            body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + utf8.encode(sentence) + "&extractors=entities"
+        });
+        var data = JSON.parse(res.getBody().toString('utf8'));
+>>>>>>> Stashed changes:test.js
         var entities = data.response.entities;
         if (entities != undefined) {
             for (g = 0; g < entities.length; g++) {
                 console.log(entities[g].entityEnglishId);
                 if (entities[g].entityEnglishId != "") {
+<<<<<<< Updated upstream:deprecated/test.js
                     var isAlreadyIn = output.indexOf("GCSE " + entities[g].entityEnglishId)
                     console.log("=====" + isAlreadyIn + "=====");
                     if (isAlreadyIn == -1) {
@@ -52,10 +59,17 @@ function test(inputArray, callback) {
                         }
 
                     }
+=======
+                    output.push("GCSE " + entities[g].entityEnglishId);
+>>>>>>> Stashed changes:test.js
                 }
             }
         }
     }
+<<<<<<< Updated upstream:deprecated/test.js
+=======
+    console.log(output);
+>>>>>>> Stashed changes:test.js
     callback(output);
 }
 test(myStringArray, function (output) {

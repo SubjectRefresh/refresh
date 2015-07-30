@@ -49,12 +49,12 @@ var databaseModule = function() {
         return crypto.createHash('md5').update(string).digest('hex');
     }
     
-    self.addUser = function(fName, lName, eMail, pass, uName) {
+    self.addUser = function(fName, lName, eMail, pass, uName, callback) {
         salt = generateSalt(SaltLength)
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
             if (err) throw err;
-
+            callback();
 
         });
     };
