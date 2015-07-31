@@ -138,7 +138,7 @@ app.post("/dashboard", function (req, res) {
                             researchModule.researchTopic(searchFields, function (usefulSentences) {
                                 questionModule.question(usefulSentences, function (toStore) {
                                     fs.writeFile("files/" + examBoard + subject + syllabus + ".sentenceData", toStore, function (err) {
-                                        if (err) throw err;
+                                        if (err) {console.log(err)};
                                         res.send("HEY! :D");
                                     });
                                 });

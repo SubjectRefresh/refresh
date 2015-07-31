@@ -17,8 +17,8 @@ var parseHTML = function(number) {
     var self = this;
     
     self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
-        fs.readFile("../files/" + examBoard + examSubject + examSyllabus + ".html", 'utf8', function(err, data) {
-            if (err) throw err;
+        fs.readFile("files/0620.html", 'utf8', function(err, data) {
+            if (err) {console.log(err);}
             console.log("Success!");
             $ = cheerio.load(data);
             var bulletpointsplit = $("body").text();
@@ -58,10 +58,20 @@ var parseHTML = function(number) {
     };
     
     self.convertPDF = function(examBoard, examSubject, examSyllabus, url, callback) {
-        var fileName = String(examBoard + examSubject + examSyllabus.replace("/", "-"));
-        fileName = fileName.replace("/", "-");
-        fileName = fileName.substring(0, fileName.length - 4);
-        request(url).pipe(fs.createWriteStream(path.join(__dirname, ("../files/" + fileName + ".pdf"))));
+        var getPDF = request(url).pipe(fs.createWriteStream("files/0620.pdf"));
+        getPDF;
+        console.log("Hi!");
+        getPDF.on("finish", function() {
+            var converter = new pdf("files/0620.pdf", "files/0620.html");
+            converter.success(function() {
+                console.log("Works! :D");
+                callback();
+            });
+            converter.error(function(err) {
+                console.log("ERROR! " + err);
+            });
+            converter.convert(); 
+        });
     };
 }
 
