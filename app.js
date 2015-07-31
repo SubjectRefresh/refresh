@@ -87,6 +87,12 @@ app.get("/finnTest", function (req, res) {
     });
 });
 
+app.get("/learn", function (req, res) {
+    fs.readFile("pages/learn.html", "ASCII", function (err, data) {
+        res.send(data);
+    });
+});
+
 app.get("/dashboard", function (req, res) {
     fs.readFile("pages/dashboard.html", "ASCII", function (err, data) {
         res.send(data);
