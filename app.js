@@ -94,7 +94,9 @@ app.get("/dashboard", function (req, res) {
 });
 
 app.get("/login", function (req, res) {
-    res.send("Login Page");
+    fs.readFile("pages/login.html", "ASCII", function (err, data) {
+        res.send(data);
+    });
 });
 
 app.post("/CIE", function (req, res) {
