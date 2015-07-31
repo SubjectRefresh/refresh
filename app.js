@@ -156,5 +156,5 @@ var server = app.listen(process.argv[2], function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log("App.JS".title + " Refresh Running at ".success + host.blue + ":".success + String(port).blue);
+    console.log("App.JS".title + " Refresh Running at ".success + String(host).blue + ":".success + String(port).blue);
 });
