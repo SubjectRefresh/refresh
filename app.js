@@ -77,7 +77,7 @@ app.post("/register", function (req, res) {
                 res.send(data);
             });  
         }               
-        console.log(firstName + " " + lastName + " " + email + " " + password + " " + username);
+        
     });
 });
 
