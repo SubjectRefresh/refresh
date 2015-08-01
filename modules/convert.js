@@ -23,9 +23,6 @@ var convertModule = function () {
     var self = this;
 
     self.covert = function (inputArray, callback) {
-
-
-
         var root = "";
         var question = "";
         var outputContentWrapper = [];

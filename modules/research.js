@@ -18,7 +18,8 @@ var nounInflector = new natural.NounInflector();
 var researchModule = function() {
     var self = this;
     
-    self.researchTopic = function(topic, commandWord, callback) {
+    self.researchTopic = function(topic, callback) {
+        var tcount = 0;
         for (t in topic) {
             var topicWordsSplit = topic[t].split(" ");
             console.log("Research.JS:".title + " Searching Bing".success);
@@ -34,6 +35,7 @@ var researchModule = function() {
                 for (var i = 0; i < 3; i++) {
                     console.log("Research.JS:".title + (" Requesting Webpage, " + URL[i]).success);
                     request(URL[i], function(err, res, body) {
+                        tcount ++;
                         console.log("Research.JS:".title + " Received Webpage!".success);
                         output += body;
                         count += 1;
@@ -85,15 +87,16 @@ var researchModule = function() {
                                 if (usefulSentences.length > 2) {
                                     break;
                                 }
-                                if (t == topic.length) {
-                                    callback(usefulSentences);
-                                }
                             }
+                        }
+                        if (tcount == topic.length - 1) {
+                            console.log("CALLBACK!");
+                            callback(usefulSentences);
                         }
                     });
                 }
-            });
-        }
+            }); // Close array callback function
+        } // Close array loop
     };
 }
 
