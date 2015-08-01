@@ -14,21 +14,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="common/bootstrap/js/bootstrap.min.js"></script>
+    <script src="common/js/refresh.js"></script>
+    <script src="common/js/js.cookie.js"></script>
+    <script src="common/js/animate_inputs.js"></script>
     <!-- End of Stylesheets -->
-
     <!-- Cookies! -->
     <script>
-    function changeCookie(){
-        var email = document.getElementsByName("eMail");
-        var password = document.getElementsByName("pass");
-        document.cookie = "email=" + email + "; path=/";
-        document.cookie = "pass=" + password + "; path=/";
+    if (getUrlParameter("s") == "incorrect_username_password") {
+        $(document).ready(function() {
+            $("#errors").append("<div class='alert alert-danger' role='alert'>Incorrect username/password combination</div>");
+        });
     }
     </script>
-    
 </head>
 
 <body id="body1">
+    <div id="errors"></div>
     <!-- Main Width of Content -->
     <div class="container">
         <div class="row" id="needs_margin_top">
@@ -39,7 +40,7 @@
                     </a>
                 </div>
                 <h1 style="font-weight:bold;margin-right:auto;margin-left:auto;margin-top:30px;"><font style="color:#E1F5FE;">LOGIN</font></h1>
-                <form class="form">
+                <form class="form" method="post" action="/checkLogin">
                     <div class="form-group">
                         <input type="email" placeholder="Email" name="email">
                     </div>
@@ -50,10 +51,9 @@
                         <button type="submit">SIGN IN</button>
                     </div>
                 </form>
-                <p><a href="login.html" style="color:#fff;">Click here to <strong>register</strong></a></p>    
+                <p><a href="register" style="color:#fff;">Click here to <strong>register</strong></a></p>
                 <hr style="border:solid 1px #E1F5FE;" />
-    <center><small style="color:#E1F5FE;">&copy; 2015 SubjectRefresh.info | All Rights Reserved<br/><br/></small></center>
-
+                <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved<br>By using this site, you agree to our use of cookies.</small></center>
             </div>
         </div>
     </div>

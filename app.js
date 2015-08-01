@@ -170,7 +170,7 @@ app.post("/dashboard", function(req, res) {
     var syllabus = req.body.syllabus;
     var url = req.body.url;
     databaseModule.login(email, password, function(output) {
-        if (output == true) {
+        if (output != false) {
             databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
                 scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
                     scrapeModule.scrape(examBoard, subject, syllabus, function(points) {

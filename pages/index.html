@@ -10,23 +10,19 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="common/bootstrap/css/bootstrap-theme.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="common/bootstrap/js/bootstrap.min.js"></script>
-    <script src="common/js/data_base.js"></script>    
+    <script src="common/js/data_base.js"></script>
+    <script src="common/js/refresh.js"></script>
+    <script src="common/js/js.cookie.js"></script>
+    <script src="common/js/animate_inputs.js"></script>
     <!-- End of Stylesheets -->
-
     <!-- Cookies! -->
     <script>
-    function changeCookie(){
-        var email = document.getElementsByName("eMail");
-        var password = document.getElementsByName("pass");
-        document.cookie = "email=" + email + "; path=/";
-        document.cookie = "pass=" + password + "; path=/";
+    if (getUrlParameter("s") == "loggedin") {
+        $("#errors").append("<div class='alert alert-success' role='alert'>Logged in!</div>");
     }
     </script>
-
 </head>
 
 <body id="body1">
@@ -63,10 +59,9 @@
                         </a>
                     </div>
                 </form>
-                <p><a href="login.html" style="color:#fff;">Click here to <strong>login</strong></a></p>    
+                <p><a href="login" style="color:#fff;">Click here to <strong>login</strong></a></p>
                 <hr style="border:solid 1px #E1F5FE;" />
-    <center><small style="color:#E1F5FE;">&copy; 2015 SubjectRefresh.info | All Rights Reserved<br/><br/></small></center><br/>
-
+                <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved | By using this site, you agree to our use of cookies.</small></center>
             </div>
         </div>
     </div>

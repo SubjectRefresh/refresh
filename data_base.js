@@ -61,11 +61,11 @@ var databaseModule = function() {
     
     self.login = function(eMail, pass, callback){
         //connection.connect();
-        connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
+        connection.query('SELECT Hash, Salt, Email, FirstName, LastName FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
-                callback(true);
+                callback({Email: rows[0]['Email'], FirstName: rows[0]['FirstName'], LastName: rows[0]['LastName']});
                 //connection.end();
                 }
             else{

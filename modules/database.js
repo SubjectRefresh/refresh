@@ -35,7 +35,7 @@ function login(eMail,pass){
             console.log('SUCCESSFUL LOGIN')
         }
         connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail,pass], function(err,rows,fields){
-        if(err) throw err;
+        if(err) console.log(err);
         
     });
     });
