@@ -136,10 +136,7 @@ app.post("/dashboard", function (req, res) {
                     scrapeModule.scrape(examBoard, subject, syllabus, function (points) {
                         convertModule.convert(points, function (searchFields) {
                             researchModule.researchTopic(searchFields, function (usefulSentences) {
-                                res.send(usefulSentences);
-                                console.log(usefulSentences);
                                 questionModule.question(usefulSentences, function (toStore) {
-                                    console.log(toStore);
                                     fs.writeFile("files/" + "0620" + ".sentenceData", toStore, function (err) {
                                         if (err) throw err;
                                         res.send("HEY! :D");

@@ -17,8 +17,8 @@ var parseHTML = function(number) {
     var self = this;
     
     self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
-        fs.readFile("files/0620.html", 'utf8', function(err, data) {
-            if (err) {console.log(err);}
+        fs.readFile("files/" + examSubject + ".html", 'utf8', function(err, data) {
+            if (err) {console.log(err)};
             console.log("Success!");
             $ = cheerio.load(data);
             var bulletpointsplit = $("body").text();
@@ -43,7 +43,7 @@ var parseHTML = function(number) {
             var bulletpointsplit2 = [];
             bulletpointsplit2 = temparray;
 
-            for (i = temparray.length; i > 0; i=i-1) {
+            for (i = temparray.length - 1; i > 0; i=i-1) {
                 if (temparray[i].indexOf("different units and/or different linkages") > -1) {
                     console.log(temparray[i]);
                     break;

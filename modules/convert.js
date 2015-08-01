@@ -22,7 +22,10 @@ console.log("Convert.JS:".title + " Successfully Imported Required Packages".suc
 var convertModule = function () {
     var self = this;
 
-    self.covert = function (inputArray, callback) {
+    self.convert = function (inputArray, callback) {
+
+
+
         var root = "";
         var question = "";
         var outputContentWrapper = [];
