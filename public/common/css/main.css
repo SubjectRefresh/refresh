@@ -238,3 +238,11 @@ input[type="submit"]:hover, button[type="submit"]:hover, button[type="reset"]:ho
 	width:148px;
 	height:40px;
 }
+
+.pretty-tick {
+    margin-top: 60%;
+	//vertical-align: bottom;
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 5px;
+}

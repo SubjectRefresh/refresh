@@ -1,5 +1,6 @@
 <!doctype html>
 <html ng-app="Refresh">
+
 <head>
     <meta charset="UTF-8">
     <title>Refresh :: Learn</title>
@@ -9,67 +10,81 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="common/bootstrap/css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="common/bootstrap/css/bootstrap-theme.min.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="common/bootstrap/js/bootstrap.min.js"></script>
-    <script src="common/js/refresh.js"></script>
     <!-- End of Stylesheets -->
-
     <script>
-    var questionArray = [] // Oli, do shit here.
+    var questionArray = [];
+    $("#blanks_form").submit(function(event) {
+        event.preventDefault();
+        console.log("user submit");
+        $.post("/getLearnData", {
+            "pointNumber": pointNumber
+        }).success(function() {
+            console.log(this);
+        });
+    });
     </script>
-
 </head>
 
-<body id="body2" ng-controller="RefreshController as Refresh">
+<body id="body1" ng-controller="RefreshController as Refresh">
     <!-- Main Width of Content -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="http://www.subjectrefresh.info">
-        <img alt="Brand" src="common/img/secondlogo.png" style="width:45px;">
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><strong>DASHBOARD</strong></a></li>
-        <li class="active"><a href="#"><strong>LEARN</strong></a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><strong>LOGOUT</strong></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img alt="Brand" src="common/img/secondlogo.png" style="width:45px;">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="dashboard"><strong>DASHBOARD</strong></a></li>
+                    <li class="active"><a href="learn"><strong>LEARN</strong></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="logout"><strong>LOGOUT</strong></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <div class="container">
         <div class="row" id="needs_margin_top">
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent">
-                <h1 style="font-weight:bold;"><font style="color:#3D3D3D;">Fill in the blanks</font></h1>
-                  <p>Load the <strike>shit</strike> here</p>
-<hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
-    <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center><br/>
-
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent" style="text-align:center;">
+                <h1><font style="color:#3D3D3D;">Fill in the blanks</font></h1>
+                <form class="form-inline" method="post" action="" id="blanks_form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="1">The four states of matter are </label>
+                                <input id="1" class="form-control" type="text">
+                                <label for="2">, </label>
+                                <input id="2" class="form-control" type="text">
+                                <label for="3">, </label>
+                                <input id="3" class="form-control" type="text">
+                                <label for="4">and</label>
+                                <input id="4" class="form-control" type="text">
+                                <label>. </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <button class="btn btn-success" type="submit" form="blanks_form" style="margin-top:15px;">Submit</button>
+                <hr style="border: 0;height: 0;border-top: 1px solid rgba(0, 0, 0, 0.1);border-bottom: 1px solid rgba(255, 255, 255, 0.3);" />
+                <center><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved</small></center>
+                <br/>
             </div>
         </div>
     </div>
-
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
-    var pointNumber = 0;
-    learnedData = [];
-    $.post("/getLearnData", {"pointNumber" : pointNumber}).success(function() {
-        var learnedData = this;                                                       
-    });
-    </script>
     <!-- bootstrap fotter - needs inputting -->
 </body>
 

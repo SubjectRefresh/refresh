@@ -20,7 +20,7 @@
     <script>
     if (getUrlParameter("s") == "loggedin") {
         $(document).ready(function() {
-            $("#errors").append("<div class='alert alert-success' role='alert'>Logged in!</div>");
+//            $("#errors").append("<div class='alert alert-success' role='alert'>Logged in!</div>");
         });
     }
 
@@ -45,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://www.subjectrefresh.info">
+                <a class="navbar-brand" href="/">
                     <img alt="Brand" src="common/img/secondlogo.png" style="width:45px;">
                 </a>
             </div>
@@ -53,7 +53,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#"><strong>DASHBOARD</strong></a></li>
-                    <li><a href="#"><strong>LEARN</strong></a></li>
+                    <li><a href="learn"><strong>LEARN</strong></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="logout"><strong>LOGOUT</strong></a></li>
@@ -67,9 +67,6 @@
     <div class="container">
         <div class="row" id="needs_margin_top">
             <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent">
-                <h1 style="font-weight:bold;"><font style="color:#3D3D3D;" id="name">Welcome to our fantastic service, </font></h1>
-                <p style="text-align:justify;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
-                <br/>
                 <h3 style="font-weight:bold;"><font style="color:#3D3D3D;">Your Course(s)</font></h3>
                 <div class="bs-example" data-example-id="thumbnails-with-custom-content">
                     <div class="row">
@@ -138,5 +135,4 @@
     <br/>
     <!-- bootstrap fotter - needs inputting -->
 </body>
-
 </html>

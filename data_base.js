@@ -18,6 +18,22 @@ var databaseModule = function() {
         database: 'hexcompu_refresh'
     });
 
+    function kissOfLife() {
+        connection.on('error', function(err) {
+            if (!err.fatal) {
+                return;
+            }
+            if (err.code !== 'PROTOCOL_CONNECTION_LOST') {
+                throw err;
+            }
+            console.log('Re-connecting lost connection: ' + err.stack);
+
+            connection.connect();
+        });
+    }
+
+    kissOfLife();
+
     var SaltLength = 9;
     
     function createHash(password,salt) {
@@ -61,11 +77,11 @@ var databaseModule = function() {
     
     self.login = function(eMail, pass, callback){
         //connection.connect();
-        connection.query('SELECT Hash, Salt, Email, FirstName, LastName FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
+        connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
-                callback({Email: rows[0]['Email'], FirstName: rows[0]['FirstName'], LastName: rows[0]['LastName']});
+                callback(true);
                 //connection.end();
                 }
             else{
