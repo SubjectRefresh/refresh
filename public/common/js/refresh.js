@@ -42,3 +42,7 @@ function parseCookies(request) {
 
     return list;
 }
+
+Array.prototype.last = function() {
+    return this[this.length - 1];
+}
