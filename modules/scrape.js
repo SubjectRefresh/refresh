@@ -17,8 +17,8 @@ var parseHTML = function(number) {
     var self = this;
     
     self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
-        fs.readFile("files/0620.html", 'utf8', function(err, data) {
-            if (err) {console.log(err);}
+        fs.readFile("files/" + examSubject + ".html", 'utf8', function(err, data) {
+            if (err) {console.log(err)};
             console.log("Success!");
             $ = cheerio.load(data);
             var bulletpointsplit = $("body").text();
@@ -75,4 +75,5 @@ var parseHTML = function(number) {
     };
 }
 
+module.exports = parseHTML;
 module.exports = parseHTML;

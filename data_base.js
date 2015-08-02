@@ -11,27 +11,32 @@ var databaseModule = function() {
     var self = this;
     
     //connect to server
-    var connection = mysql.createConnection({
-        host: '185.38.45.194',
-        user: 'hexcompu_ref',
-        password: 'AWDRGY123123',
-        database: 'hexcompu_refresh'
-    });
-
+    
     function kissOfLife() {
-        connection.on('error', function(err) {
-            if (!err.fatal) {
-                return;
+        connection = mysql.createConnection({
+            host: '185.38.45.194',
+            user: 'hexcompu_ref',
+            password: 'AWDRGY123123',
+            database: 'hexcompu_refresh'
+        });
+        
+        connection.connect(function(err) {
+            if (err) {
+                console.log('error when connecting to db:', err);
+                setTimeout(kissOfLife, 2000);
             }
-            if (err.code !== 'PROTOCOL_CONNECTION_LOST') {
+        });
+        
+        connection.on("error", function(err) {
+            console.log('db error', err);
+            if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+                kissOfLife();
+            } else {
                 throw err;
             }
-            console.log('Re-connecting lost connection: ' + err.stack);
-
-            connection.connect();
         });
     }
-
+    
     kissOfLife();
 
     var SaltLength = 9;
@@ -63,32 +68,26 @@ var databaseModule = function() {
     }
     
     self.addUser = function(fName, lName, eMail, pass, uName, callback) {
-        //connection.connect();
-        
         console.log('Server Login');
         salt = generateSalt(SaltLength);
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
         if (err) console.log( err );
-        //connection.end();
         callback(true);
         });
     };
     
     self.login = function(eMail, pass, callback){
-        //connection.connect();
         connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
                 console.log('Login Successful');
                 callback(true);
-                //connection.end();
                 }
             else{
 
                 console.log('Login Denied');
                 callback(false);
-                //connection.end();
             }
 
         });
@@ -96,11 +95,9 @@ var databaseModule = function() {
     
     self.createSyllabusEntry = function(eMail, examBoard, examSubject, examSyllabus, callback) {
         var toStore = examBoard + ":" + examSubject + ":" + examSyllabus + ";";
-        //connection.connect();
         connection.query('UPDATE UserData SET Sylabii = ? WHERE Email = ?', [toStore, eMail], function(err, rows, fields) {
             if (err) throw err;
             callback();
-            //connection.end();
         });
     };
 };

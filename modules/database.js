@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var mysql = require('mysql');
 var crypto = require('crypto');
 var connection = mysql.createConnection({
@@ -9,43 +8,43 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 console.log('Server Login')
-function AddUser(fName,lName,eMail,pass,uName){
+
+function AddUser(fName, lName, eMail, pass, uName) {
     var salt = crypto.randomBytes(128).toString('base64');
-  crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
-    pass = derivedKey;
-   
-        
-    connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName,lName,eMail,pass,uName,salt], function(err,rows,fields){
-        if(err) throw err;
-        
-    });
+    crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
+        pass = derivedKey;
+
+
+        connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail, pass, uName, salt], function(err, rows, fields) {
+            if (err) throw err;
+
+        });
     });
 }
 
-function login(eMail,pass){
-    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err,rows,fields){
-        if(err) throw err;
+function login(eMail, pass) {
+    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err, rows, fields) {
+        if (err) throw err;
         console.log(rows);
-        var salt=rows[0]['Salt'];
+        var salt = rows[0]['Salt'];
         var hash = rows[0]['Hash'];
-        var both = pass+salt;
+        var both = pass + salt;
         console.log(rows[0]['Salt'])
         console.log(both)
-        console.log(hash+salt)
-        if(both==hash+salt){
+        console.log(hash + salt)
+        if (both == hash + salt) {
             console.log('SUCCESSFUL LOGIN')
         }
-        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail,pass], function(err,rows,fields){
-        if(err) console.log(err);
-        
-    });
-    });
-   
-    
+        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail, pass], function(err, rows, fields) {
+            if (err) console.log(err);
 
-    
+        });
+    });
+
+
+
+
 }
-=======
 var mysql = require('mysql');
 var crypto = require('crypto');
 var connection = mysql.createConnection({
@@ -56,41 +55,37 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 console.log('Server Login')
-function AddUser(fName,lName,eMail,pass,uName){
+
+function AddUser(fName, lName, eMail, pass, uName) {
     var salt = crypto.randomBytes(128).toString('base64');
-  crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
-    pass = derivedKey;
-   
-        
-    connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName,lName,eMail,pass,uName,salt], function(err,rows,fields){
-        if(err) throw err;
-        
-    });
+    crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
+        pass = derivedKey;
+
+
+        connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail, pass, uName, salt], function(err, rows, fields) {
+            if (err) throw err;
+
+        });
     });
 }
 
-function login(eMail,pass){
-    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err,rows,fields){
-        if(err) throw err;
+function login(eMail, pass) {
+    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err, rows, fields) {
+        if (err) throw err;
         console.log(rows);
-        var salt=rows[0]['Salt'];
+        var salt = rows[0]['Salt'];
         var hash = rows[0]['Hash'];
-        var both = pass+salt;
+        var both = pass + salt;
         console.log(rows[0]['Salt'])
         console.log(both)
-        console.log(hash+salt)
-        if(both==hash+salt){
+        console.log(hash + salt)
+        if (both == hash + salt) {
             console.log('SUCCESSFUL LOGIN')
         }
-        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail,pass], function(err,rows,fields){
-        if(err) throw err;
-        
-    });
-    });
-   
-    
+        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail, pass], function(err, rows, fields) {
+            if (err) throw err;
 
-    
+        });
+    });
 }
->>>>>>> origin/master
-login('jim','dave')
+login('jim', 'dave')
