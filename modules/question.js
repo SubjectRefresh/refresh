@@ -37,8 +37,10 @@ var questionModule = function () {
             entityPositions.push([data.response.entities[i].matchedText, data.response.entities[i].startingPos, data.response.entities[i].endingPos]);
         }
         output = [entityPositions, sentence];
+        
+        output2 = JSON.stringify(output);
 
-        callback(output);
+        callback(output2);
     }
 };
 //callback = [[[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence], [[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence]]

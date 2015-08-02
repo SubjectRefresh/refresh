@@ -137,9 +137,11 @@ app.post("/dashboard", function (req, res) {
                         convertModule.convert(points, function (searchFields) {
                             researchModule.researchTopic(searchFields, function (usefulSentences) {
                                 questionModule.question(usefulSentences, function (toStore) {
-                                    fs.writeFile("files/" + "0620" + ".sentenceData", toStore, function (err) {
+                                    fs.writeFile("files/" + subject + ".sentenceData", toStore, function (err) {
                                         if (err) throw err;
-                                        res.send("HEY! :D");
+                                        fs.readFile("pages/learn.html", "ASCII", function(err, data) {
+                                            res.send(data); 
+                                        });
                                     });
                                 });
                             })
@@ -150,6 +152,15 @@ app.post("/dashboard", function (req, res) {
         } else {
 
         }
+    });
+});
+
+app.get("/getGapFill", function(req, res) {
+    fs.readFile("files/" + "0620" + ".sentenceData", "ASCII", function(err, data) {
+        if (err) {console.log(err);}
+        var buffer = JSON.parse(data);
+        console.log(buffer);
+        res.send(buffer);
     });
 });
 
