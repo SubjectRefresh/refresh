@@ -1,7 +1,6 @@
 // Node.JS Packages
 var express = require("express");
 var bodyParser = require("body-parser");
-var multer = require("multer");
 var fs = require("fs");
 var colors = require("colors");
 var cookieParser = require('cookie-parser');
@@ -50,7 +49,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(multer());
 console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
 
 // Creating Static Public Folder
