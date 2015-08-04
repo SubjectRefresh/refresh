@@ -15,3 +15,5 @@ APP.js - The main controller of the application, this controls all the other fil
 Scrape.js - Reads PDFs for bullet points.
 
 QUestion.js - Generates questions from strings.
+
+Copyright (c) 2015 SubjectRefresh.info
