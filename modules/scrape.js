@@ -76,4 +76,3 @@ var parseHTML = function(number) {
 }
 
 module.exports = parseHTML;
-module.exports = parseHTML;

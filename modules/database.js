@@ -1,91 +1,105 @@
+/////////////////////////////////////////////////////////////USE OF CODE ///////////////////////////
+//Login('tom@tom.com','pass')
+//AddUser('gib','hansome','tom@tom.com','pass','davedave')
+
 var mysql = require('mysql');
 var crypto = require('crypto');
-var connection = mysql.createConnection({
-    host: '185.38.45.194',
-    user: 'hexcompu_ref',
-    password: 'AWDRGY123123',
-    database: 'hexcompu_refresh'
-});
-connection.connect();
-console.log('Server Login')
 
-function AddUser(fName, lName, eMail, pass, uName) {
-    var salt = crypto.randomBytes(128).toString('base64');
-    crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
-        pass = derivedKey;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-        connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail, pass, uName, salt], function(err, rows, fields) {
-            if (err) throw err;
-
+var databaseModule = function() {
+    var self = this;
+    
+    //connect to server
+    
+    function kissOfLife() {
+        connection = mysql.createConnection({
+            host: '185.38.45.194',
+            user: 'hexcompu_ref',
+            password: 'AWDRGY123123',
+            database: 'hexcompu_refresh'
         });
-    });
-}
+        
+        connection.connect(function(err) {
+            if (err) {
+                console.log('error when connecting to db:', err);
+                setTimeout(kissOfLife, 2000);
+            }
+        });
+        
+        connection.on("error", function(err) {
+            console.log('db error', err);
+            if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+                kissOfLife();
+            } else {
+                throw err;
+            }
+        });
+    }
+    
+    kissOfLife();
 
-function login(eMail, pass) {
-    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err, rows, fields) {
-        if (err) throw err;
-        console.log(rows);
-        var salt = rows[0]['Salt'];
-        var hash = rows[0]['Hash'];
-        var both = pass + salt;
-        console.log(rows[0]['Salt'])
-        console.log(both)
-        console.log(hash + salt)
-        if (both == hash + salt) {
-            console.log('SUCCESSFUL LOGIN')
+    var SaltLength = 9;
+    
+    function createHash(password,salt) {
+    var hash = md5(password + salt);
+        return hash;
+    }
+
+    function validateHash(hash, password, salt) {
+
+        var validHash = md5(password + salt);
+        return hash === validHash;
+    }
+
+    function generateSalt(len) {
+        var set = '0123456789abcdefghijklmnopqurstuvwxyzABCDEFGHIJKLMNOPQURSTUVWXYZ',
+            setLen = set.length,
+            salt = '';
+        for (var i = 0; i < len; i++) {
+        var p = Math.floor(Math.random() * setLen);
+            salt += set[p];
         }
-        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail, pass], function(err, rows, fields) {
-            if (err) console.log(err);
+        return salt;
+    }
+
+    function md5(string) {
+        return crypto.createHash('md5').update(string).digest('hex');
+    }
+    
+    self.addUser = function(fName, lName, eMail, pass, uName, callback) {
+        console.log('Server Login');
+        salt = generateSalt(SaltLength);
+
+        connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
+        if (err) console.log( err );
+        callback(true);
+        });
+    };
+    
+    self.login = function(eMail, pass, callback){
+        connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
+            if (err) console.log( err );
+            if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
+                console.log('Login Successful');
+                callback(true);
+                }
+            else{
+
+                console.log('Login Denied');
+                callback(false);
+            }
 
         });
-    });
-
-
-
-
-}
-var mysql = require('mysql');
-var crypto = require('crypto');
-var connection = mysql.createConnection({
-    host: '185.38.45.194',
-    user: 'hexcompu_ref',
-    password: 'AWDRGY123123',
-    database: 'hexcompu_refresh'
-});
-connection.connect();
-console.log('Server Login')
-
-function AddUser(fName, lName, eMail, pass, uName) {
-    var salt = crypto.randomBytes(128).toString('base64');
-    crypto.pbkdf2(pass, salt, 10000, 512, function(err, derivedKey) {
-        pass = derivedKey;
-
-
-        connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail, pass, uName, salt], function(err, rows, fields) {
+    };
+    
+    self.createSyllabusEntry = function(eMail, examBoard, examSubject, examSyllabus, callback) {
+        var toStore = examBoard + ":" + examSubject + ":" + examSyllabus + ";";
+        connection.query('UPDATE UserData SET Sylabii = ? WHERE Email = ?', [toStore, eMail], function(err, rows, fields) {
             if (err) throw err;
-
+            callback();
         });
-    });
-}
+    };
+};
 
-function login(eMail, pass) {
-    connection.query('SELECT Salt,Hash FROM UserData WHERE Email=?', [eMail], function(err, rows, fields) {
-        if (err) throw err;
-        console.log(rows);
-        var salt = rows[0]['Salt'];
-        var hash = rows[0]['Hash'];
-        var both = pass + salt;
-        console.log(rows[0]['Salt'])
-        console.log(both)
-        console.log(hash + salt)
-        if (both == hash + salt) {
-            console.log('SUCCESSFUL LOGIN')
-        }
-        connection.query('SELECT UID FROM UserData WHERE Email=? and Hash=? ', [eMail, pass], function(err, rows, fields) {
-            if (err) throw err;
-
-        });
-    });
-}
-login('jim', 'dave')
+module.exports = databaseModule;
