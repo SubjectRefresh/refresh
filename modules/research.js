@@ -23,7 +23,7 @@ var researchModule = function() {
         var allowed = true;
         var usefulSentences = [];
         var tcount = 0;
-        for (var t = 0; t < topic.length; t++) {
+        for (var t = 0; t < 10; t++) { // var t = 0; t < topic.length; t++
             var topicWordsSplit = topic[t];
             console.log("Research.JS:".title + " Searching Bing".success);
             bing.web(topic[t], {top:3, skip:0}, function(err, res, body) {
@@ -41,6 +41,9 @@ var researchModule = function() {
                         for (var i = 0; i < 3; i++) {
                             console.log("Research.JS:".title + (" Requesting Webpage, " + URL[i]).success);
                             request(URL[i], function(err, res, body) {
+                                if (err) {
+                                    console.log(err);
+                                }
                                 console.log("Research.JS:".title + " Received Webpage!".success);
                                 output += body;
                                 count += 1;
@@ -87,6 +90,10 @@ var researchModule = function() {
                                                 irrelevent = true;
                                             } if (natural.JaroWinklerDistance(tokenizedText[w], "Cambridge") > 0.8) {
                                                 irrelevent = true;
+                                            } if (natural.JaroWinklerDistance(tokenizedText[w], "Blog") > 0.8) {
+                                                irrelevent = true;
+                                            } if (natural.JaroWinklerDistance(tokenizedText[w], "Cambridge") > 0.8) {
+                                                irrelevent = true;
                                             }
                                         }
                                         workingSentence += ".";
@@ -101,7 +108,7 @@ var researchModule = function() {
                                     tcount ++;
 
                                     // Only creates 5 points //
-                                    if (tcount == 5) {
+                                    if (tcount == 10) {
                                         console.log("FIND THIS: " + usefulSentences);
                                         callback(usefulSentences);
                                         allowed = false;

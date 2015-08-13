@@ -58,11 +58,11 @@ var parseHTML = function(number) {
     };
     
     self.convertPDF = function(examBoard, examSubject, examSyllabus, url, callback) {
-        var getPDF = request(url).pipe(fs.createWriteStream("files/0620.pdf"));
+        var getPDF = request(url).pipe(fs.createWriteStream("files/" + examSubject + ".pdf"));
         getPDF;
         console.log("Hi!");
         getPDF.on("finish", function() {
-            var converter = new pdf("files/0620.pdf", "files/0620.html");
+            var converter = new pdf("files/" + examSubject + ".pdf", "files/" + examSubject + ".html");
             converter.success(function() {
                 console.log("Works! :D");
                 callback();
