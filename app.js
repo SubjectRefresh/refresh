@@ -39,6 +39,25 @@ console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
 
 var databaseModule = new database();
 
+var sessionsActive = [];
+
+function driveThru(sessionID, email, callback) {
+    sessionsActive.push([sessionID, email]);
+    setTimeout(function () {
+        sessionsActive.shift();
+    }, 1000);
+    callback();
+}
+
+function createHash(callback) {
+    var hash = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@£$%^&*()_+{}[];|<>,.?#±€~`";
+
+    for (var i = 0; i < 5; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    callback(text);
+}
 
 // Creating Express.JS Web Server
 var app = express();
@@ -55,7 +74,99 @@ console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
 app.use(express.static('public'));
 console.log("App.JS: ".title + " Successfully Created Public Folder".success);
 
+// Pages Cache
+var homeTemplate = "";
+var dashboardTemplate = "";
+var learnTemplate = "";
+
+function refreshTemplateCache(callback) {
+    count = 0;
+
+    // Homepage Template
+    fs.readFile("pages/index.html", "utf-8", function(err, data) {
+        homeTemplate = data;
+        count ++;
+        if ((count == 3) && (callback !== undefined)) {
+            callback();
+        }
+    });
+
+    // Dashboard Template
+    fs.readFile("pages/dashboard.html", "utf-8", function(err, data) {
+        dashboardTemplate = data;
+        count ++;
+        if ((count == 3) && (callback !== undefined)) {
+            callback();
+        }
+    });
+
+    // Learning Environment Template
+    fs.readFile("pages/learn.html", "utf-8", function(err, data) {
+        learnTemplate = data;
+        count ++;
+        if ((count == 3) && (callback !== undefined)) {
+            callback();
+        }
+    });
+}
+
+// Template Engine
+function refreshRenderer(template, elementsToReplace, callback) {
+    // Variables //
+    var bracket = false;
+    var handlebar = false;
+    var endBracket = false;
+    var tagID = "";
+    var start = 0;
+    var end = 0;
+    var toReplace = [];
+
+    // Collect Points to Template //
+    for (i in template) {
+        if (handlebar == true) {
+            if (template[i] == "}") {
+                if (endBracket == true) {
+                    handlebar = false;
+                    end = i;
+                    toReplace.push([tagID.trim(), start, end]);
+                    tagID = "";
+                }
+                endBracket = true;
+            } else {
+                tagID += template[i];
+            }
+        } else {
+            endBracket = false;
+        }
+
+        if (template[i] == "{") {
+            if (bracket == true) {
+                handlebar = true;
+            } else {
+                start = i;
+            }
+            bracket = true;
+        } else {
+            bracket = false;
+        }
+    }
+
+    var renderedWebpage = "";
+    var previousStartPoint = 0;
+
+    for (e in toReplace) {
+        renderedWebpage += template.substring(previousStartPoint, parseInt(toReplace[e][1]));
+        renderedWebpage += elementsToReplace[toReplace[e][0]];
+        previousStartPoint = parseInt(toReplace[e][2]) + 1;
+    }
+
+    renderedWebpage += template.substring(previousStartPoint, template.length);
+
+    callback(renderedWebpage);
+}
+
 // App Routes
+
 app.get("/", function (req, res) {
     fs.readFile("pages/index.html", "ASCII", function (err, data) {
         res.send(data);
@@ -141,7 +252,6 @@ app.post("/checkLogin", function (req, res) {
     });
 });
 
-
 app.post("/CIE", function (req, res) {
     listModule.examBoardCIE(function (data) {
         res.send({
@@ -149,7 +259,6 @@ app.post("/CIE", function (req, res) {
         });
     });
 });
-
 
 app.post("/CIEsubject", function (req, res) {
     var syllabusNumber = String(req.body.syllabusNumber);
@@ -177,8 +286,8 @@ app.post("/dashboard", function (req, res) {
                                 researchModule.researchTopic(searchFields, function (usefulSentences) {
                                     questionModule.question(usefulSentences, function (toStore) {
                                         //fs.writeFile("files/" + subject + ".sentenceData", toStore, function (err) {
-                                            //if (err) throw err;
-                                            res.redirect(301, "/learn?subject=" + subject);
+                                        //if (err) throw err;
+                                        res.redirect(301, "/learn?subject=" + subject);
                                         //});
                                     });
                                 })
@@ -211,14 +320,14 @@ app.post("/getLearnData", function (req, res) {
 });
 
 // Initialising the Express.JS Web Server to Listen on Port process.argv[2]
-if (process.argv[2]) {
-
-} else {
+if (process.argv[2] == undefined) {
     process.argv[2] = 80;
 }
+
 var server = app.listen(process.argv[2], function () {
     var host = server.address().address;
     var port = server.address().port;
 
+    refreshTemplateCache();
     console.log("App.JS".title + " Refresh Running at ".success + String(host).blue + ":".success + String(port).blue);
 });

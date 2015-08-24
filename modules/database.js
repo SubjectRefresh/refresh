@@ -42,7 +42,7 @@ var databaseModule = function() {
     var SaltLength = 9;
     
     function createHash(password,salt) {
-    var hash = md5(password + salt);
+        var hash = md5(password + salt);
         return hash;
     }
 
@@ -96,7 +96,7 @@ var databaseModule = function() {
     self.createSyllabusEntry = function(eMail, examBoard, examSubject, examSyllabus, callback) {
         var toStore = examBoard + ":" + examSubject + ":" + examSyllabus + ";";
         connection.query('UPDATE UserData SET Sylabii = ? WHERE Email = ?', [toStore, eMail], function(err, rows, fields) {
-            if (err) throw err;
+            if (err) console.log(err);
             callback();
         });
     };
