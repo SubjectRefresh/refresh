@@ -112,7 +112,7 @@ html, * {
 	border-bottom-left-radius: 10px;
 }
 
-#bodycontent {
+#bodycontent, .bodycontent {
 /*	margin-left:auto;
 	margin-right:auto;
 	width:500px;

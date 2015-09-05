@@ -272,6 +272,7 @@ app.post("/CIEsubject", function(req, res) {
 });
 
 app.post("/dashboard", function(req, res) {
+    console.log("App.JS".title + ": " + "let's go!".success);
     try {
         var email = req.body.email;
         var password = req.body.password;
@@ -291,26 +292,26 @@ app.post("/dashboard", function(req, res) {
                                 researchModule.researchTopic(searchFields, function(usefulSentences) {
                                     console.log("Researched")
                                     questionModule.question(usefulSentences, function(toStore) {
+                                        console.log(toStore);
+                                        
+                                        toStore = JSON.parse(toStore);
                                         if (!toStore) {
                                             res.send(toStore)
                                         } else {
                                             // we have some duplicate keywords in the data so we need to remove them
-                                            var newToStore = [];
+                                            var newToStore = [[]];
                                             var keywords = [];
 
-
-                                            console.log(toStore);
                                             for (var i = 0; i < toStore[0].length - 1; i++) {
                                                 console.log(toStore[0][i]);
                                                 if (keywords.indexOf(toStore[0][i][0]) == -1) {
-                                                    console.log("new");
                                                     keywords.push(toStore[0][i][0]);
-                                                    newToStore.push(toStore[0][i]);
+                                                    newToStore[0].push(toStore[0][i]);
                                                 }
                                                 else {
-                                                    console.log("New");
                                                 }
                                             }
+                                            newToStore.push(toStore[1]);
                                             fs.writeFile("files/" + subject + ".sentenceData", newToStore, function(err) {
                                                 //if (err) throw err;
                                                 res.send(newToStore);

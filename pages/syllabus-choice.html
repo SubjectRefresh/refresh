@@ -48,8 +48,12 @@
         <!-- /.container-fluid -->
     </nav>
     <div class="container">
-        <div class="row" id="needs_margin_top">
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent" style="border-radius: 10px;">
+        <div class="row" id="answer_div">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 bodycontent" style="border-radius: 10px;">
+            </div>
+        </div>
+        <div class="row" id="course_selection">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 bodycontent" style="border-radius: 10px;">
                 <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
                         <h1>Course selection</h1>
@@ -85,9 +89,9 @@
         </div>
     </div>
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted text-center"><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved<br>By using this site, you agree to our use of cookies.</small></p>
-      </div>
+        <div class="container">
+            <p class="text-muted text-center"><small>&copy; 2015 SubjectRefresh.info | All Rights Reserved<br>By using this site, you agree to our use of cookies.</small></p>
+        </div>
     </footer>
 </body>
 <script type="text/javascript">
@@ -96,6 +100,9 @@ Array.prototype.last = function() {
 }
 
 function updateSubjects() {
+    $("#selectSubject").find('option').remove();
+    $("#selectSyllabus").find('option').remove();
+
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
     $.post(examBoard).success(function(data) {
@@ -114,6 +121,8 @@ function updateSubjects() {
 }
 
 function updateSyllabus(i_n) {
+    $("#selectSyllabus").find('option').remove();
+
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
     $.post(examBoard + "Subject", {
@@ -131,10 +140,29 @@ function updateSyllabus(i_n) {
     });
 }
 
-var data = [];
+var not_duplicated = [];
+var answers = [];
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 function goGetQuestion(i_n) {
-    console.log("Submitting...");
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
 
@@ -159,11 +187,22 @@ function goGetQuestion(i_n) {
         "syllabus": syllabus,
         "url": i_n
     }).success(function(newData) {
-        data = newData;
-        console.log(data);
-        for (var i = 0; i < 5; i++){
-            console.log(data[0][i]);
+        for (i = 0; i < newData[0].length-1; i++) {
+            if (newData[0][i][0].split(' ').length == 1) {
+                not_duplicated.push(newData[0][i][0]);
+            }
         }
+        for (var i = 1; i < 5; i++) {
+            var answer = newData[0][i][0];
+            if (not_duplicated.indexOf(answer) > -1){
+                answers.push(answer);
+                var replace_with_this = "<input class='form-control' answer='" + answer + "' type='text' size='" + (answer.length + 2) + "' style='display:inline-block;'>"
+                console.log("Replacing answer " + answer + " with " + replace_with_this);
+                newData[1] = newData[1].replace(answer, replace_with_this);
+            }
+        }
+        //answers = shuffle(answers); // not sure if this works or not
+        $("#answer_div").find(".bodycontent").html(answers.join(", ") + "<hr>" + newData[1]);
     });
 }
 
@@ -184,4 +223,5 @@ $("#submit_btn").on("click", function() {
     return false;
 });
 </script>
+
 </html>
