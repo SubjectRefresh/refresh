@@ -17,26 +17,22 @@ colors.setTheme({
     success: ['bgGreen', 'white'],
 });
 
-console.log("Convert.JS:".title + " Successfully Imported Required Packages".success);
+//console.log("Convert.JS:".title + " Successfully Imported Required Packages".success);
 
 var convertModule = function () {
     var self = this;
 
     self.convert = function (inputArray, callback) {
-
-
-
+        console.log("Convert.JS".title + ": convert()".info);
         var root = "";
         var question = "";
         var outputContentWrapper = [];
         var output = []
         var arrayLength = inputArray.length;
-        console.log("Test.JS: ".title + "got to loading the array".success);
+        //console.log("Convert.JS: ".title + "got to loading the array".success);
 
         for (var i = 0; i < arrayLength; i++) {
-
             var sentence = inputArray[i]
-
 
             for (c = 0; c < sentence.length; c++) {
 
@@ -54,18 +50,18 @@ var convertModule = function () {
             });
             var data = JSON.parse(res.getBody().toString('utf8'));
             //console.log(res.getBody().toString('utf8'));
-            console.log("Test.JS:".title + " Successfully attempted communication with TextRazor".success);
+//            console.log("Convert.JS:".title + " Successfully attempted communication with TextRazor".success);
             var entities = data.response.entities;
             if (entities != undefined) {
                 for (g = 0; g < entities.length; g++) {
-                    console.log(entities[g].entityEnglishId);
+                    //console.log(entities[g].entityEnglishId);
                     if (entities[g].entityEnglishId != "") {
                         var isAlreadyIn = output.indexOf("GCSE " + entities[g].entityEnglishId)
-                        console.log("=====" + isAlreadyIn + "=====");
+                        //console.log("=====" + isAlreadyIn + "=====");
                         if (isAlreadyIn == -1) {
                             for (j = 0; j < data.response.sentences[0].words.length; j++) {
                                 if (data.response.sentences[0].words[j].parentPosition == undefined) {
-                                    console.log(data.response.sentences[0].words[j].token);
+                                    //console.log(data.response.sentences[0].words[j].token);
                                     output.push(data.response.sentences[0].words[j].token + " " + entities[g].entityEnglishId + " GCSE");
                                 }
                             }
@@ -78,7 +74,7 @@ var convertModule = function () {
         callback(output);
     }
 
-    console.log("Convert.JS:".title + " Successfully Defined `convert`".success);
+    //console.log("Convert.JS:".title + " Successfully Defined `convert`".success);
 };
 
 module.exports = convertModule;

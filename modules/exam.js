@@ -29,10 +29,10 @@ var examBoardModule = function() {
             pdfs: []
         };
         var baseURL = "http://www.cie.org.uk"
-        console.log("PDFList.js: ".bold + "Successfully Defined Global Variables".green);
+//        console.log("Exam.js: ".bold + "Successfully Defined Global Variables".green);
         request("http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/", function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log("PDFList.js: ".bold + "Successfully Requested Website For List of Subjects".green);
+                console.log("Exam.js: ".bold + "Got list of subjects".green);
                 $ = cheerio.load(body);
                 $(".emphasized-link").find("li").each(function() { // loop through each link
                     var selector = $(this).find("a").attr("href");
@@ -42,12 +42,11 @@ var examBoardModule = function() {
                         "link": baseURL + selector // link
                     });
                 });
-                console.log(newArray);
                 for (i = 0; i < newArray.length; i++) {
                     if (String(newArray[i].number) == String(number)) { // we got a match for the subject
                         links.syllabus = newArray[i].link;
                         request(baseURL + newArray[i].dom_object.find("a").attr("href"), function(error2, response2, body2) {
-                            console.log("PDFList.js: ".bold + "Successfully Requested Website For List Of PDFs".green);
+                            console.log("Exam.js: ".bold + "Got list of PDFs".green);
                             $new = cheerio.load(body2);
                             
                             $new(".binaryLink").find("a").each(function(i, elem) {
@@ -58,12 +57,12 @@ var examBoardModule = function() {
                                 if (i == $new(".binaryLink").find("a").length - 1) {
                                     callback(links.pdfs);
                                 }
-                                console.log("collectURLs has finished".green);
+//                                console.log("collectURLs has finished".green);
                                 
                                 // is working
-                                //    console.log("PDFList.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
+                                //    console.log("Exam.js: ".bold + $new(this).text().blue + " => " + baseURL.green + PDFLink.green);
                             });
-                            //console.log("PDFList.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
+                            //console.log("Exam.js: ".bold + "Got ".green + String(links.pdfs.length).blue + " PDFs".green);
                         });
                     }
                 }

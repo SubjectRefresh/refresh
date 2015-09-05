@@ -13,7 +13,6 @@ colors.setTheme({
     success: ['bgGreen', 'white'],
 });
 
-console.log("App.JS: ".title + " Successfully Imported Required Packages".success);
 
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
@@ -24,7 +23,7 @@ var research = require('./modules/research.js');
 var question = require('./modules/question.js');
 var answer = require('./modules/answer.js');
 var database = require('./modules/database.js');
-console.log("App.JS: ".title + " Successfully Imported External Functions".success);
+//console.log("App.JS: ".title + " Successfully Imported External Functions".success);
 
 // Instantiating External Refresh Packages
 var listModule = new list();
@@ -35,7 +34,7 @@ var researchModule = new research();
 var questionModule = new question();
 var answerModule = new answer();
 var databaseModule = new database();
-console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
+//console.log("App.JS: ".bold + " Successfully Instantiated Packages".blue);
 
 var databaseModule = new database();
 
@@ -61,18 +60,18 @@ function createHash(callback) {
 
 // Creating Express.JS Web Server
 var app = express();
-console.log("App.JS: ".title + " Successfully Initialised Express.JS Web Server".success);
+//console.log("App.JS: ".title + "Initialised Web Server".success);
 
 // Initialising Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
+//console.log("App.JS: ".title + " Successfully Initialised Middleware".success);
 
 // Creating Static Public Folder
 app.use(express.static('public'));
-console.log("App.JS: ".title + " Successfully Created Public Folder".success);
+//console.log("App.JS: ".title + " Successfully Created Public Folder".success);
 
 // Pages Cache
 var homeTemplate = "";
@@ -168,12 +167,14 @@ function refreshRenderer(template, elementsToReplace, callback) {
 // App Routes
 
 app.get("/", function (req, res) {
+    console.log("/");
     fs.readFile("pages/index.html", "ASCII", function (err, data) {
         res.send(data);
     });
 });
 
 app.post("/register", function (req, res) {
+    console.log("/register");
     var firstName = req.body.fName;
     var lastName = req.body.lName;
     var email = req.body.eMail;
@@ -191,36 +192,42 @@ app.post("/register", function (req, res) {
 });
 
 app.get("/finnTest", function (req, res) {
+    console.log("/finnTest");
     fs.readFile("pages/syllabus-choice.html", "ASCII", function (err, data) {
         res.send(data);
     });
 });
 
 app.get("/learn", function (req, res) {
+    console.log("/learn");
     fs.readFile("pages/learn.html", "ASCII", function (err, data) {
         res.send(data);
     });
 });
 
 app.get("/dashboard", function (req, res) {
+    console.log("GET /dashboard");
     fs.readFile("pages/dashboard.html", "ASCII", function (err, data) {
         res.send(data);
     });
 });
 
 app.get("/login", function (req, res) {
+    console.log("/login");
     fs.readFile("pages/login.html", "ASCII", function (err, data) {
         res.send(data);
     });
 });
 
 app.get("/logout", function (req, res) {
+    console.log("/logout");
     res.clearCookie('emai');
     res.clearCookie('loggedin');
     res.redirect("/", 301);
 });
 
 app.post("/checkLogin", function (req, res) {
+    console.log("/checkLogin");
     var cookies = new Cookies(req, res),
         unsigned, signed, tampered;
     var password = req.body.password;
@@ -253,6 +260,7 @@ app.post("/checkLogin", function (req, res) {
 });
 
 app.post("/CIE", function (req, res) {
+    console.log("/CIE");
     listModule.examBoardCIE(function (data) {
         res.send({
             subjectData: data
@@ -261,6 +269,7 @@ app.post("/CIE", function (req, res) {
 });
 
 app.post("/CIEsubject", function (req, res) {
+    console.log("/CIEsubject")
     var syllabusNumber = String(req.body.syllabusNumber);
     //syllabusNumber = "0620";
     console.log(syllabusNumber);
@@ -270,6 +279,7 @@ app.post("/CIEsubject", function (req, res) {
 });
 
 app.post("/dashboard", function (req, res) {
+    console.log("POST /dashboard");
     try {
         var email = req.body.email;
         var password = req.body.password;
@@ -305,7 +315,7 @@ app.post("/dashboard", function (req, res) {
 });
 
 app.post("/getLearnData", function (req, res) {
-    console.log("FOUND ROUTE!");
+    console.log("/getLearnData");
     var subject = req.body.examSubject;
     subject = "0620";
     fs.readFile("files/" + subject + ".sentenceData", function (err, data) {
@@ -329,5 +339,5 @@ var server = app.listen(process.argv[2], function () {
     var port = server.address().port;
 
     refreshTemplateCache();
-    console.log("App.JS".title + " Refresh Running at ".success + String(host).blue + ":".success + String(port).blue);
+    console.log("App.JS".title + ": " + "Refresh Running at".success + " " + String(host).blue + ":" + String(port).blue);
 });

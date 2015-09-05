@@ -18,7 +18,7 @@ colors.setTheme({
     success: ['bgGreen', 'white'],
 });
 
-console.log("Question.JS:".bold + " Successfully Imported Required Packages".blue);
+//console.log("Question.JS:".bold + " Successfully Imported Required Packages".blue);
 
 var questionModule = function () {
     var self = this;
@@ -35,6 +35,7 @@ var questionModule = function () {
         
         var data = JSON.parse(res.getBody().toString('utf8'));
         
+        console.log(data);
         for (i = 0; i < data.response.entities.length; i++) {
             entityPositions.push([data.response.entities[i].matchedText, data.response.entities[i].startingPos, data.response.entities[i].endingPos]);
         }
@@ -46,6 +47,6 @@ var questionModule = function () {
     }
 };
 //callback = [[[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence], [[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence]]
-console.log("Convert.JS:".bold + " Successfully Defined `convert`".blue);
+//console.log("Convert.JS:".bold + " Successfully Defined question.JS".blue);
 
 module.exports = questionModule;
