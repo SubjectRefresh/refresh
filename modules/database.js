@@ -2,10 +2,18 @@
 //Login('tom@tom.com','pass')
 //AddUser('gib','hansome','tom@tom.com','pass','davedave')
 
+var colors = require("colors");
 var mysql = require('mysql');
 var crypto = require('crypto');
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+colors.setTheme({
+  title: ['white', 'italic'],
+  error: ['bgRed', 'white', 'bold'],
+  info: ['bgYellow', 'white', 'italic'],
+  success: ['bgGreen', 'white'],
+});
 
 var databaseModule = function() {
     var self = this;
@@ -28,7 +36,6 @@ var databaseModule = function() {
         });
         
         connection.on("error", function(err) {
-            console.log('db error', err);
             if(err.code === 'PROTOCOL_CONNECTION_LOST') {
                 kissOfLife();
             } else {
@@ -68,11 +75,10 @@ var databaseModule = function() {
     }
     
     self.addUser = function(fName, lName, eMail, pass, uName, callback) {
-        console.log('Server Login');
         salt = generateSalt(SaltLength);
 
         connection.query('INSERT INTO UserData SET FirstName=?, LastName=?, Email=?, Hash=?, UserName=?, Salt=?', [fName, lName, eMail,createHash(pass,salt), uName,salt], function (err, rows, fields) {
-        if (err) console.log( err );
+        if (err) throw err;
         callback(true);
         });
     };
@@ -81,12 +87,12 @@ var databaseModule = function() {
         connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
-                console.log('Login Successful');
+                console.log("Database.JS".title + ":" + "Login Successful".success);
                 callback(true);
                 }
             else{
 
-                console.log('Login Denied');
+                console.log("Database.JS".title + ":" + "Login Failed".error);
                 callback(false);
             }
 
