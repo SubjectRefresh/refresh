@@ -20,10 +20,10 @@ colors.setTheme({
 
 //console.log("Question.JS:".bold + " Successfully Imported Required Packages".blue);
 
-var questionModule = function () {
+var questionModule = function() {
     var self = this;
 
-    self.question = function (inputArray, callback) {
+    self.question = function(inputArray, callback) {
         var output = [];
         var outputFinal = [];
         var sentence = inputArray.join(" ");
@@ -32,18 +32,23 @@ var questionModule = function () {
             body: "apiKey=c0dbc052930dce78cc1dd1b37b3d3a4fb3f609c251c4f7e34a3b452a&text=" + encodeURIComponent(utf8.encode(sentence)) + "&extractors=" + utf8.encode("entities")
         });
         //console.log(res.getBody().toString('utf8'));
-        
-        var data = JSON.parse(res.getBody().toString('utf8'));
-        
-        console.log(data);
-        for (i = 0; i < data.response.entities.length; i++) {
-            entityPositions.push([data.response.entities[i].matchedText, data.response.entities[i].startingPos, data.response.entities[i].endingPos]);
-        }
-        output = [entityPositions, sentence];
-        
-        output2 = JSON.stringify(output);
 
-        callback(output2);
+        var data = JSON.parse(res.getBody().toString('utf8'));
+
+        console.log(data);
+        if (!data.response.languageIsReliable) {
+            console.log("Bad bad data");
+            callback(false);
+        } else {
+            for (i = 0; i < data.response.entities.length; i++) {
+                entityPositions.push([data.response.entities[i].matchedText, data.response.entities[i].startingPos, data.response.entities[i].endingPos]);
+            }
+            output = [entityPositions, sentence];
+
+            output2 = JSON.stringify(output);
+
+            callback(output2);
+        }
     }
 };
 //callback = [[[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence], [[[Entity, StartPos, EndPos], [Entity, StartPos, EndPos]], sentence]]
