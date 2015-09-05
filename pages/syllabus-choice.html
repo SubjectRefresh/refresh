@@ -49,26 +49,35 @@
     </nav>
     <div class="container">
         <div class="row" id="needs_margin_top">
-            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent" style="border-radius: 10px; padding-bottom: 15px;">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" id="bodycontent" style="border-radius: 10px;">
                 <div class="row">
                     <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
                         <h1>Course selection</h1>
                         <form>
-                            <label for="selectBoard">Board</label>
-                            <select id="selectBoard" name="course" class="form-control">
-                                <option value="CIE">CIE</option>
-                                <option class="disabled" value="Edexcel" disabled="disabled">Edexcel</option>
-                                <option class="disabled" value="AQA" disabled="disabled">AQA</option>
-                                <option class="disabled" value="OCR" disabled="disabled">OCR</option>
-                            </select>
-                            <label for="selectSubject">Subject</label>
-                            <select id="selectSubject" name="subject" class="form-control">
-                                <option disabled="" id="remove_subject">Loading...</option>
-                            </select>
-                            <label for="selectSyllabus">Syllabus</label>
-                            <select id="selectSyllabus" name="syllabus" class="form-control">
-                                <option disabled="" id="remove_syllabus">Loading...</option>
-                            </select>
+                            <div class="form-group">
+                                <label for="selectBoard">Board</label>
+                                <select id="selectBoard" name="course" class="form-control">
+                                    <option value="CIE">CIE</option>
+                                    <option class="disabled" value="Edexcel" disabled="disabled">Edexcel</option>
+                                    <option class="disabled" value="AQA" disabled="disabled">AQA</option>
+                                    <option class="disabled" value="OCR" disabled="disabled">OCR</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="selectSubject">Subject</label>
+                                <select id="selectSubject" name="subject" class="form-control">
+                                    <option disabled="" id="remove_subject">Loading...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="selectSyllabus">Syllabus</label>
+                                <select id="selectSyllabus" name="syllabus" class="form-control">
+                                    <option disabled="" id="remove_syllabus">Loading...</option>
+                                </select>
+                            </div>
+                            <div class="form-group text-center">
+                                <button id="submit_btn" class="btn btn-primary">Generate questions</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -122,7 +131,10 @@ function updateSyllabus(i_n) {
     });
 }
 
+var data = [];
+
 function goGetQuestion(i_n) {
+    console.log("Submitting...");
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
 
@@ -146,10 +158,13 @@ function goGetQuestion(i_n) {
         "subject": subject,
         "syllabus": syllabus,
         "url": i_n
-    }).success(function(data) {
+    }).success(function(newData) {
+        data = newData;
         console.log(data);
+        for (var i = 0; i < 5; i++){
+            console.log(data[0][i]);
+        }
     });
-    // Oli: i_n = the url for the PDF - do with it what you want.
 }
 
 $("#selectBoard").on("change", function() {
@@ -164,11 +179,9 @@ $("#selectSubject").on("change", function() {
 $("#selectSubject").on("click", function() {
     updateSyllabus($("#selectSubject").find(":selected").attr("value"));
 });
-$("#selectSyllabus").on("click", function() {
+$("#submit_btn").on("click", function() {
     goGetQuestion($("#selectSyllabus").find(":selected").attr("value"));
-});
-$("#selectSyllabus").on("change", function() {
-    goGetQuestion($("#selectSyllabus").find(":selected").attr("value"));
+    return false;
 });
 </script>
 </html>
