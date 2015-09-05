@@ -19,7 +19,6 @@ var parseHTML = function(number) {
     self.scrape = function(examBoard, examSubject, examSyllabus, callback) {
         fs.readFile("files/" + examSubject + ".html", 'utf8', function(err, data) {
             if (err) {console.log(err)};
-            console.log("Success!");
             $ = cheerio.load(data);
             var bulletpointsplit = $("body").text();
             // console.log(bulletpointsplit);
@@ -31,24 +30,22 @@ var parseHTML = function(number) {
 
             for (i = 0; i < bulletpointsplit.length; i++) {
                 if (bulletpointsplit[i].indexOf("State the distinguishing properties of solids") > -1) {
-                    console.log(bulletpointsplit[i]);
+                    //console.log(bulletpointsplit[i]);
                     break;
                 } else {
-                    console.log("Shifted!");
+                    //console.log("Shifted!");
                     temparray.shift()
                 }
             }
 
-            console.log(temparray);
-            var bulletpointsplit2 = [];
-            bulletpointsplit2 = temparray;
+            //console.log(temparray);
 
             for (i = temparray.length - 1; i > 0; i=i-1) {
                 if (temparray[i].indexOf("different units and/or different linkages") > -1) {
-                    console.log(temparray[i]);
+                    //console.log(temparray[i]);
                     break;
                 } else {
-                    console.log("Popped!");
+                    //console.log("Popped!");
                     temparray.pop()
                 }
             }
@@ -63,11 +60,10 @@ var parseHTML = function(number) {
         getPDF.on("finish", function() {
             var converter = new pdf("files/" + examSubject + ".pdf", "files/" + examSubject + ".html");
             converter.success(function() {
-                console.log("Works! :D");
                 callback();
             });
             converter.error(function(err) {
-                console.log("ERROR! " + err);
+                console.log("Scrape.JS".title + ": " + "Error with PDF converter: ".error + err.error);
             });
             converter.convert(); 
         });

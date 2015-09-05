@@ -35,9 +35,7 @@ var questionModule = function() {
 
         var data = JSON.parse(res.getBody().toString('utf8'));
 
-        console.log(data);
         if (!data.response.languageIsReliable) {
-            console.log("Bad bad data");
             callback(false);
         } else {
             for (i = 0; i < data.response.entities.length; i++) {

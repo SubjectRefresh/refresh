@@ -32,7 +32,7 @@ var examBoardModule = function() {
 //        console.log("Exam.js: ".bold + "Successfully Defined Global Variables".green);
         request("http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/", function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log("Exam.js: ".bold + "Got list of subjects".green);
+                //console.log("Exam.js: ".bold + "Got list of subjects".green);
                 $ = cheerio.load(body);
                 $(".emphasized-link").find("li").each(function() { // loop through each link
                     var selector = $(this).find("a").attr("href");
@@ -46,7 +46,7 @@ var examBoardModule = function() {
                     if (String(newArray[i].number) == String(number)) { // we got a match for the subject
                         links.syllabus = newArray[i].link;
                         request(baseURL + newArray[i].dom_object.find("a").attr("href"), function(error2, response2, body2) {
-                            console.log("Exam.js: ".bold + "Got list of PDFs".green);
+                            //console.log("Exam.js: ".bold + "Got list of PDFs".green);
                             $new = cheerio.load(body2);
                             
                             $new(".binaryLink").find("a").each(function(i, elem) {

@@ -105,7 +105,6 @@ function updateSubjects() {
 }
 
 function updateSyllabus(i_n) {
-    console.log("the needed syllabus is " + i_n);
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
     $.post(examBoard + "Subject", {
@@ -115,8 +114,7 @@ function updateSyllabus(i_n) {
             $(this).remove();
         });
         for (i = 0; i < urls.length - 1; i++) {
-            console.log(urls[i]);
-            $("#selectSyllabus").append("<option onclick='goGetSyllabus(" + i_n + ")' value='" + urls[i][0] + "'>" + urls[i][1] + "</option>");
+            $("#selectSyllabus").append("<option onclick='goGetQuestion(" + i_n + ")' value='" + urls[i][0] + "'>" + urls[i][1] + "</option>");
             $("#remove_syllabus").remove();
         }
     }, "json").done(function() {
@@ -124,7 +122,7 @@ function updateSyllabus(i_n) {
     });
 }
 
-function goGetSyllabus(i_n) {
+function goGetQuestion(i_n) {
     var examBoardBuffer = document.getElementById("selectBoard");
     var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
 
@@ -136,7 +134,6 @@ function goGetSyllabus(i_n) {
 
     if (examBoard == "CIE") {
         i_n = "http://cie.org.uk" + i_n;
-        console.log(i_n);
     }
     var password = "(Abcde12345)";
     var email = "OliCallaghan@icloud.com"
@@ -150,7 +147,7 @@ function goGetSyllabus(i_n) {
         "syllabus": syllabus,
         "url": i_n
     }).success(function(data) {
-        $("html").html(data);
+        console.log(data);
     });
     // Oli: i_n = the url for the PDF - do with it what you want.
 }
@@ -168,10 +165,10 @@ $("#selectSubject").on("click", function() {
     updateSyllabus($("#selectSubject").find(":selected").attr("value"));
 });
 $("#selectSyllabus").on("click", function() {
-    goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
+    goGetQuestion($("#selectSyllabus").find(":selected").attr("value"));
 });
 $("#selectSyllabus").on("change", function() {
-    goGetSyllabus($("#selectSyllabus").find(":selected").attr("value"));
+    goGetQuestion($("#selectSyllabus").find(":selected").attr("value"));
 });
 </script>
 </html>

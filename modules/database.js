@@ -87,7 +87,7 @@ var databaseModule = function() {
         connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
             if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
-                console.log("Database.JS".title + ":" + "Login Successful".success);
+                //console.log("Database.JS".title + ":" + "Login Successful".success);
                 callback(true);
                 }
             else{

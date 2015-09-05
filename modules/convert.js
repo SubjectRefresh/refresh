@@ -23,7 +23,7 @@ var convertModule = function () {
     var self = this;
 
     self.convert = function (inputArray, callback) {
-        console.log("Convert.JS".title + ": convert()".info);
+//        console.log("Convert.JS".title + ": convert()".info);
         var root = "";
         var question = "";
         var outputContentWrapper = [];

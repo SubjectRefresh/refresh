@@ -184,6 +184,10 @@ app.post("/register", function(req, res) {
             fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
                 res.send(data);
             });
+        } else {
+            fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
+                res.send(data);
+            });
         }
 
     });
@@ -279,19 +283,39 @@ app.post("/dashboard", function(req, res) {
             if (output != false) {
                 databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
                     scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
+                        console.log("Converted PDF");
                         scrapeModule.scrape(examBoard, subject, syllabus, function(points) {
+                            console.log("Scraped");
                             convertModule.convert(points, function(searchFields) {
+                                console.log("Converted")
                                 researchModule.researchTopic(searchFields, function(usefulSentences) {
+                                    console.log("Researched")
                                     questionModule.question(usefulSentences, function(toStore) {
                                         if (!toStore) {
-                                            console.log("App.js".title + " " + "Bad bad data".error);
+                                            res.send(toStore)
                                         } else {
-                                            console.log("App.js".title + " " + "Lovely data: ".success);
-                                            console.log("App.js" + JSON.stringify(toStore));
-                                            //fs.writeFile("files/" + subject + ".sentenceData", toStore, function (err) {
-                                            //if (err) throw err;
-                                            res.redirect(301, "/learn?subject=" + subject);
-                                            //});
+                                            // we have some duplicate keywords in the data so we need to remove them
+                                            var newToStore = [];
+                                            var keywords = [];
+
+
+                                            console.log(toStore);
+                                            for (var i = 0; i < toStore[0].length - 1; i++) {
+                                                console.log(toStore[0][i]);
+                                                if (keywords.indexOf(toStore[0][i][0]) == -1) {
+                                                    console.log("new");
+                                                    keywords.push(toStore[0][i][0]);
+                                                    newToStore.push(toStore[0][i]);
+                                                }
+                                                else {
+                                                    console.log("New");
+                                                }
+                                            }
+                                            fs.writeFile("files/" + subject + ".sentenceData", newToStore, function(err) {
+                                                //if (err) throw err;
+                                                res.send(newToStore);
+                                                console.log("Sent data to client")
+                                            });
                                         }
                                     });
                                 })

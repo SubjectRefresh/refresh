@@ -20,18 +20,18 @@ var researchModule = function() {
     var self = this;
     
     self.researchTopic = function(topic, callback) {
-        var allowed = true;
+        var keep_going = true;
         var usefulSentences = [];
         var tcount = 0;
+        //console.log("Research.JS".title + " " + " Binging!".success)
         for (var t = 0; t < 10; t++) { // var t = 0; t < topic.length; t++
             var topicWordsSplit = topic[t];
-            console.log("Research.JS:".title + " Searching Bing".success);
+
             bing.web(topic[t], {top:3, skip:0}, function(err, res, body) {
-                if (allowed == true) {
-                    console.log("Research.JS:".title + " Received Bing Search Results".success);
+                if (keep_going == true) {
                     var URL = []
                     if (body != undefined) {
-                        console.log(res);
+                        //console.log(res);
                         URL.push(body.d.results[0].Url);
                         URL.push(body.d.results[1].Url);
                         URL.push(body.d.results[2].Url);
@@ -39,12 +39,12 @@ var researchModule = function() {
                         var output = "";
                         var count = 0;
                         for (var i = 0; i < 3; i++) {
-                            console.log("Research.JS:".title + (" Requesting Webpage, " + URL[i]).success);
+                            //console.log("Research.JS:".title + (" Requesting web page, " + URL[i]).success);
                             request(URL[i], function(err, res, body) {
                                 if (err) {
                                     console.log(err);
                                 }
-                                console.log("Research.JS:".title + " Received Webpage!".success);
+                                //console.log("Research.JS:".title + " Received web page!".success);
                                 output += body;
                                 count += 1;
                                 if (count == 3) {
@@ -77,7 +77,7 @@ var researchModule = function() {
                                                 }
                                             }
                                             if (tokenizedText[w] == ")") {clause -= 1;}
-                                            console.log(tokenizedText[w], "URL");
+                                            //console.log(tokenizedText[w], "URL");
                                             if (natural.JaroWinklerDistance(tokenizedText[w], "URL") > 0.8) { 
                                                 irrelevent = true;
                                             } if (natural.JaroWinklerDistance(tokenizedText[w], "exam") > 0.8) {
@@ -99,7 +99,6 @@ var researchModule = function() {
                                         workingSentence += ".";
                                         if ((usefulSentence == true) && (irrelevent == false)) {
                                             usefulSentences.push(workingSentence);
-                                            console.log(workingSentence);
                                         }
                                         if (usefulSentences.length > 2) {
                                             break;
@@ -109,16 +108,13 @@ var researchModule = function() {
 
                                     // Only creates 5 points //
                                     if (tcount == 10) {
-                                        console.log("FIND THIS: " + usefulSentences);
                                         callback(usefulSentences);
-                                        allowed = false;
+                                        keep_going = false;
                                     }
                                 }
                             });
                         }
                     }
-                } else {
-                    console.log("Blah");
                 }
             });
         }
