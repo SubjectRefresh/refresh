@@ -272,7 +272,6 @@ app.post("/CIEsubject", function(req, res) {
 });
 
 app.post("/dashboard", function(req, res) {
-    console.log("App.JS".title + ": " + "Let's go!".success);
     try {
         var email = req.body.email;
         var password = req.body.password;
