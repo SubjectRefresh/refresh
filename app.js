@@ -42,7 +42,7 @@ var sessionsActive = [];
 
 function driveThru(sessionID, email, callback) {
     sessionsActive.push([sessionID, email]);
-    setTimeout(function () {
+    setTimeout(function() {
         sessionsActive.shift();
     }, 1000);
     callback();
@@ -84,7 +84,7 @@ function refreshTemplateCache(callback) {
     // Homepage Template
     fs.readFile("pages/index.html", "utf-8", function(err, data) {
         homeTemplate = data;
-        count ++;
+        count++;
         if ((count == 3) && (callback !== undefined)) {
             callback();
         }
@@ -93,7 +93,7 @@ function refreshTemplateCache(callback) {
     // Dashboard Template
     fs.readFile("pages/dashboard.html", "utf-8", function(err, data) {
         dashboardTemplate = data;
-        count ++;
+        count++;
         if ((count == 3) && (callback !== undefined)) {
             callback();
         }
@@ -102,7 +102,7 @@ function refreshTemplateCache(callback) {
     // Learning Environment Template
     fs.readFile("pages/learn.html", "utf-8", function(err, data) {
         learnTemplate = data;
-        count ++;
+        count++;
         if ((count == 3) && (callback !== undefined)) {
             callback();
         }
@@ -166,24 +166,22 @@ function refreshRenderer(template, elementsToReplace, callback) {
 
 // App Routes
 
-app.get("/", function (req, res) {
-    console.log("/");
-    fs.readFile("pages/index.html", "ASCII", function (err, data) {
+app.get("/", function(req, res) {
+    fs.readFile("pages/index.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
 
-app.post("/register", function (req, res) {
-    console.log("/register");
+app.post("/register", function(req, res) {
     var firstName = req.body.fName;
     var lastName = req.body.lName;
     var email = req.body.eMail;
     var password = req.body.pass;
     var username = req.body.uName;
 
-    databaseModule.addUser(firstName, lastName, email, password, username, function (output) {
+    databaseModule.addUser(firstName, lastName, email, password, username, function(output) {
         if (output == true) {
-            fs.readFile("pages/syllabus-choice.html", "ASCII", function (err, data) {
+            fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
                 res.send(data);
             });
         }
@@ -191,49 +189,44 @@ app.post("/register", function (req, res) {
     });
 });
 
-app.get("/finnTest", function (req, res) {
-    console.log("/finnTest");
-    fs.readFile("pages/syllabus-choice.html", "ASCII", function (err, data) {
+app.get("/finnTest", function(req, res) {
+    fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
 
-app.get("/learn", function (req, res) {
-    console.log("/learn");
-    fs.readFile("pages/learn.html", "ASCII", function (err, data) {
+app.get("/learn", function(req, res) {
+    fs.readFile("pages/learn.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
 
-app.get("/dashboard", function (req, res) {
+app.get("/dashboard", function(req, res) {
     console.log("GET /dashboard");
-    fs.readFile("pages/dashboard.html", "ASCII", function (err, data) {
+    fs.readFile("pages/dashboard.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
 
-app.get("/login", function (req, res) {
-    console.log("/login");
-    fs.readFile("pages/login.html", "ASCII", function (err, data) {
+app.get("/login", function(req, res) {
+    fs.readFile("pages/login.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
 
-app.get("/logout", function (req, res) {
-    console.log("/logout");
+app.get("/logout", function(req, res) {
     res.clearCookie('emai');
     res.clearCookie('loggedin');
     res.redirect("/", 301);
 });
 
-app.post("/checkLogin", function (req, res) {
-    console.log("/checkLogin");
+app.post("/checkLogin", function(req, res) {
     var cookies = new Cookies(req, res),
         unsigned, signed, tampered;
     var password = req.body.password;
     var email = req.body.email;
 
-    databaseModule.login(email, password, function (output) {
+    databaseModule.login(email, password, function(output) {
         if (output != false) {
             console.log(output.Email, output.FirstName, output.LastName);
             cookies.set("emai", output.Email, {
@@ -259,25 +252,22 @@ app.post("/checkLogin", function (req, res) {
     });
 });
 
-app.post("/CIE", function (req, res) {
-    console.log("/CIE");
-    listModule.examBoardCIE(function (data) {
+app.post("/CIE", function(req, res) {
+    listModule.examBoardCIE(function(data) {
         res.send({
             subjectData: data
         });
     });
 });
 
-app.post("/CIEsubject", function (req, res) {
-    console.log("/CIEsubject");
+app.post("/CIEsubject", function(req, res) {
     var syllabusNumber = String(req.body.syllabusNumber);
-    examBoardModule.collectURLs(syllabusNumber, function (data) {
+    examBoardModule.collectURLs(syllabusNumber, function(data) {
         res.send(data);
     });
 });
 
-app.post("/dashboard", function (req, res) {
-    console.log("POST /dashboard");
+app.post("/dashboard", function(req, res) {
     try {
         var email = req.body.email;
         var password = req.body.password;
@@ -285,18 +275,24 @@ app.post("/dashboard", function (req, res) {
         var subject = req.body.subject;
         var syllabus = req.body.syllabus;
         var url = req.body.url;
-        databaseModule.login(email, password, function (output) {
+        databaseModule.login(email, password, function(output) {
             if (output != false) {
-                databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function () {
-                    scrapeModule.convertPDF(examBoard, subject, syllabus, url, function () {
-                        scrapeModule.scrape(examBoard, subject, syllabus, function (points) {
-                            convertModule.convert(points, function (searchFields) {
-                                researchModule.researchTopic(searchFields, function (usefulSentences) {
-                                    questionModule.question(usefulSentences, function (toStore) {
-                                        //fs.writeFile("files/" + subject + ".sentenceData", toStore, function (err) {
-                                        //if (err) throw err;
-                                        res.redirect(301, "/learn?subject=" + subject);
-                                        //});
+                databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
+                    scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
+                        scrapeModule.scrape(examBoard, subject, syllabus, function(points) {
+                            convertModule.convert(points, function(searchFields) {
+                                researchModule.researchTopic(searchFields, function(usefulSentences) {
+                                    questionModule.question(usefulSentences, function(toStore) {
+                                        if (!toStore) {
+                                            console.log("App.js".title + " " + "Bad bad data".error);
+                                        } else {
+                                            console.log("App.js".title + " " + "Lovely data: ".success);
+                                            console.log("App.js" + JSON.stringify(toStore));
+                                            //fs.writeFile("files/" + subject + ".sentenceData", toStore, function (err) {
+                                            //if (err) throw err;
+                                            res.redirect(301, "/learn?subject=" + subject);
+                                            //});
+                                        }
                                     });
                                 })
                             });
@@ -312,11 +308,10 @@ app.post("/dashboard", function (req, res) {
     }
 });
 
-app.post("/getLearnData", function (req, res) {
-    console.log("/getLearnData");
+app.post("/getLearnData", function(req, res) {
     var subject = req.body.examSubject;
     subject = "0620";
-    fs.readFile("files/" + subject + ".sentenceData", function (err, data) {
+    fs.readFile("files/" + subject + ".sentenceData", function(err, data) {
         if (err) {
             res.send("Error :(");
         } else {
@@ -332,7 +327,7 @@ if (process.argv[2] == undefined) {
     process.argv[2] = 80;
 }
 
-var server = app.listen(process.argv[2], function () {
+var server = app.listen(process.argv[2], function() {
     var host = server.address().address;
     var port = server.address().port;
 
