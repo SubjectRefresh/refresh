@@ -41,8 +41,8 @@ var questionModule = function() {
             for (i = 0; i < data.response.entities.length; i++) {
                 //entityPositions.push([data.response.entities[i].matchedText, data.response.entities[i].startingPos, data.response.entities[i].endingPos]);
 				//<input answer=‘“ + theAnswer + ”’ class='form-control' type='text’>
-				sentence = sentence.substring(0, data.response.entities[i].startingPos) + "<input answer=‘" + sentence.substring(data.response.entities[i].startingPos);
-				sentence = sentence.substring(0, data.response.entities[i].endingPos) + "’ class='form-control' type='text’>" + sentence.substring(data.response.entities[i].endingPos);
+				sentence = sentence.substring(0, data.response.entities[i].startingPos) + "<input answer='" + sentence.substring(data.response.entities[i].startingPos);
+				sentence = sentence.substring(0, data.response.entities[i].endingPos) + "' class='form-control' type='text’>" + sentence.substring(data.response.entities[i].endingPos);
             }
 			console.log("SENTENCE = " + sentence);
 			callback(sentence);
