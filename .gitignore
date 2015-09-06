@@ -1,5 +1,4 @@
 output.html
-files/
 node_modules/
 *.txt
 *.DS_Store
