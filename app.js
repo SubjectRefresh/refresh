@@ -193,14 +193,8 @@ app.post("/register", function(req, res) {
     });
 });
 
-app.get("/finnTest", function(req, res) {
-    fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
-        res.send(data);
-    });
-});
-
 app.get("/learn", function(req, res) {
-    fs.readFile("pages/learn.html", "ASCII", function(err, data) {
+    fs.readFile("pages/syllabus-choice.html", "ASCII", function(err, data) {
         res.send(data);
     });
 });
