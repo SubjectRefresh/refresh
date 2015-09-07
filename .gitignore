@@ -3,3 +3,4 @@ node_modules/
 *.txt
 *.DS_Store
 temporary/
+files/
