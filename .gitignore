@@ -2,5 +2,3 @@ output.html
 node_modules/
 *.txt
 *.DS_Store
-files/*.html
-files/*.sentenceData
