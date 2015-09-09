@@ -245,15 +245,20 @@ function goGetQuestion(i_n) {
                         console.log("Duplicate");
                     }*/
                 }
-                answers = shuffle(answers); // not sure if this works or not
-        //        newData[1] = newData[1].replace(/ *\[[^)]*\] */g, ""); // remove anything between a [ and a ]
+                answers = shuffle(answers);
+                newData[1] = newData[1].replace(/ \[[^)]*\] /g, ""); // remove anything between a [ and a ]
+                // is there weird punctuation in your text? Fix it here!
                 newData[1] = newData[1].replace(/ \, /g, ", ");
                 newData[1] = newData[1].replace(/ \. /g, ". ");
                 newData[1] = newData[1].replace(/ \’ /g, "'");
+                newData[1] = newData[1].replace(/ \’ /g, "'");
+                newData[1] = newData[1].replace(/ \’ /g, "'");
                 newData[1] = newData[1].replace(/ \? /g, "? ");
+                newData[1] = newData[1].replace(/ : /g, ":<br>");
+                newData[1] = newData[1].trim(); // remove excess whitespace
                 $("#submit_btn").fadeOut(500, function(){
                     $("#course_selection").fadeOut(500, function(){
-                        $("#answer_div").find(".bodycontent").html('<form id="answers" class="form-inline">' + answers.join(", ") + "<hr>" + newData[1] + '<form class="form-group"><div class="hr text-center"><button class="btn btn-success" type="submit" style="padding-top: 15px;">Check answers</button></div></form>');
+                        $("#answer_div").find(".bodycontent").html('<form id="answers" class="form-inline">' + answers.join(", ") + "<hr>" + newData[1] + '<form class="form-group"><div class="hr text-center"><button class="btn btn-success" type="submit" style="margin-top: 15px;">Check answers</button></div></form>');
                         $("#answer_div").fadeIn(500);
                         $("#answers").submit(function(event){
                             validateAnswers();
