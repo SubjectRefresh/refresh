@@ -16,7 +16,6 @@ var examBoardModule = function() {
     self.examBoardCIE = function(callback) {
         request('http://www.cie.org.uk/programmes-and-qualifications/cambridge-secondary-2/cambridge-igcse/subjects/', function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.log("List.JS:".bold + " Got request for subject list".green);
                 $ = cheerio.load(body);
 
                 data = cleanArray($('.emphasized-link').text().replace(/ +?|\r/g, '').split("\n"));
