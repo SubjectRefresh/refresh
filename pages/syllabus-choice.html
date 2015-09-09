@@ -253,7 +253,7 @@ function goGetQuestion(i_n) {
                 newData[1] = newData[1].replace(/ \? /g, "? ");
                 $("#submit_btn").fadeOut(500, function(){
                     $("#course_selection").fadeOut(500, function(){
-                        $("#answer_div").find(".bodycontent").html('<form id="answers" class="form-inline">' + answers.join(", ") + "<hr>" + newData[1] + '<form class="form-group"><div class="hr text-center"><button class="btn btn-success" type="submit">Check answers</button></div></form>');
+                        $("#answer_div").find(".bodycontent").html('<form id="answers" class="form-inline">' + answers.join(", ") + "<hr>" + newData[1] + '<form class="form-group"><div class="hr text-center"><button class="btn btn-success" type="submit" style="padding-top: 15px;">Check answers</button></div></form>');
                         $("#answer_div").fadeIn(500);
                         $("#answers").submit(function(event){
                             validateAnswers();
