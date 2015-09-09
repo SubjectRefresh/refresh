@@ -50,6 +50,7 @@
     "qs": "^5.0.0",
     "request": "^2.60.0",
     "sesh": "^0.1.0",
+    "stream-browserify": "^2.0.1",
     "stringstream": "0.0.4",
     "sync-request": "^2.0.1",
     "tough-cookie": "^2.0.0",
