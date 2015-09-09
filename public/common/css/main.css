@@ -275,13 +275,13 @@ input[type="submit"]:hover, button[type="submit"]:hover, button[type="reset"]:ho
 	outline-offset: none;
 }
 
-input.correct {
+.answer.correct {
 	color: #fff;
 	border: 1px solid #449d44;
 	background-color: #5cb85c;
 }
 
-input.incorrect {
+.answer.incorrect {
 	color: #fff;
 	border: 1px solid #c9302c;
 	background-color: #d9534f;

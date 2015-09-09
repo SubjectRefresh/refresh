@@ -226,7 +226,6 @@ function goGetQuestion(i_n) {
             "url": i_n
         }).success(function(newData) {
             data = newData;
-            console.log(data[1]);
             if (newData){
                 alert("Got some lovely questions for you!");
                 for (i = 0; i < newData[0].length-1; i++) {
@@ -238,8 +237,7 @@ function goGetQuestion(i_n) {
                     var answer = newData[0][i][0];
                     if (not_duplicated.indexOf(answer) != -1){
                         answers.push(answer);
-                        var replace_with_this = "<input class='form-control' answer='" + answer + "' type='text' size='" + (answer.length + 2) + "' style='display:inline-block;'>"
-                        console.log("Replacing answer " + answer + " with " + replace_with_this);
+                        var replace_with_this = "<input class='form-control answer' type='text' size='" + (answer.length + 2) + "' style='display:inline-block;'>"
                         newData[1] = newData[1].replace(answer, replace_with_this);
                     }
                     /*else {
