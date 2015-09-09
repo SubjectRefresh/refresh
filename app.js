@@ -267,7 +267,7 @@ app.post("/CIEsubject", function(req, res) {
     });
 });
 
-app.post("/dashboard", function(req, res) {
+app.post("/getQuestions", function(req, res) {
     console.log("App.JS".title + ": " + "Looking for questions".success);
     try {
         var email = req.body.email;

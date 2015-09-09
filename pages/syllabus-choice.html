@@ -216,7 +216,7 @@ function goGetQuestion(i_n) {
         var email = "OliCallaghan@icloud.com"
         var examBoardBuffer = document.getElementById("selectBoard");
         var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
-        $.post("/dashboard", {
+        $.post("/getQuestions", {
             "email": email,
             "password": password,
             "examBoard": examBoard,
