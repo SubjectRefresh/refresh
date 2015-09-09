@@ -215,7 +215,7 @@ app.get("/login", function(req, res) {
 app.get("/logout", function(req, res) {
     res.clearCookie('emai');
     res.clearCookie('loggedin');
-    res.redirect("/", 301);
+    res.redirect(301, "/");
 });
 
 app.post("/checkLogin", function(req, res) {
