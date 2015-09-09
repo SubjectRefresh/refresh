@@ -249,3 +249,40 @@ input[type="submit"]:hover, button[type="submit"]:hover, button[type="reset"]:ho
 	border-radius: 15px;
 	padding: 5px;
 }
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+
+  -webkit-transition: opacity 0.25s, max-width 0.45s; 
+  -moz-transition: opacity 0.25s, max-width 0.45s;
+  -o-transition: opacity 0.25s, max-width 0.45s;
+  transition: opacity 0.25s, max-width 0.45s; /* Duration fixed since we animate additional hidden width */
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
+}
+
+.btn:active {
+	outline: none;
+	outline-offset: none;
+}
+
+input.correct {
+	color: #fff;
+	border: 1px solid #449d44;
+	background-color: #5cb85c;
+}
+
+input.incorrect {
+	color: #fff;
+	border: 1px solid #c9302c;
+	background-color: #d9534f;
+}

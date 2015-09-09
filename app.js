@@ -251,6 +251,7 @@ app.post("/checkLogin", function(req, res) {
 });
 
 app.post("/CIE", function(req, res) {
+    console.log("App.JS".title + ": " + "Looking for subjects".success);
     listModule.examBoardCIE(function(data) {
         res.send({
             subjectData: data
@@ -259,6 +260,7 @@ app.post("/CIE", function(req, res) {
 });
 
 app.post("/CIEsubject", function(req, res) {
+    console.log("App.JS".title + ": " + "Looking for syllabii".success);
     var syllabusNumber = String(req.body.syllabusNumber);
     examBoardModule.collectURLs(syllabusNumber, function(data) {
         res.send(data);
@@ -266,7 +268,7 @@ app.post("/CIEsubject", function(req, res) {
 });
 
 app.post("/dashboard", function(req, res) {
-    console.log("App.JS".title + ": " + "let's go!".success);
+    console.log("App.JS".title + ": " + "Looking for questions".success);
     try {
         var email = req.body.email;
         var password = req.body.password;
@@ -278,15 +280,15 @@ app.post("/dashboard", function(req, res) {
             if (output != false) {
                 databaseModule.createSyllabusEntry(email, examBoard, subject, syllabus, function() {
                     scrapeModule.convertPDF(examBoard, subject, syllabus, url, function() {
-                        console.log("Converted PDF");
+                        console.log("App.JS".title + ": " + "Converted PDF".success);
                         scrapeModule.scrape(examBoard, subject, syllabus, function(points) {
-                            console.log("Scraped");
+                        console.log("App.JS".title + ": " + "Scraped".success);
                             convertModule.convert(points, function(searchFields) {
-                                console.log("Converted")
+                        console.log("App.JS".title + ": " + "Converted".success);
                                 researchModule.researchTopic(searchFields, function(usefulSentences) {
-                                    console.log("Researched")
+                        console.log("App.JS".title + ": " + "Researched".success);
                                     questionModule.question(usefulSentences, function(toStore) {
-                                        console.log(toStore);
+                                        //console.log(toStore);
                                         
                                         toStore = JSON.parse(toStore);
                                         if (!toStore) {
@@ -297,7 +299,7 @@ app.post("/dashboard", function(req, res) {
                                             var keywords = [];
 
                                             for (var i = 0; i < toStore[0].length - 1; i++) {
-                                                console.log(toStore[0][i]);
+                                                //console.log(toStore[0][i]);
                                                 if (keywords.indexOf(toStore[0][i][0]) == -1) {
                                                     keywords.push(toStore[0][i][0]);
                                                     newToStore[0].push(toStore[0][i]);
@@ -309,7 +311,8 @@ app.post("/dashboard", function(req, res) {
                                             fs.writeFile("files/" + subject + ".sentenceData", newToStore, function(err) {
                                                 //if (err) throw err;
                                                 res.send(newToStore);
-                                                console.log("Sent data to client")
+                                                console.log(newToStore);
+                                                console.log("App.JS".title + ": " + "Sent data to client".success);
                                             });
                                         }
                                     });
