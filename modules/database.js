@@ -30,7 +30,7 @@ var databaseModule = function() {
         
         connection.connect(function(err) {
             if (err) {
-                console.log('error when connecting to db:', err);
+                //console.log('error when connecting to db:', err);
                 setTimeout(kissOfLife, 2000);
             }
         });
@@ -86,14 +86,21 @@ var databaseModule = function() {
     self.login = function(eMail, pass, callback){
         connection.query('SELECT Hash, Salt FROM UserData WHERE Email=?', [eMail], function (err, rows, fields) {
             if (err) console.log( err );
-            if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
-                //console.log("Database.JS".title + ":" + "Login Successful".success);
-                callback(true);
-                }
-            else{
+            try {
+                if (validateHash(rows[0]['Hash'],pass,rows[0]['Salt']) == true) {
+                    //console.log("Database.JS".title + ":" + "Login Successful".success);
+                    callback(true);
+                    }
+                else{
 
-                console.log("Database.JS".title + ":" + "Login Failed".error);
-                callback(false);
+                    console.log("Database.JS".title + ":" + "Login Failed".error);
+                    callback(false);
+                }
+            }
+            catch (error){
+                if (error.name === "TypeError"){
+                    kissOfLife();
+                }
             }
 
         });
