@@ -106,7 +106,7 @@ Array.prototype.last = function() {
     return this[this.length - 1];
 }
 
-function validateAnswers(){
+function validateAnswers(answers){
     var score = 0;
     $("input[answer]").each(function(){
         $(this).removeClass("incorrect");
@@ -174,11 +174,6 @@ function updateSyllabus(i_n) {
     });
 }
 
-var not_duplicated = [];
-var data = [];
-var answers = [];
-var shuffled = [];
-
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex ;
 
@@ -200,6 +195,10 @@ function shuffle(array) {
 
 
 function goGetQuestion(i_n) {
+    var answers = [];
+    var not_duplicated = [];
+    var shuffled = [];
+
     if (i_n !== undefined){
         var examBoardBuffer = document.getElementById("selectBoard");
         var examBoard = examBoardBuffer.options[examBoardBuffer.selectedIndex].value;
@@ -225,7 +224,6 @@ function goGetQuestion(i_n) {
             "syllabus": syllabus,
             "url": i_n
         }).success(function(newData) {
-            data = newData;
             if (newData){
                 alert("Got some lovely questions for you!");
                 for (i = 0; i < newData[0].length-1; i++) {
@@ -261,7 +259,7 @@ function goGetQuestion(i_n) {
                         $("#answer_div").find(".bodycontent").html('<form id="answers" class="form-inline">' + shuffled.join(", ") + "<hr>" + newData[1] + '<form class="form-group"><div class="hr text-center"><button class="btn btn-success" type="submit" style="margin-top: 15px;">Check answers</button></div></form>');
                         $("#answer_div").fadeIn(500);
                         $("#answers").submit(function(event){
-                            validateAnswers();
+                            validateAnswers(answers);
                             event.preventDefault();
                         })
                     });
