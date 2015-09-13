@@ -6,7 +6,7 @@ Refresh is a simplistic app that uses machine learning in order to improve the i
 
 ### Collaborators
 
-This was made by @pbexe, OliCallaghan, BakerBoy11, Popey456963, Developius, TomEmmerson.
+This was made by pbexe, OliCallaghan, BakerBoy11, Popey456963, Developius, TomEmmerson.
 
 ### List of files
 
