@@ -6,14 +6,14 @@ Refresh is a simplistic app that uses machine learning in order to improve the i
 
 ### Collaborators
 
-This was made by Pombearman, OliCallaghan, BakerBoy11, Popey456963, Developius, TomEmmerson.
+This was made by @pbexe, OliCallaghan, BakerBoy11, Popey456963, Developius, TomEmmerson.
 
 ### List of files
 
-APP.js - The main controller of the application, this controls all the other files.
+app.js - The main controller of the application, this controls all the other files.
 
-Scrape.js - Reads PDFs for bullet points.
+scrape.js - Reads PDFs for bullet points.
 
-QUestion.js - Generates questions from strings.
+question.js - Generates questions from strings.
 
 Copyright (c) 2015 SubjectRefresh.info
