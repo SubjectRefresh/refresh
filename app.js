@@ -13,6 +13,7 @@ colors.setTheme({
     success: ['bgGreen', 'white'],
 });
 
+
 // Imports for External Refresh Node.JS Functions
 var list = require('./modules/list.js');
 var examBoard = require('./modules/exam.js');
@@ -45,6 +46,16 @@ function driveThru(sessionID, email, callback) {
         sessionsActive.shift();
     }, 1000);
     callback();
+}
+
+function createHash(callback) {
+    var hash = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@£$%^&*()_+{}[];|<>,.?#±€~`";
+
+    for (var i = 0; i < 5; i++) {
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    callback(text);
 }
 
 // Creating Express.JS Web Server
