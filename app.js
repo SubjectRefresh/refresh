@@ -38,26 +38,6 @@ var databaseModule = new database();
 
 var databaseModule = new database();
 
-var sessionsActive = [];
-
-function driveThru(sessionID, email, callback) {
-    sessionsActive.push([sessionID, email]);
-    setTimeout(function() {
-        sessionsActive.shift();
-    }, 1000);
-    callback();
-}
-
-function createHash(callback) {
-    var hash = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@£$%^&*()_+{}[];|<>,.?#±€~`";
-
-    for (var i = 0; i < 5; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    callback(text);
-}
-
 // Creating Express.JS Web Server
 var app = express();
 //console.log("App.JS: ".title + "Initialised Web Server".success);
@@ -165,7 +145,6 @@ function refreshRenderer(template, elementsToReplace, callback) {
 }
 
 // App Routes
-
 app.get("/", function(req, res) {
     fs.readFile("pages/index.html", "ASCII", function(err, data) {
         res.send(data);
