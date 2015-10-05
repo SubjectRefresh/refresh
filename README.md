@@ -1,4 +1,4 @@
-# Looking for a Demo? - https://www.youtube.com/watch?v=qIvA6GbncBU
+# Looking for a [Demo](https://www.youtube.com/watch?v=qIvA6GbncBU)?
 
 # Refresh
 
@@ -10,10 +10,11 @@ This was made by Pombearman, OliCallaghan, BakerBoy11, Popey456963, Developius, 
 
 ### List of files
 
-APP.js - The main controller of the application, this controls all the other files.
+app.js - The main controller of the application, this controls all the other files.
 
 Scrape.js - Reads PDFs for bullet points.
 
-QUestion.js - Generates questions from strings.
+Question.js - Generates questions from strings.
 
-Copyright (c) 2015 SubjectRefresh.info
+Copyright &copy; 2015 Oli Callaghan, Miles Budden, Tom Emmerson, Alexander Craggs, Alex Baker and Finnian Anderson.
+All rights reserved.
