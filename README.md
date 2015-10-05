@@ -16,5 +16,5 @@ Scrape.js - Reads PDFs for bullet points.
 
 Question.js - Generates questions from strings.
 
-Copyright &copy; 2015 Oli Callaghan, Miles Budden, Tom Emmerson, Alexander Craggs, Alex Baker and Finnian Anderson.
+Copyright &copy; 2015 Oliver Easton-Callaghan, Miles Budden, Tom Emmerson, Alexander Craggs, Alex Baker and Finnian Anderson.
 All rights reserved.
