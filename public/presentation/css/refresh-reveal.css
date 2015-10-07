@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+	font-family: 'Roboto', sans-serif !important;
+}
+
+img {
+	border: 0px !important;
+    box-shadow: none !important;
+}
+
+.img-logo-small {
+	position: absolute;
+	width: 10%;
+	left: 0;
+	margin-top: 20px;
+	margin-left: 20px;
+	top: -15%;
+	-webkit-transition: top 0.8s ease-in-out;
+    -moz-transition: top 0.8s ease-in-out;
+    -o-transition: top 0.8s ease-in-out;
+    transition: top 0.8s ease-in-out;
+}
+
+.fragment {
+	transition: 0.8s !important;
+}
+
+.footer {
+	text-align: center;
+	color: #fff;
+	width: 80%;
+	padding: 10px;
+	background-color: #0B97D7;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: none;
+	padding-right: 0px !important;
+	margin-right: 0px !important;
+}
+
+/*.reveal .progress span {
+	width: 80%;
+	-moz-transition: all 0.8s ease-in;
+    -o-transition: all 0.8s ease-in;
+    -webkit-transition: all 0.8s ease-in;
+    transition: all 0.8s ease-in;
+
+    -webkit-transition: width 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+    transition: width 0.8s cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}*/
+
+.side-panel {
+	right: -20%;
+	top: 0;
+	height: 100%;
+	position: absolute;
+	width: 20%;
+	-webkit-transition: right 0.8s ease-in-out;
+    -moz-transition: right 0.8s ease-in-out;
+    -o-transition: right 0.8s ease-in-out;
+    transition: right 0.8s ease-in-out;
+	margin-bottom: 71px !important;
+}
+
+body .reveal {
+	//width: 100%;
+	height: 100% !important;
+	-webkit-transition: right 0.8s ease-in-out;
+    -moz-transition: right 0.8s ease-in-out;
+    -o-transition: right 0.8s ease-in-out;
+    transition: right 0.8s ease-in-out;
+}
+
+#twitter-widget-0 {
+	height: 100% !important;
+}
+
+.apis img {
+	max-width: 25%;
+	height: auto;
+    background: rgba(255, 255, 255, 0.12) !important;
+    //border: 4px solid #222 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.spin-f {
+	-webkit-animation: spin-f.8s ease-out 1;
+	-moz-animation: spin-f .8s ease-out 1;
+	animation: spin-f .8s ease-out 1;
+}
+
+.spin-b {
+	-webkit-animation: spin-b .8s ease-out 1;
+	-moz-animation: spin-b .8s ease-out 1;
+	animation: spin-b .8s ease-out 1;
+}
+
+@-moz-keyframes spin-f { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin-f { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin-f { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes spin-b { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin-b { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin-b { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }

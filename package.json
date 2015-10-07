@@ -40,6 +40,7 @@
     "merge-descriptors": "1.0.0",
     "methods": "1.1.1",
     "mime-types": "^2.1.6",
+    "mustache": "~0.7.2",
     "mysql": "^2.9.0",
     "natural": "^0.2.1",
     "node-bing-api": "^2.0.0",
@@ -55,6 +56,7 @@
     "sync-request": "^2.0.1",
     "tough-cookie": "^2.0.0",
     "tunnel-agent": "^0.4.1",
+    "underscore": "~1.5.1",
     "utf8": "^2.1.1"
   },
   "devDependencies": {},

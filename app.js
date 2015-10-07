@@ -166,6 +166,14 @@ function refreshRenderer(template, elementsToReplace, callback) {
 
 // App Routes
 
+
+app.get("/presentation", function(req, res) {
+    console.log("GET /presentation");
+    fs.readFile("pages/presentation/index.html", "ASCII", function(err, data) {
+        res.send(data);
+    });
+});
+
 app.get("/", function(req, res) {
     fs.readFile("pages/index.html", "ASCII", function(err, data) {
         res.send(data);
@@ -311,12 +319,11 @@ app.post("/getQuestions", function(req, res) {
                                             fs.writeFile("files/" + subject + ".sentenceData", newToStore, function(err) {
                                                 //if (err) throw err;
                                                 res.send(newToStore);
-                                                console.log(newToStore);
                                                 console.log("App.JS".title + ": " + "Sent data to client".success);
                                             });
                                         }
                                     });
-                                })
+                                });
                             });
                         });
                     });
